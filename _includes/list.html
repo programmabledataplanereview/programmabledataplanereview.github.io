@@ -1,0 +1,23 @@
+<h2>{{list.name}}</h2>
+
+{{list.preamble}}
+
+{% for category in list.categories %}
+
+    <h3>{{category.name}}</h3>
+    {{category.preamble}}
+
+    {% for paper in category.papers %}
+        {% include paper.html paper=paper %}
+    {% endfor %}
+
+    {% for section in category.sections %}
+        <h4>{{section.name}}</h4>
+        {{section.preamble}}
+        {% for paper in section.papers %}
+            {% include paper.html paper=paper %}
+        {% endfor %}
+
+    {% endfor %}
+
+{% endfor %}

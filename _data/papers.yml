@@ -1,31 +1,49 @@
 
 architectures:
-  sw-switching:
-    viability:
-      - authors: Norbert Egi, Adam Greenhalgh, Mark Handley, Mickael Hoerdt, Felipe Huici, Laurent Mathy
-        title: Towards High Performance Virtual Routers on Commodity Hardware
-        in: ACM CoNext
-        year: 2018
-        url: http://doi.acm.org/10.1145/1544012.1544032
-        relevance: interesting
-        desc: The paper is the first to study the performance limitations when building both software routers and software virtual routers on commodity CPU platforms. The authors observe that the fundamental performance bottleneck is the memory system, and that through careful mapping of tasks to CPU cores one can achieve very high forwarding rates. The authors also identify principles for the construction of high-performance software router systems on commodity hardware.
-      
-      - authors: Adam Greenhalgh, Felipe Huici, Mickael Hoerdt, Panagiotis Papadimitriou, Mark Handley, and Laurent Mathy
-        title: Flow processing and the rise of commodity network hardware
-        in: ACM SIGCOMM CCR 39, 2
-        year: 2009
-        url: https://dl.acm.org/doi/10.1145/1517480.1517484
-        relevance: mustread
-        desc: The paper introduces the FlowStream switch architecture, which enables flow processing and forwarding at unprecedented flexibility and low cost by consolidating middlebox functionality, such as load balancing, packet inspection and intrusion detection, and commodity switch technologies, offering the possibility to control the switching of flows in a fine-grained manner, into a single integrated package deployed on commodity hardware.
+  name: Architectures
+  preamble: We divide the discussion of switch architectures into software and hardware switch architectures.
+  categories:
+    - name: Software Switch Architectures
+      preamble: We first discuss the viability of software switching and then review dataflow graph abstractions, also discussing, e.g., Click, ClickOS, and software NICs. We proceed by revisiting literature on match-action abstractions, discussing OVS and PISCES. We conclude with a review on packet I/O libraries. 
 
-    data-flow:
-      - authors: Eddie Kohler, Robert Morris, Benjie Chen, John Jannotti, and M. Frans Kaashoek
-        title: The click modular router
-        in: ACM Trans. Comput. Syst. 18, 3
-        year: 2000
-        url: https://dl.acm.org/doi/10.1145/354871.354874
-        relevance: mustread
-        desc: Introduces Click, a software architecture for building flexible and configurable routers from packet processing modules implementing simple router functions like packet classification, queuing, scheduling, organized into a directed graph with packet processing modules at the vertices; packets flow along the edges of the graph. 
+      sections:
+        - name: Viability of Software Switching
+          papers:
+            - authors: Norbert Egi, Adam Greenhalgh, Mark Handley, Mickael Hoerdt, Felipe Huici, Laurent Mathy
+              title: Towards High Performance Virtual Routers on Commodity Hardware
+              in: ACM CoNext
+              year: 2018
+              url: http://doi.acm.org/10.1145/1544012.1544032
+              relevance: interesting
+              desc: The paper is the first to study the performance limitations when building both software routers and software virtual routers on commodity CPU platforms. The authors observe that the fundamental performance bottleneck is the memory system, and that through careful mapping of tasks to CPU cores one can achieve very high forwarding rates. The authors also identify principles for the construction of high-performance software router systems on commodity hardware.
+            
+            - authors: Adam Greenhalgh, Felipe Huici, Mickael Hoerdt, Panagiotis Papadimitriou, Mark Handley, and Laurent Mathy
+              title: Flow processing and the rise of commodity network hardware
+              in: ACM SIGCOMM CCR 39, 2
+              year: 2009
+              url: https://dl.acm.org/doi/10.1145/1517480.1517484
+              relevance: mustread
+              desc: The paper introduces the FlowStream switch architecture, which enables flow processing and forwarding at unprecedented flexibility and low cost by consolidating middlebox functionality, such as load balancing, packet inspection and intrusion detection, and commodity switch technologies, offering the possibility to control the switching of flows in a fine-grained manner, into a single integrated package deployed on commodity hardware.
 
+    
+        - name: The Dataflow Graph Abstraction
+          papers:
+            - authors: Eddie Kohler, Robert Morris, Benjie Chen, John Jannotti, and M. Frans Kaashoek
+              title: The click modular router
+              in: ACM Trans. Comput. Syst. 18, 3
+              year: 2000
+              url: https://dl.acm.org/doi/10.1145/354871.354874
+              relevance: mustread
+              desc: Introduces Click, a software architecture for building flexible and configurable routers from packet processing modules implementing simple router functions like packet classification, queuing, scheduling, organized into a directed graph with packet processing modules at the vertices; packets flow along the edges of the graph. 
 
+abstractions:
+  name: Abstractions
 
+algorithms:
+  name: Algorithms & HW Realizations
+
+applications:
+  name: Applications
+
+misc:
+  name: Miscellaneous Topics
