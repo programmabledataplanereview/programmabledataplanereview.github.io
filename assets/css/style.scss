@@ -1,0 +1,84 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$link-color: #1d3557; // prussian blue
+$link-color-hover: #1d3557; // celadon blue
+
+
+body {
+
+    color: #444444;
+
+    nav {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+
+        a:hover {
+            color: $link-color;
+            font-weight: bold;
+        }
+    }
+
+    h3 {
+        padding: 0;
+        margin: 15px 0px 5px 0px;
+        color:#494949;
+        // font-weight: 500;
+    }
+
+    h4 {
+        padding: 0;
+        margin: 15px 0px 5px 0px;
+        color:#494949;
+        // font-weight: 500;
+    }
+
+
+    a {
+        color: #1d3557;
+
+        &:hover {
+            font-weight: 400;
+            color: #457b9d;
+        }
+
+        &:focus {
+            font-weight: 400;
+            color: $link-color;
+        }
+    }
+
+    header nav {
+        a {
+            display: block;
+        }
+    }
+
+    .paper {
+        
+        margin-bottom: 10px;
+
+        .title a {
+            font-weight: 700;
+            display: block;
+        }
+
+        .meta {
+            font-size: 12px;
+            display: block;
+        }
+        
+        .desc {
+            margin-top: 5px;
+            font-size: 14px;
+            display: block;
+        }
+
+    }
+}
+

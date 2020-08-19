@@ -1,0 +1,25 @@
+---
+title: Architectures
+layout: default
+permalink: /architectures/
+---
+
+<h2>Architectures</h2>
+
+<p>We divide the discussion of switch architectures into software and hardware switch architectures.</p>
+
+<h3>Software Switch Architectures</h3>
+
+We first discuss the viability of software switching and then review dataflow graph abstractions, also discussing, e.g., Click, ClickOS, and software NICs. We proceed by revisiting literature on match-action abstractions, discussing OVS and PISCES. We conclude with a review on packet I/O libraries.
+
+<h4>Viability of Software Switching</h4>
+
+{% for paper in site.data.papers['architectures']['sw-switching']['viability'] %}
+    {% include paper.html paper=paper %}
+{% endfor %}
+
+<h4>The Dataflow Graph Abstraction</h4>
+
+{% for paper in site.data.papers['architectures']['sw-switching']['data-flow'] %}
+    {% include paper.html paper=paper %}
+{% endfor %}
