@@ -15,3 +15,10 @@ nav:
     url: /applications/
   - text: Miscellaneous Topics
     url: /misc/
+
+baseurl: ''
+url: https://programmabledataplanereview.github.io
+markdown: kramdown
+
+sass:
+  style: compressed
