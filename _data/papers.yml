@@ -9,6 +9,7 @@ architectures:
       sections:
         - name: Viability of Software Switching
           papers:
+            
             - authors: Norbert Egi, Adam Greenhalgh, Mark Handley, Mickael Hoerdt, Felipe Huici, Laurent Mathy
               title: Towards High Performance Virtual Routers on Commodity Hardware
               in: ACM CoNext
@@ -25,17 +26,130 @@ architectures:
               relevance: mustread
               desc: The paper introduces the FlowStream switch architecture, which enables flow processing and forwarding at unprecedented flexibility and low cost by consolidating middlebox functionality, such as load balancing, packet inspection and intrusion detection, and commodity switch technologies, offering the possibility to control the switching of flows in a fine-grained manner, into a single integrated package deployed on commodity hardware.
 
-    
+            - authors: Mihai Dobrescu, Norbert Egi, Katerina Argyraki, Byung-Gon Chun, Kevin Fall, Gianluca Iannaccone, Allan Knies, Maziar Manesh, Sylvia Ratnasamy
+              title: 'RouteBricks: Exploiting Parallelism to Scale Software Routers'
+              in: ACM SOSP
+              year: 2009
+              url: https://dl.acm.org/doi/10.1145/1629575.1629578
+              relevance: interesting
+              desc: RouteBricks is concerned with enabling high-speed parallel processing in software routers, using a software router architecture that parallelizes router functionality both across multiple servers and across multiple cores within a single server. RouteBricks adopts a fully programmable Click/Linux environment and is built entirely from off-the-shelf, general-purpose server hardware.
+
         - name: The Dataflow Graph Abstraction
           papers:
+            
             - authors: Eddie Kohler, Robert Morris, Benjie Chen, John Jannotti, and M. Frans Kaashoek
               title: The click modular router
               in: ACM Trans. Comput. Syst. 18, 3
               year: 2000
               url: https://dl.acm.org/doi/10.1145/354871.354874
               relevance: mustread
-              desc: Introduces Click, a software architecture for building flexible and configurable routers from packet processing modules implementing simple router functions like packet classification, queuing, scheduling, organized into a directed graph with packet processing modules at the vertices; packets flow along the edges of the graph. 
+              desc: Introduces Click, a software architecture for building flexible and configurable routers from packet processing modules implementing simple router functions like packet classification, queuing, scheduling, organized into a directed graph with packet processing modules at the vertices; packets flow along the edges of the graph.
+            
+            - authors: Weibin Sun, Robert Ricci
+              title: 'Fast and Flexible: Parallel Packet Processing with GPUs and Click'
+              in: ACM/IEEE ANCS
+              year: 2013
+              url: https://dl.acm.org/doi/10.5555/2537857.2537861
+              relevance: important
+              desc: The paper introduces Snap, a framework for packet processing that exploits the parallelism available on modern GPUs, while remaining flexible, with packet processing tasks implemented as simple modular elements that are composed to build fully functional routers and switches. Snap is based on the Click modular router, which it extends by adding new architectural features that support batched packet processing, memory structures optimized for offloading to coprocessors, and asynchronous scheduling with in-order completion.
 
+            - authors: Joao Martins, Mohamed Ahmed, Costin Raiciu, Vladimir Olteanu, Michio Honda, Roberto Bifulco, Felipe Huici
+              title: ClickOS and the Art of Network Function Virtualization
+              in: USENIX NSDI
+              year: 2014
+              url: https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/martins
+              relevance: mustread
+              desc: The paper introduces ClickOS, a high-performance, virtualized software middlebox platform. ClickOS virtual machines are small (5MB), boot quickly (about 30 milliseconds), add little delay (45 microseconds), and over one hundred of them can be concurrently run while saturating a 10Gb pipe on a commodity server. A wide range of middleboxes is implemented, including a firewall, a carrier-grade NAT and a load balancer, and the evaluations suggest that ClickOS can handle packets in the millions per second.
+
+            - authors: Sangjin Han, Keon Jang, Aurojit Panda, Shoumik Palkar, Dongsu Han, Sylvia Ratnasamy
+              title: Berkeley Extensible Software Switch
+              url: http://span.cs.berkeley.edu/bess.html
+              in: project website
+              year: 2015
+              relevance: important
+              desc: BESS is the Berkeley Extensible Software Switch developed at the University of California, Berkeley and at Nefeli Networks. BESS is heavily inspired by the Click modular router, representing a packet processing pipeline as a dataflow (multi)graph that consists of modules, each of which implements a NIC feature, and ports that act as sources and sinks for this pipeline. Packets received at a port flow through the pipeline to another port, and each module in the pipeline performs module-specific operations on packets.
+
+            - name: 'mSwitch: A Highly-scalable, Modular Software Switch'
+
+            - name: 'NetBricks: Taking the V out of NFV'
+
+        - name: The Match-action Abstraction
+          papers:
+
+            - title: The Design and Implementation of Open vSwitch
+
+            - title: 'PISCES: A Programmable, Protocol-Independent Software Switch'
+
+            - title: 'SoftFlow: A Middlebox Architecture for Open vSwitch'
+
+            - title: 'Dataplane Specialization for High-performance OpenFlow Software Switching'
+
+            - title: 'Dynamic Compilation and Optimization of Packet Processing Programs'
+
+            - title: 'Andromeda: Performance, Isolation, and Velocity at Scale in Cloud Network Virtualization'
+
+        - name: Packet I/O libraries
+          papers:
+
+            - title: 'Netmap: a novel framework for fast packet I/O'
+
+            - title: 'Intel DPDK: Data Plane Development Kit'
+
+            - title: The Fast Data Project
+
+    - name: Hardware Switch Architectures
+      papers:
+
+        - title: 'PLUG: Flexible Lookup Modules for Rapid Deployment of New Protocols in High-speed Routers'
+
+        - title: 'SwitchBlade: A Platform for Rapid Deployment of Network Protocols on Programmable Hardware'
+
+        - title: 'Forwarding Metamorphosis: Fast Programmable Match-action Processing in Hardware for SDN'
+
+        - title: 'High-Speed Packet Processing using Reconfigurable Computing'
+
+        - title: What You Need to Know About SDN Control and Data Planes
+
+        - title: 'BlueSwitch: Enabling Provably Consistent Configuration of Network Switches'
+
+        - title: 'ClickNP: Highly Flexible and High Performance Network Processing with Reconfigurable Hardware'
+
+        - title: 'dRMT: Disaggregated Programmable Switching'
+
+        - title: Language-Directed Hardware Design for Network Performance Monitoring
+
+        - title: 'Azure Accelerated Networking: SmartNICs in the Public Cloud'
+
+    - name: Hybrid Hardware/Software Architectures
+      papers:
+
+        - title: 'PacketShader: A GPU-accelerated Software Router'
+
+        - title: 'Cheap Silicon: A Myth or Reality Picking the Right Data Plane Hardware for Software Defined Networking'
+
+        - title: 'Raising the Bar for Using GPUs in Software Packet Processing'
+
+        - title: 'CacheFlow: Dependency-Aware Rule-Caching for Software-Defined Networks'
+
+        - title: 'APUNet: Revitalizing GPU as Packet Processing Accelerator'
+
+    - name: Programmable NICs
+      papers: 
+
+        - title: 'We Need to Talk About NICs'
+
+        - title: 'NetFPGA SUME: Toward 100 Gbps as Research Commodity'
+
+        - title: 'SoftNIC: A Software NIC to Augment Hardware'
+
+        - title: High Performance Packet Processing with FlexNIC
+
+        - title: 'Floem: A Programming System for NIC-Accelerated Network Applications'
+
+        - title: 'Offloading Distributed Applications Onto SmartNICs Using iPipe'
+
+        - title: 'PicNIC: Predictable Virtualized NIC'
+            
 abstractions:
   name: Abstractions
 
