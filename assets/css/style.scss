@@ -5,11 +5,12 @@
 
 $link-color: #1d3557; // prussian blue
 $link-color-hover: #1d3557; // celadon blue
-
+$lighter-gray: #666666;
+$darker-gray: #333333;
 
 body {
 
-    color: #444444;
+    color: $darker-gray;
 
     nav {
         margin-bottom: 10px;
@@ -79,6 +80,16 @@ body {
             display: block;
         }
 
+    }
+
+    .authors {
+        a {
+            color: $darker-gray;
+
+            &:hover {
+                color: $lighter-gray;
+            }
+        }\
     }
 }
 
