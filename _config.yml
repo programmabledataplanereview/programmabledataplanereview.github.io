@@ -2,7 +2,6 @@
 theme: jekyll-theme-minimal
 
 title: The Programmable Data Plane Reading List
-authors: Oliver Michel, Gábor Rétvári, Roberto Bifulco, Stefan Schmid
 
 nav:
   - text: Architectures
