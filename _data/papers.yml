@@ -1059,3 +1059,89 @@ applications:
  
 misc:
   name: Miscellaneous Topics
+  preamble: There exists highly recommendable literature on the history of SDN and programmable data planes. We also report on two other important topics, deployment and algorithms of programmable data planes. 
+  categories:
+
+    - name: History
+      preamble: There are several interesting papers putting the technological trends around programmable networks into a historic perspective.
+      papers:
+
+        - title: 'Smart packets: Applying active networks to network management'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+
+        - title: The Road to SDN
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+
+        - title: Reconfigurable Network Systems and Software-Defined Networking
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+
+        - title: Programmable Forwarding Planes are Here to Stay
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                              
+    - name: Deployments
+      preamble: A very relevant question, which is also a research challenge, regards the deployment of SDN and programmable data planes.
+      papers:
+
+        - title: 'Ethane: Taking Control of the Enterprise'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+        
+        - title: 'Softcell: Scalable and flexible cellular core network architecture'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+        
+        - title: 'B4: Experience with a Globally-deployed Software Defined Wan'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+        
+        - title: A High Performance Packet Core for Next Generation Cellular Networks
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+        
+    - name: Simulators and evaluation platforms
+      papers:
+
+        - title: 'NS4: Enabling Programmable Data Plane Simulation'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                
