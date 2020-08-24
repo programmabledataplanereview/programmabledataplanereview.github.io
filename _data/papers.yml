@@ -670,7 +670,7 @@ abstractions:
           url:
           relevance:
           desc:
-                  
+
         - title: Approximating Fair Queueing on Reconfigurable Switches
           authors:
           in:
@@ -678,7 +678,7 @@ abstractions:
           url:
           relevance:
           desc:
-                  
+
         - title: Fast, Scalable, and Programmable Packet Scheduler in Hardware
           authors:
           in:
@@ -686,10 +686,92 @@ abstractions:
           url:
           relevance:
           desc:
-                      
+  
 algorithms:
   name: Algorithms & HW Realizations
+  premble: Another very relevant research area regards the design of algorithms and data planes for this new technology. 
+  papers:
 
+    - title: Packet Classification Using Tuple Space Search
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+
+    - title: 'Content-addressable memory (CAM) circuits and architectures: A tutorial and survey'
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+
+    - title: Efficient IP-address Lookup with a Shared Forwarding Table for Multiple Virtual Routers
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: A Smart Pre-classifier to Reduce Power Consumption of TCAMs for Multi-dimensional Packet Classification
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: Scalable, High Performance Ethernet Forwarding with CuckooSwitch
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: 'Compressing IP Forwarding Tables: Towards Entropy Bounds and Beyond'
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: SAX-PAC (Scalable And eXpressive PAcket Classification)
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: 'Towards Scalable SDN Switches: Enabling Faster Flow Table Entries Installation'
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: 'Hermes: Providing Tight Control over High-Performance SDN Switches'
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
+    - title: Fast String Searching on PISA
+      authors:
+      in:
+      year:
+      url:
+      relevance:
+      desc:
+                
 applications:
   name: Applications
 
