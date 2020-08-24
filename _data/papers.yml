@@ -12,7 +12,7 @@ architectures:
             
             - authors: Norbert Egi, Adam Greenhalgh, Mark Handley, Mickael Hoerdt, Felipe Huici, Laurent Mathy
               title: Towards High Performance Virtual Routers on Commodity Hardware
-              in: ACM CoNext
+              in: ACM CoNext '18
               year: 2018
               url: http://doi.acm.org/10.1145/1544012.1544032
               relevance: interesting
@@ -28,7 +28,7 @@ architectures:
 
             - authors: Mihai Dobrescu, Norbert Egi, Katerina Argyraki, Byung-Gon Chun, Kevin Fall, Gianluca Iannaccone, Allan Knies, Maziar Manesh, Sylvia Ratnasamy
               title: 'RouteBricks: Exploiting Parallelism to Scale Software Routers'
-              in: ACM SOSP
+              in: ACM SOSP '09
               year: 2009
               url: https://dl.acm.org/doi/10.1145/1629575.1629578
               relevance: interesting
@@ -47,7 +47,7 @@ architectures:
             
             - authors: Weibin Sun, Robert Ricci
               title: 'Fast and Flexible: Parallel Packet Processing with GPUs and Click'
-              in: ACM/IEEE ANCS
+              in: ACM/IEEE ANCS '13
               year: 2013
               url: https://dl.acm.org/doi/10.5555/2537857.2537861
               relevance: important
@@ -55,7 +55,7 @@ architectures:
 
             - authors: Joao Martins, Mohamed Ahmed, Costin Raiciu, Vladimir Olteanu, Michio Honda, Roberto Bifulco, Felipe Huici
               title: ClickOS and the Art of Network Function Virtualization
-              in: USENIX NSDI
+              in: USENIX NSDI '14
               year: 2014
               url: https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/martins
               relevance: mustread
@@ -70,18 +70,18 @@ architectures:
               desc: BESS is the Berkeley Extensible Software Switch developed at the University of California, Berkeley and at Nefeli Networks. BESS is heavily inspired by the Click modular router, representing a packet processing pipeline as a dataflow (multi)graph that consists of modules, each of which implements a NIC feature, and ports that act as sources and sinks for this pipeline. Packets received at a port flow through the pipeline to another port, and each module in the pipeline performs module-specific operations on packets.
 
             - title: 'mSwitch: A Highly-scalable, Modular Software Switch'
-              authors:
-              in:
-              year:
-              url:
+              authors: Michio Honda, Felipe Huici, Giuseppe Lettieri, Luigi Rizzo
+              in: ACM SOSR '15
+              year: 2015
+              url: https://dl.acm.org/doi/10.1145/2774993.2775065
               relevance:
               desc:              
 
             - title: 'NetBricks: Taking the V out of NFV'
-              authors:
-              in:
-              year:
-              url:
+              authors: Aurojit Panda, Sangjin Han, Keon Jang, Melvin Walls, Sylvia Ratnasamy, Scott Shenker
+              in: USENIX OSDI
+              year: 2016
+              url: https://www.usenix.org/conference/osdi16/technical-sessions/presentation/panda
               relevance:
               desc:
 
@@ -89,34 +89,34 @@ architectures:
           papers:
 
             - title: The Design and Implementation of Open vSwitch
-              authors:
-              in:
-              year:
-              url:
+              authors: Ben Pfaff, Justin Pettit, Teemu Koponen, Ethan Jackson, Andy Zhou, Jarno Rajahalme, Jesse Gross, Alex Wang, Joe Stringer,Pravin Shelar, Keith Amidon, Martín Casado
+              in: USENIX NSDI '15
+              year: 2015
+              url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/pfaff
               relevance:
               desc:
 
             - title: 'PISCES: A Programmable, Protocol-Independent Software Switch'
-              authors:
-              in:
-              year:
-              url:
+              authors: Muhammad Shahbaz, Sean Choi, Ben Pfaff, Changhoon Kim, Nick Feamster, Nick McKeown, Jennifer Rexford
+              in: ACM SIGCOMM '16
+              year: 2016
+              url: https://dl.acm.org/doi/10.1145/2934872.2934886
               relevance:
               desc:
 
             - title: 'SoftFlow: A Middlebox Architecture for Open vSwitch'
-              authors:
-              in:
-              year:
-              url:
+              authors: Ethan J. Jackson, Melvin Walls, Aurojit Panda, Justin Pettit, Ben Pfaff, Jarno Rajahalme, Teemu Koponen, Scott Shenker
+              in: USENIX ATC '16
+              year: 2016
+              url: https://www.usenix.org/conference/atc16/technical-sessions/presentation/jackson
               relevance:
               desc:
 
             - title: 'Dataplane Specialization for High-performance OpenFlow Software Switching'
-              authors:
-              in:
-              year:
-              url:
+              authors: László Molnár, Gergely Pongrácz, Gábor Enyedi, Zoltán Lajos Kis, Levente Csikor, Ferenc Juhász, Attila Kőrösi, and Gábor Rétvári
+              in: ACM SIGCOMM '16
+              year: 2016
+              url: https://dl.acm.org/doi/10.1145/2934872.2934887
               relevance:
               desc:
 
@@ -129,10 +129,10 @@ architectures:
               desc:
 
             - title: 'Andromeda: Performance, Isolation, and Velocity at Scale in Cloud Network Virtualization'
-              authors:
-              in:
-              year:
-              url:
+              authors: Michael Dalton, David Schultz, Jacob Adriaens, Ahsan Arefin, Anshuman Gupta, Brian Fahs, Dima Rubinstein, Enrique Cauich Zermeno, Erik Rubow, James Alexander Docauer, Jesse Alpert, Jing Ai, Jon Olson, Kevin DeCabooter, Marc de Kruijf, Nan Hua, Nathan Lewis, Nikhil Kasinadhuni, Riccardo Crepaldi, Srinivas Krishnan, Subbaiah Venkata, Yossi Richter, Uday Naik,  Amin Vahdat
+              in: USENIX NSDI '18
+              year: 2018
+              url: https://www.usenix.org/conference/nsdi18/presentation/dalton
               relevance:
               desc:
 
@@ -140,10 +140,10 @@ architectures:
           papers:
 
             - title: 'Netmap: a novel framework for fast packet I/O'
-              authors:
-              in:
-              year:
-              url:
+              authors: Luigi Rizzo
+              in: USENIX ATC '12
+              year: 2012
+              url: https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo
               relevance:
               desc:
 
@@ -167,33 +167,34 @@ architectures:
       papers:
 
         - title: 'PLUG: Flexible Lookup Modules for Rapid Deployment of New Protocols in High-speed Routers'
-          authors:
-          in:
-          year:
-          url:
+          authors: Lorenzo De Carli, Yi Pan, Amit Kumar, Cristian Estan,  Karthikeyan Sankaralingam
+          in: ACM SIGCOMM '09
+          year: 2009
+          url: https://dl.acm.org/doi/10.1145/1594977.1592593
           relevance:
           desc:
 
         - title: 'SwitchBlade: A Platform for Rapid Deployment of Network Protocols on Programmable Hardware'
-          authors:
-          in:
-          year:
-          url:
+          authors: Muhammad Bilal Anwer, Murtaza Motiwala, Mukarram bin Tariq,  Nick Feamster
+          in: ACM SIGCOMM '10
+          year: 2010
+          url: https://dl.acm.org/doi/10.1145/1851182.1851206
           relevance:
           desc:
+
         - title: 'Forwarding Metamorphosis: Fast Programmable Match-action Processing in Hardware for SDN'
-          authors:
-          in:
-          year:
-          url:
+          authors: Pat Bosshart, Glen Gibb, Hun-Seok Kim, George Varghese, Nick McKeown, Martin Izzard, Fernando Mujica, Mark Horowitz
+          in: ACM SIGCOMM '13
+          year: 2013
+          url: https://dl.acm.org/doi/10.1145/2486001.2486011
           relevance:
           desc:
 
         - title: 'High-Speed Packet Processing using Reconfigurable Computing'
-          authors:
-          in:
-          year:
-          url:
+          authors: Gordon Brebner, Weirong Jiang 
+          in: IEEE Micro 34,1
+          year: 2014
+          url: https://ieeexplore.ieee.org/document/6774354
           relevance:
           desc:
 
@@ -206,146 +207,146 @@ architectures:
           desc:
 
         - title: 'BlueSwitch: Enabling Provably Consistent Configuration of Network Switches'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors:  Jong Hun Han, Prashanth Mundkur, Charalampos Rotsos, Gianni Antichi, Nirav Dave, Andrew W. Moore, Peter G. Neumann
+          in: ACM/IEEE ANCS '15
+          year: 2015
+          url: https://ieeexplore.ieee.org/document/7110117
+          relevance: 
+          desc: 
 
         - title: 'ClickNP: Highly Flexible and High Performance Network Processing with Reconfigurable Hardware'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Bojie Li, Kun Tan, Layong (Larry) Luo, Yanqing Peng, Renqian Luo, Ningyi Xu, Yongqiang Xiong, Peng Cheng, Enhong Chen
+          in: ACM SIGCOMM '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2934872.2934897
+          relevance: 
+          desc: 
 
         - title: 'dRMT: Disaggregated Programmable Switching'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Sharad Chole, Andy Fingerhut, Sha Ma, Anirudh Sivaraman, Shay Vargaftik, Alon Berger, Gal Mendelson, Mohammad Alizadeh, Shang-Tse Chuang, Isaac Keslassy, Ariel Orda, Tom Edsall
+          in: ACM SIGCOMM '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3098822.3098823
+          relevance: 
+          desc: 
 
         - title: Language-Directed Hardware Design for Network Performance Monitoring
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Srinivas Narayana, Anirudh Sivaraman, Vikram Nathan, Prateesh Goyal, Venkat Arun, Mohammad Alizadeh, Vimalkumar Jeyakumar, Changhoon Kim
+          in: ACM SIGCOMM '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3098822.3098829
+          relevance: 
+          desc: 
 
         - title: 'Azure Accelerated Networking: SmartNICs in the Public Cloud'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Daniel Firestone, Andrew Putnam, Sambhrama Mundkur, Derek Chiou, Alireza Dabagh, Mike Andrewartha, Hari Angepat, Vivek Bhanu, Adrian Caulfield, Eric Chung, Harish Kumar Chandrappa, Somesh Chaturmohta, Matt Humphrey, Jack Lavier, Norman Lam, Fengfen Liu, Kalin Ovtcharov, Jitu Padhye, Gautham Popuri, Shachar Raindel, Tejas Sapre, Mark Shaw, Gabriel Silva, Madhan Sivakumar, Nisheeth Srivastava, Anshuman Verma, Qasim Zuhair, Deepak Bansal, Doug Burger, Kushagra Vaid, David A. Maltz, Albert Greenberg
+          in: USENIX NSDI '18
+          year: 2018
+          url: https://www.usenix.org/conference/nsdi18/presentation/firestone
+          relevance: 
+          desc: 
 
     - name: Hybrid Hardware/Software Architectures
       papers:
 
         - title: 'PacketShader: A GPU-accelerated Software Router'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Sangjin Han, Keon Jang, KyoungSoo Park, Sue Moon
+          in: ACM SIGCOMM '10
+          year: 2010
+          url: https://dl.acm.org/doi/10.1145/1851275.1851207
+          relevance: 
+          desc: 
 
         - title: 'Cheap Silicon: A Myth or Reality Picking the Right Data Plane Hardware for Software Defined Networking'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Gergely Pongrácz, László Molnár, Zoltán Lajos Kis, Zoltán Turányi
+          in: ACM HotSDN '13
+          year: 2013
+          url: https://dl.acm.org/doi/10.1145/2491185.2491204
+          relevance: 
+          desc: 
 
         - title: 'Raising the Bar for Using GPUs in Software Packet Processing'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Anuj Kalia, Dong Zhou, Michael Kaminsky, David G. Andersen
+          in: USENIX NSDI '15
+          year: 2015
+          url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/kalia
+          relevance: 
+          desc: 
 
         - title: 'CacheFlow: Dependency-Aware Rule-Caching for Software-Defined Networks'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Naga Katta, Omid Alipourfard, Jennifer Rexford, David Walker
+          in: ACM SOSR '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2890955.2890969
+          relevance: 
+          desc: 
 
         - title: 'APUNet: Revitalizing GPU as Packet Processing Accelerator'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Younghwan Go, Muhammad Asim Jamshed, YoungGyoun Moon, Changho Hwang, KyoungSoo Park
+          in: USENIX NSDI '17
+          year: 2017
+          url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/go
+          relevance: 
+          desc: 
 
     - name: Programmable NICs
       papers: 
 
         - title: 'We Need to Talk About NICs'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Pravin Shinde, Antoine Kaufmann, Timothy Roscoe, Stefan Kaestle
+          in: USENIX HotOS '13
+          year: 2013
+          url: https://www.usenix.org/conference/hotos13/session/shinde
+          relevance: 
+          desc: 
 
         - title: 'NetFPGA SUME: Toward 100 Gbps as Research Commodity'
           authors:
           in:
           year:
           url:
-          relevance:
-          desc:
+          relevance: 
+          desc: 
 
         - title: 'SoftNIC: A Software NIC to Augment Hardware'
           authors:
           in:
           year:
           url:
-          relevance:
-          desc:
+          relevance: 
+          desc: 
 
         - title: High Performance Packet Processing with FlexNIC
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Antoine Kaufmann, SImon Peter, Naveen Kr. Sharma, Thomas Anderson, Arvind Krishnamurthy
+          in: ACM ASPLOS '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2872362.2872367
+          relevance: 
+          desc: 
 
         - title: 'Floem: A Programming System for NIC-Accelerated Network Applications'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Phitchaya Mangpo Phothilimthana, Ming Liu, Antoine Kaufmann, Simon Peter, Rastislav Bodik, Thomas Anderson
+          in: USENIX OSDI '18
+          year: 2018
+          url: https://www.usenix.org/conference/osdi18/presentation/phothilimthana
+          relevance: 
+          desc: 
 
         - title: 'Offloading Distributed Applications Onto SmartNICs Using iPipe'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Ming Liu, Tianyi Cui, Henry Schuh, Arvind Krishnamurthy, Simon Peter, Karan Gupta
+          in: ACM SIGCOMM '19
+          year: 2019
+          url: https://dl.acm.org/doi/10.1145/3341302.3342079
+          relevance: 
+          desc: 
 
         - title: 'PicNIC: Predictable Virtualized NIC'
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Praveen Kumar, Nandita Dukkipati, Nathan Lewis, Yi Cui, Yaogong Wang, Chonggang Li, Valas Valancius, Jake Adriaens, Steve Gribble, Nate Foster, Amin Vahdat
+          in: ACM SIGCOMM '19
+          year: 2019
+          url: https://dl.acm.org/doi/10.1145/3341302.3342093
+          relevance: 
+          desc: 
 
 abstractions:
   name: Abstractions
