@@ -69,90 +69,624 @@ architectures:
               relevance: important
               desc: BESS is the Berkeley Extensible Software Switch developed at the University of California, Berkeley and at Nefeli Networks. BESS is heavily inspired by the Click modular router, representing a packet processing pipeline as a dataflow (multi)graph that consists of modules, each of which implements a NIC feature, and ports that act as sources and sinks for this pipeline. Packets received at a port flow through the pipeline to another port, and each module in the pipeline performs module-specific operations on packets.
 
-            - name: 'mSwitch: A Highly-scalable, Modular Software Switch'
+            - title: 'mSwitch: A Highly-scalable, Modular Software Switch'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:              
 
-            - name: 'NetBricks: Taking the V out of NFV'
+            - title: 'NetBricks: Taking the V out of NFV'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
         - name: The Match-action Abstraction
           papers:
 
             - title: The Design and Implementation of Open vSwitch
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: 'PISCES: A Programmable, Protocol-Independent Software Switch'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: 'SoftFlow: A Middlebox Architecture for Open vSwitch'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: 'Dataplane Specialization for High-performance OpenFlow Software Switching'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: 'Dynamic Compilation and Optimization of Packet Processing Programs'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: 'Andromeda: Performance, Isolation, and Velocity at Scale in Cloud Network Virtualization'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
         - name: Packet I/O libraries
           papers:
 
             - title: 'Netmap: a novel framework for fast packet I/O'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: 'Intel DPDK: Data Plane Development Kit'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
             - title: The Fast Data Project
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
 
     - name: Hardware Switch Architectures
       papers:
 
         - title: 'PLUG: Flexible Lookup Modules for Rapid Deployment of New Protocols in High-speed Routers'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'SwitchBlade: A Platform for Rapid Deployment of Network Protocols on Programmable Hardware'
-
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
         - title: 'Forwarding Metamorphosis: Fast Programmable Match-action Processing in Hardware for SDN'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'High-Speed Packet Processing using Reconfigurable Computing'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: What You Need to Know About SDN Control and Data Planes
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'BlueSwitch: Enabling Provably Consistent Configuration of Network Switches'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'ClickNP: Highly Flexible and High Performance Network Processing with Reconfigurable Hardware'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'dRMT: Disaggregated Programmable Switching'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: Language-Directed Hardware Design for Network Performance Monitoring
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'Azure Accelerated Networking: SmartNICs in the Public Cloud'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
     - name: Hybrid Hardware/Software Architectures
       papers:
 
         - title: 'PacketShader: A GPU-accelerated Software Router'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'Cheap Silicon: A Myth or Reality Picking the Right Data Plane Hardware for Software Defined Networking'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'Raising the Bar for Using GPUs in Software Packet Processing'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'CacheFlow: Dependency-Aware Rule-Caching for Software-Defined Networks'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'APUNet: Revitalizing GPU as Packet Processing Accelerator'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
     - name: Programmable NICs
       papers: 
 
         - title: 'We Need to Talk About NICs'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'NetFPGA SUME: Toward 100 Gbps as Research Commodity'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'SoftNIC: A Software NIC to Augment Hardware'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: High Performance Packet Processing with FlexNIC
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'Floem: A Programming System for NIC-Accelerated Network Applications'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'Offloading Distributed Applications Onto SmartNICs Using iPipe'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
 
         - title: 'PicNIC: Predictable Virtualized NIC'
-            
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+
 abstractions:
   name: Abstractions
+  preamble: At the heart of programmable data planes lies the question of which abstractions and programming interfaces to provide. We first review literature on low-level APIs, including OpenFlow and P4, and then discuss more high-level languages and compilers, including DevoFlow and the Frenetic framework. Particular focus is put on stateful abstractions. We then extend our review to literature on parser design as well as scheduling, and in particular, the question whether there exist universal packet scheduling algorithms.
 
+  categories:
+
+    - name: Languages and Compilers
+      preamble: |
+        We start our survey with the seminal paper on OpenFlow, introducing a standardized interface to manage flow table entries in data plane devices via a standard control-plane–data-plane API. We then proceed by discussing P4 and its alternatives and use cases. We also review, among other, high-performance packet processing languages and make the case for intermediate representations for programmable data planes.
+
+        We then proceed to more high-level languages and abstractions, discuss programming languages such as Pyretic, systems such as Maple, or novel switch designs like HARMLESS to seamlessly add SDN capability to legacy network gear.
+
+      sections:
+
+        - name: Low-level APIs
+          papers:
+
+            - title: 'OpenFlow: Enabling Innovation in Campus Networks'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+
+            - title: 'packetC: Language for High Performance Packet Processing'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'Protocol-oblivious Forwarding: Unleash the Power of SDN Through a Future-proof Forwarding Plane'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'P4: Programming protocol-independent packet processors'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'DC.P4: Programming the Forwarding Plane of a Data-center Switch'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: The Case for an Intermediate Representation for Programmable Data Planes
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: Improving SDN with InSPired Switches
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'PVPP: A Programmable Vector Packet Processor'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+        - name: High-level Languages and Compilers
+          papers:
+
+            - title: 'DevoFlow: scaling flow management for high-performance networks'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'Composing Software Defined Networks'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'Maple: simplifying SDN programming using algorithmic policies'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: Languages for software-defined networks
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'NetKAT: Semantic Foundations for Networks'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: A Purely Functional Approach to Packet Processing
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'Reclaiming the Brain: Useful OpenFlow Functions in the Data Plane'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: Compiling Packet Programs to Reconfigurable Switches
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'VFP: A Virtual Switch Platform for Host SDN in the Public Cloud'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'P4FPGA: A Rapid Prototyping Framework for P4'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: 'HARMLESS: Cost-Effective Transitioning to SDN for Small Enterprises'
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+            - title: Dataplane equivalence and its applications
+              authors:
+              in:
+              year:
+              url:
+              relevance:
+              desc:
+                  
+    - name: Abstractions for Embedded State
+      preamble: While OpenFlow match/action table abstractions are stateless, there are many efforts toward devising a stateful data plane programming abstraction, e.g., based on finite state machines, for supporting more dynamic applications. We discuss such approaches as well as first workload characterizations of stateful networking applications. We also review literature on the challenge of consistent state migration and elastic scaling, and discuss security implications.
+      papers:
+
+        - title: Workload Characterization of Stateful Networking Applications
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'OpenState: Programming Platform-independent Stateful Openflow Applications Inside the Switch'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Flow-level State Transition As a New Switch Primitive for SDN'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'SNAP: Stateful Network-Wide Abstractions for Packet Processing'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Kinetic: Verifiable Dynamic Network Control'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Packet Transactions: High-Level Programming for Line-Rate Switches'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Open Packet Processor: a programmable architecture for wire speed platform-independent stateful in-network processing'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Paving the Way for NFV: Simplifying Middlebox Modifications Using StateAlyzr'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Swing State: Consistent Updates for Stateful and Programmable Data Planes'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'A Survey on the Security of Stateful SDN Data Planes'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Stateless Network Functions: Breaking the Tight Coupling of State and Processing'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Elastic Scaling of Stateful Network Functions'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'FlowBlaze: Stateful Packet Processing in Hardware'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+    - name: Programmable Parsing and Scheduling
+      desc: We start by reviewing design principles for packet parsers. We then revisit the concept of a universal scheduler that would handle all queuing strategies that may arise in a programmable switch, and ask whether such a scheduling algorithm can really exist. We conclude with a review of fair queuing on reconfigurable switches.
+      papers:
+
+        - title: Design principles for packet parsers
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'No Silver Bullet: Extending SDN to the Data Plane'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Universal Packet Scheduling'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: 'Programmable Packet Scheduling at Line Rate'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: Approximating Fair Queueing on Reconfigurable Switches
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                  
+        - title: Fast, Scalable, and Programmable Packet Scheduler in Hardware
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+                      
 algorithms:
   name: Algorithms & HW Realizations
 
