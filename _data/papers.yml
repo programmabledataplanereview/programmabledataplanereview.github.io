@@ -689,7 +689,7 @@ abstractions:
   
 algorithms:
   name: Algorithms & HW Realizations
-  premble: Another very relevant research area regards the design of algorithms and data planes for this new technology. 
+  preamble: Another very relevant research area regards the design of algorithms and data planes for this new technology. 
   papers:
 
     - title: Packet Classification Using Tuple Space Search
@@ -774,6 +774,288 @@ algorithms:
                 
 applications:
   name: Applications
+  preamble: |
+    A main motivation for programmable data planes are the novel applications they enable. We identify and, in the following, will discuss five main categories: applications related to resilient and efficient forwarding, in-network computation, consensus, telemetry, and load-balancing.
 
+    One may wonder, what aspects of SDN and programmable data plane make these applications possible? There is probably no single perfect answer to this question.
+
+    Applications related to in-network computation typically leverage new hardware-assisted primitive operations, supported in the data plane, to provide novel functionality and improve performance. Resilient and efficient routing (and to some extent load-balancing) leverage the unique and unprecedented programmatic control over the way traffic flows through the network, e.g., to implement advanced functionality in the data plane (whereas formerly it used to be handled, e.g., in the control plane). Measurement applications benefit from the improved traffic visibility and/or from the improved latency and throughput at which high-volume and highly variable traffic can be handled, if offloaded to the data plane. Reduced latency and improved reaction time is arguably also a key reason for consensus applications. Furthermore, measurement applications benefit from the fact that they can be expressed in terms of simple primitives (e.g., sketches). We also note that such applications are not limited to be "performed (only) in the network": for example, telemetry can (and today often does) occur outside the network. That said, telemetry applications also benefit from the new visibility into the network, e.g., queues occupation levels of the switches along the path. Many interesting applications also arise from offloading applications that were formerly handled in a separate middlebox to programmable switches.
+
+    In general, any application designed for a non-programmable device may benefit from the flexibilities introduced by a programmable counterpart (e.g., allowing to evolve the application). Also, applications with a strong networking component (e.g., request-response patterns) are more likely to benefit from in-network services, as much communication traffic naturally traverses the network anyway.
+
+  categories:
+
+    - name: Resilient, Robust, and Efficient Forwarding
+      preamble: Data planes often operate much faster than the control plane, which motivates to move functionality for maintaining connectivity and efficient routing under failures to the switches. At the same time, implementing such functionality is non-trivial, as discussed in the following research papers. 
+      papers:
+
+        - title: 'Hedera: Dynamic Flow Scheduling for Data Center Networks'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+          
+        - title: Ensuring Connectivity via Data Plane Mechanisms
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'The show must go on: Fundamental data plane connectivity services for dependable SDNs'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Blink: Fast Connectivity Recovery Entirely in the Data Plane'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+    - name: In-network Computation
+      preamble: Offloading computation, on‐path aggregation functionalities, caching, or even AI, to the network, has the potential to significantly improve the efficiency of distributed applications. Accordingly, the study of such mechanisms have recently received much attention. 
+      papers:
+
+        - title: 'Camdoop: Exploiting In-network Aggregation for Big Data Applications'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Netagg: Using middleboxes for application-specific on-path aggregation in data centres'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Scalable hierarchical aggregation protocol (SHArP): a hardware architecture for efficient data reduction'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: In-Network Computation is a Dumb Idea Whose Time Has Come
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'IncBricks: Toward In-Network Computation with an In-Network Cache'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Evaluating the Power of Flexible Packet Processing for Network Resource Allocation'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Can the Network Be the AI Accelerator'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+          
+        - title: In-network Neural Networks
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+        
+    - name: Distributed Consensus
+      preamble: |
+        Another interesting application for programmable data planes is related to consensus algorithms: the coordination among controllers or switches may be performed most efficiently directly on the network devices. Over the last years, several interesting first approaches have been reported in the literature, not only to compute consensus but also to provide different notions of consistency more generally. 
+      papers:
+
+        - title: 'NetPaxos: Consensus at Network Speed'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: Paxos Made Switch-y
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: Be Fast, Cheap and in Control with SwitchKV
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: In-band synchronization for distributed SDN control planes
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'NetCache: Balancing Key-Value Stores with Fast In-Network Caching'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'KV-Direct: High-Performance In-Memory Key-Value Store with Programmable NIC'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'NetChain: Scale-Free Sub-RTT Coordination'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+    - name: Monitoring, Telemetry, and Measurement
+      preamble: Perhaps the most interesting applications are related to network measurement, monitoring and diagnosis. Indeed, programmable data planes can be a game changer, providing deep insights into the network, even to end-hosts, as we discuss in the following. 
+      papers:
+
+        - title: 'Millions of little minions: Using packets for low latency network programming and visibility'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: In-band Network Telemetry via Programmable Dataplanes
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: Towards Accurate Online Traffic Matrix Estimation in Software-defined Networks
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: In-band Network Telemetry (INT)
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: Heavy-Hitter Detection Entirely in the Data Plane
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Dapper: Data plane performance diagnosis of TCP'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'SketchVisor: Robust Network Measurement for Software Packet Processing'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+    - name: Load balancing
+      preamble: Last but not least, and similarly to the above discussion on resilient routing, programmable data planes provide unprecedented flexibilities (and performance) in how traffic can be dynamically load-balanced. 
+      papers:
+
+        - title: 'Hula: Scalable load balancing using programmable data planes'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'SilkRoad: Making Stateful Layer-4 Load Balancing Fast and Cheap Using Switching ASICs'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: 'Load Balancing Memcached Traffic Using Software Defined Networking'
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+    - name: Control plane acceleration
+      papers:
+
+        - title: Hardware-Accelerated Network Control Planes
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
+        - title: Precise Time-synchronization in the Data-Plane Using Programmable Switching ASICs
+          authors:
+          in:
+          year:
+          url:
+          relevance:
+          desc:
+ 
 misc:
   name: Miscellaneous Topics
