@@ -2,6 +2,10 @@
 
 {{list.preamble}}
 
+{% for paper in list.papers %}
+    {% include paper.html paper=paper %}
+{% endfor %}
+
 {% for category in list.categories %}
 
     <h3>{{category.name}}</h3>
@@ -17,7 +21,6 @@
         {% for paper in section.papers %}
             {% include paper.html paper=paper %}
         {% endfor %}
-
     {% endfor %}
 
 {% endfor %}
