@@ -366,66 +366,66 @@ abstractions:
           papers:
 
             - title: 'OpenFlow: Enabling Innovation in Campus Networks'
-              authors:
-              in:
-              year:
-              url:
+              authors: Nick McKeown, Tom Anderson, Hari Balakrishnan, Guru Parulkar, Larry Peterson, Jennifer Rexford, Scott Shenker,  Jonathan Turner
+              in: ACM SIGCOMM CCR 28,2
+              year: 2008
+              url: https://dl.acm.org/doi/10.1145/1355734.1355746
               relevance:
               desc:
 
             - title: 'packetC: Language for High Performance Packet Processing'
-              authors:
-              in:
-              year:
-              url:
+              authors: Ralph Duncan, Peder Jungck
+              in: IEEE HPCC '09
+              year: 2009
+              url: https://ieeexplore.ieee.org/document/5167027/authors#authors
               relevance:
               desc:
                   
             - title: 'Protocol-oblivious Forwarding: Unleash the Power of SDN Through a Future-proof Forwarding Plane'
-              authors:
-              in:
-              year:
-              url:
+              authors: Haoyu Song
+              in: ACM HotSDN '13 
+              year: 2013
+              url: https://dl.acm.org/doi/10.1145/2491185.2491190
               relevance:
               desc:
                   
             - title: 'P4: Programming protocol-independent packet processors'
-              authors:
-              in:
-              year:
-              url:
+              authors: Pat Bosshart, Dan Daly, Glen Gibb, Martin Izzard, Nick McKeown, Jennifer Rexford, Cole Schlesinger, Dan Talayco, Amin Vahdat, George Varghese, David Walker
+              in: ACM SIGCOMM CCR 44,3
+              year: 2014
+              url: https://dl.acm.org/doi/10.1145/2656877.2656890
               relevance:
               desc:
                   
             - title: 'DC.P4: Programming the Forwarding Plane of a Data-center Switch'
-              authors:
-              in:
-              year:
-              url:
+              authors: Anirudh Sivaraman, Changhoon Kim, Ramkumar Krishnamoorthy, Advait Dixit, Mihai Budiu
+              in: ACM SOSR '15
+              year: 2015
+              url: https://dl.acm.org/doi/10.1145/2774993.2775007
               relevance:
               desc:
                   
             - title: The Case for an Intermediate Representation for Programmable Data Planes
-              authors:
-              in:
-              year:
-              url:
+              authors: Muhammad Shahbaz, Nick Feamster
+              in: ACM SOSR '15
+              year: 2015
+              url: https://dl.acm.org/doi/10.1145/2774993.2775000
               relevance:
               desc:
                   
             - title: Improving SDN with InSPired Switches
-              authors:
-              in:
-              year:
-              url:
+              authors: Roberto Bifulco, Julien Boite, Mathieu Bouet, Fabian Schneider
+              in: ACM SOSR '16
+              year: 2016
+              url: https://dl.acm.org/doi/10.1145/2890955.2890962
               relevance:
               desc:
                   
             - title: 'PVPP: A Programmable Vector Packet Processor'
-              authors:
-              in:
-              year:
-              url:
+              authors: Sean Choi, Xiang Long, Muhammad Shahbaz, Skip Booth, Andy Keep, John Marshall, Changhoon Kim
+              in: ACM SOSR '17
+              year: 2017
+              url: https://dl.acm.org/doi/10.1145/3050220.3060609
               relevance:
               desc:
                   
@@ -433,98 +433,98 @@ abstractions:
           papers:
 
             - title: 'DevoFlow: scaling flow management for high-performance networks'
-              authors:
-              in:
-              year:
-              url:
+              authors: Andrew R. Curtis, Jeffrey C. Mogul, Jean Tourrilhes, Praveen Yalagandula, Puneet Sharma, Sujata Banerjee
+              in: ACM SIGCOMM '11
+              year: 2011
+              url: https://dl.acm.org/doi/10.1145/2018436.2018466
               relevance:
               desc:
                   
             - title: 'Composing Software Defined Networks'
-              authors:
-              in:
-              year:
-              url:
+              authors: Christopher Monsanto, Joshua Reich, Nate Foster, Jennifer Rexford, David Walker
+              in: USENIX NSDI '13
+              year: 2013
+              url: https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/monsanto
               relevance:
               desc:
                   
             - title: 'Maple: simplifying SDN programming using algorithmic policies'
-              authors:
-              in:
-              year:
-              url:
+              authors: Andreas Voellmy, Junchang Wang, Y Richard Yang, Bryan Ford, Paul Hudak
+              in: ACM SIGCOMM '13
+              year: 2013
+              url: https://dl.acm.org/doi/10.1145/2534169.2486030
               relevance:
               desc:
                   
             - title: Languages for software-defined networks
-              authors:
-              in:
-              year:
-              url:
+              authors:  Nate Foster, Arjun Guha, Mark Reitblatt, Alec Story, Michael J. Freedman, Naga Praveen Katta, Christopher Monsanto, Joshua Reich, Jennifer Rexford, Cole Schlesinger, David Walker, Robert Harrison
+              in: IEEE Communications 51,2
+              year: 2013
+              url: https://ieeexplore.ieee.org/document/6461197
               relevance:
               desc:
                   
             - title: 'NetKAT: Semantic Foundations for Networks'
-              authors:
-              in:
-              year:
-              url:
+              authors: Carolyn Jane Anderson, Nate Foster, Arjun Guha, Jean-Baptiste Jeannin, Dexter Kozen, Cole Schlesinger, David Walker
+              in: ACM POPL '14
+              year: 2014
+              url: https://dl.acm.org/doi/10.1145/2578855.2535862
               relevance:
               desc:
                   
             - title: A Purely Functional Approach to Packet Processing
-              authors:
-              in:
-              year:
-              url:
+              authors: Nicola Bonelli, Stefano Giordano, Gregorio Procissi, Luca Abeni
+              in: ACM/IEEE ANCS '14
+              year: 2014
+              url: https://dl.acm.org/doi/10.1145/2658260.2658269
               relevance:
               desc:
                   
             - title: 'Reclaiming the Brain: Useful OpenFlow Functions in the Data Plane'
-              authors:
-              in:
-              year:
-              url:
+              authors: Liron Schiff, Michael Borokhovich, Stefan Schmid
+              in: ACM HotNets '14
+              year: 2014
+              url: https://dl.acm.org/doi/10.1145/2670518.2673874
               relevance:
               desc:
                   
             - title: Compiling Packet Programs to Reconfigurable Switches
-              authors:
-              in:
-              year:
-              url:
+              authors: Lavanya Jose, Lisa Yan, George Varghese, Nick McKeown
+              in: USENIX NSDI '15
+              year: 2015
+              url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/jose
               relevance:
               desc:
                   
             - title: 'VFP: A Virtual Switch Platform for Host SDN in the Public Cloud'
-              authors:
-              in:
-              year:
-              url:
+              authors: Daniel Firestone
+              in: USENIX NSDI '17
+              year: 2017
+              url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/firestone
               relevance:
               desc:
                   
             - title: 'P4FPGA: A Rapid Prototyping Framework for P4'
-              authors:
-              in:
-              year:
-              url:
+              authors: Han Wang, Robert Soulé, Huynh Tu Dang, Ki Suh Lee, Vishal Shrivastav, Nate Foster, Hakim Weatherspoon
+              in: ACM SOSR '17
+              year: 2017
+              url: https://dl.acm.org/doi/10.1145/3050220.3050234
               relevance:
               desc:
                   
             - title: 'HARMLESS: Cost-Effective Transitioning to SDN for Small Enterprises'
-              authors:
-              in:
-              year:
-              url:
+              authors: Levente Csikor, László Toka, Márk Szalay, Gergely Pongrácz, Dimitrios P. Pezaros, Gábor Rétvári 
+              in: IFIP Networking '18
+              year: 2018
+              url: https://ieeexplore.ieee.org/document/8696504
               relevance:
               desc:
                   
             - title: Dataplane equivalence and its applications
-              authors:
-              in:
-              year:
-              url:
+              authors: Dragos Dumitrescu, Radu Stoenescu, Matei Popovici, Lorina Negreanu, Costin Raiciu
+              in: USENIX NSDI '19
+              year: 2019
+              url: https://www.usenix.org/conference/nsdi19/presentation/dumitrescu
               relevance:
               desc:
                   
@@ -533,106 +533,106 @@ abstractions:
       papers:
 
         - title: Workload Characterization of Stateful Networking Applications
-          authors:
-          in:
-          year:
-          url:
+          authors: Javier Verdú, Mario Nemirovsky, Jorge García, Mateo Valero
+          in: IEEE ISHPC '08
+          year: 2008
+          url: https://link.springer.com/chapter/10.1007/978-3-540-77704-5_11
           relevance:
           desc:
                   
         - title: 'OpenState: Programming Platform-independent Stateful Openflow Applications Inside the Switch'
-          authors:
-          in:
-          year:
-          url:
+          authors: Giuseppe Bianchi, Marco Bonola, Antonio Capone, Carmelo Cascone
+          in: ACM SIGCOMM CCR 44,2
+          year: 2014
+          url: https://dl.acm.org/doi/10.1145/2602204.2602211
           relevance:
           desc:
                   
         - title: 'Flow-level State Transition As a New Switch Primitive for SDN'
-          authors:
-          in:
-          year:
-          url:
+          authors: Masoud Moshref, Apoorv Bhargava, Adhip Gupta, Minlan Yu, Ramesh Govindan
+          in: ACM HotSDN '14
+          year: 2014
+          url: https://dl.acm.org/doi/10.1145/2620728.2620729
           relevance:
           desc:
                   
         - title: 'SNAP: Stateful Network-Wide Abstractions for Packet Processing'
-          authors:
-          in:
-          year:
-          url:
+          authors: Mina Tahmasbi Arashloo, Yaron Koral, Michael Greenberg, Jennifer Rexford, David Walker
+          in: ACM SIGCOMM '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2934872.2934892
           relevance:
           desc:
                   
         - title: 'Kinetic: Verifiable Dynamic Network Control'
-          authors:
-          in:
-          year:
-          url:
+          authors: Hyojoon Kim, Joshua Reich, Arpit Gupta, Muhammad Shahbaz,  Nick Feamster, Russ Clark
+          in: USENIX NSDI '15
+          year: 2015
+          url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/kim
           relevance:
           desc:
                   
         - title: 'Packet Transactions: High-Level Programming for Line-Rate Switches'
-          authors:
-          in:
-          year:
-          url:
+          authors: Anirudh Sivaraman, Alvin Cheung, Mihai Budiu, Changhoon Kim, Mohammad Alizadeh, Hari Balakrishnan, George Varghese, Nick McKeown,  Steve Licking
+          in: ACM SIGCOMM '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2934872.2934900
           relevance:
           desc:
                   
         - title: 'Open Packet Processor: a programmable architecture for wire speed platform-independent stateful in-network processing'
-          authors:
-          in:
-          year:
-          url:
+          authors: Giuseppe Bianchi, Marco Bonola, Salvatore Pontarelli, Davide Sanvito, Antonio Capone, Carmelo Cascone
+          in: unpublished manuscript
+          year: 2016
+          url: https://arxiv.org/abs/1605.01977
           relevance:
           desc:
                   
         - title: 'Paving the Way for NFV: Simplifying Middlebox Modifications Using StateAlyzr'
-          authors:
-          in:
-          year:
-          url:
+          authors: Junaid Khalid, Aaron Gember-Jacobson, Roney Michael, Anubhavnidhi Abhashkumar,Aditya Akella
+          in: USENIX NSDI '16
+          year: 2016
+          url: https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/khalid
           relevance:
           desc:
                   
         - title: 'Swing State: Consistent Updates for Stateful and Programmable Data Planes'
-          authors:
-          in:
-          year:
-          url:
+          authors: Shouxi Luo, Hongfang Yu, Laurent Vanbever
+          in: ACM SOSR '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3050220.3050233
           relevance:
           desc:
                   
         - title: 'A Survey on the Security of Stateful SDN Data Planes'
-          authors:
-          in:
-          year:
-          url:
+          authors:  Tooska Dargahi, Alberto Caponi, Moreno Ambrosin, Giuseppe Bianchi, Mauro Conti 
+          in: IEEE Comm. Surveys & Tutorials 19,3
+          year: 2017
+          url: https://ieeexplore.ieee.org/document/7890396
           relevance:
           desc:
                   
         - title: 'Stateless Network Functions: Breaking the Tight Coupling of State and Processing'
-          authors:
-          in:
-          year:
-          url:
+          authors: Murad Kablan, Azzam Alsudais, Eric Keller, Franck Le
+          in: USENIX NSDI '17
+          year: 2017
+          url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/kablan
           relevance:
           desc:
                   
         - title: 'Elastic Scaling of Stateful Network Functions'
-          authors:
-          in:
-          year:
-          url:
+          authors: Shinae Woo, Justine Sherry, Sangjin Han, Sue Moon, Sylvia Ratnasamy, Scott Shenker
+          in: USENIX NSDI '18
+          year: 2018
+          url: https://www.usenix.org/conference/nsdi18/presentation/woo
           relevance:
           desc:
                   
         - title: 'FlowBlaze: Stateful Packet Processing in Hardware'
-          authors:
-          in:
-          year:
-          url:
+          authors: Salvatore Pontarelli, Roberto Bifulco, Marco Bonola, Carmelo Cascone, Marco Spaziani, Valerio Bruschi, Davide Sanvito, Giuseppe Siracusano, Antonio Capone, Michio Honda, Felipe Huici, Giuseppe Bianchi
+          in: USENIX NSDI '19
+          year: 2019
+          url: https://www.usenix.org/conference/nsdi19/presentation/pontarelli
           relevance:
           desc:
                   
@@ -641,50 +641,50 @@ abstractions:
       papers:
 
         - title: Design principles for packet parsers
-          authors:
-          in:
-          year:
-          url:
+          authors: Glen Gibb, George Varghese, Mark Horowitz, Nick McKeown
+          in: ACM/IEEE ANCS '13
+          year: 2013
+          url: https://dl.acm.org/doi/10.5555/2537857.2537860
           relevance:
           desc:
                   
         - title: 'No Silver Bullet: Extending SDN to the Data Plane'
-          authors:
-          in:
-          year:
-          url:
+          authors: Anirudh Sivaraman, Keith Winstein, Suvinay Subramanian, Hari Balakrishnan
+          in: ACM HotNets '13
+          year: 2013
+          url: https://dl.acm.org/doi/10.1145/2535771.2535796 
           relevance:
           desc:
                   
         - title: 'Universal Packet Scheduling'
-          authors:
-          in:
-          year:
-          url:
+          authors: Radhika Mittal, Rachit Agarwal, Sylvia Ratnasamy, Scott Shenker
+          in: USENIX NSDI '16
+          year: 2016
+          url: https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/mittal
           relevance:
           desc:
                   
         - title: 'Programmable Packet Scheduling at Line Rate'
-          authors:
-          in:
-          year:
-          url:
+          authors: Anirudh Sivaraman, Suvinay Subramanian, Mohammad Alizadeh, Sharad Chole, Shang-Tse Chuang, Anurag Agrawal, Hari Balakrishnan, Tom Edsall, Sachin Katti, Nick McKeown
+          in: ACM SIGCOMM '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2934872.2934899
           relevance:
           desc:
 
         - title: Approximating Fair Queueing on Reconfigurable Switches
-          authors:
-          in:
-          year:
-          url:
+          authors: Naveen Kr. Sharma, Ming Liu, Kishore Atreya, Arvind Krishnamurthy
+          in: USENIX NSDI '18
+          year: 2018
+          url: https://www.usenix.org/conference/nsdi18/presentation/sharma
           relevance:
           desc:
 
         - title: Fast, Scalable, and Programmable Packet Scheduler in Hardware
-          authors:
-          in:
-          year:
-          url:
+          authors: Vishal Shrivastav
+          in: ACM SIGCOMM '19
+          year: 2019
+          url: https://dl.acm.org/doi/10.1145/3341302.3342090
           relevance:
           desc:
   
