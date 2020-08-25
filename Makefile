@@ -5,7 +5,6 @@ JEKYLL=jekyll
 build:
 	$(JEKYLL) build
 
-
 check:
 	$(JEKYLL) doctor
 

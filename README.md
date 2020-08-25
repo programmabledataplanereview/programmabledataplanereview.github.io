@@ -3,10 +3,23 @@
 
 *Oliver Michel, Gábor Rétvári, Roberto Bifulco, Stefan Schmid*
 
-### Paper Entry Template
+### Prerequisites for local testing
 
-    - authors: 
-      title: 
+  * Ruby
+  * Bundler: `gem install bundler`
+
+Install dependencies:
+
+    make install
+
+Serve page on local web server:
+
+    make serve
+
+### Paper entry template
+
+    - title: 
+      authors: 
       in: 
       year: 
       url: 
