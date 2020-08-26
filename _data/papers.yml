@@ -694,82 +694,82 @@ algorithms:
   papers:
 
     - title: Packet Classification Using Tuple Space Search
-      authors:
-      in:
-      year:
-      url:
+      authors: V. Srinivasan, S. Suri, and G. Varghese
+      in: ACM SIGCOMM '99
+      year: 1999
+      url: https://dl.acm.org/doi/10.1145/316188.316216
       relevance:
       desc:
 
     - title: 'Content-addressable memory (CAM) circuits and architectures: A tutorial and survey'
-      authors:
-      in:
-      year:
-      url:
+      authors: Kostas Pagiamtzis, Ali Sheikholeslami
+      in: IEEE Journal of Solid-State Circuits 41,3
+      year: 2006
+      url: https://ieeexplore.ieee.org/document/1599540
       relevance:
       desc:
 
     - title: Efficient IP-address Lookup with a Shared Forwarding Table for Multiple Virtual Routers
-      authors:
-      in:
-      year:
-      url:
+      authors: Jing Fu, Jennifer Rexford
+      in: ACM CoNEXT '08
+      year: 2008
+      url: https://dl.acm.org/doi/10.1145/1544012.1544033
       relevance:
       desc:
                 
     - title: A Smart Pre-classifier to Reduce Power Consumption of TCAMs for Multi-dimensional Packet Classification
-      authors:
-      in:
-      year:
-      url:
+      authors: Yadi Ma, Suman Banerjee
+      in: ACM SIGCOMM CCR 42,4
+      year: 2012
+      url: https://dl.acm.org/doi/10.1145/2377677.2377749
       relevance:
       desc:
                 
     - title: Scalable, High Performance Ethernet Forwarding with CuckooSwitch
-      authors:
-      in:
-      year:
-      url:
+      authors: Dong Zhou, Bin Fan, Hyeontaek Lim, Michael Kaminsky, David G. Andersen
+      in: ACM CoNEXT '13
+      year: 2013
+      url: https://dl.acm.org/doi/10.1145/2535372.2535379
       relevance:
       desc:
                 
     - title: 'Compressing IP Forwarding Tables: Towards Entropy Bounds and Beyond'
-      authors:
-      in:
-      year:
-      url:
+      authors: Gábor Rétvári, János Tapolcai, Attila Kőrösi, András Majdán,  Zalán Heszberger
+      in: IEEE/ACM Trans. Networking 24,1
+      year: 2016
+      url: https://ieeexplore.ieee.org/document/6910329
       relevance:
       desc:
                 
     - title: SAX-PAC (Scalable And eXpressive PAcket Classification)
-      authors:
-      in:
-      year:
-      url:
+      authors: Kirill Kogan, Sergey Nikolenko, Ori Rottenstreich, William Culhane, Patrick Eugster
+      in: ACM SIGCOMM '14
+      year: 2014
+      url: https://dl.acm.org/doi/10.1145/2740070.2626294
       relevance:
       desc:
                 
     - title: 'Towards Scalable SDN Switches: Enabling Faster Flow Table Entries Installation'
-      authors:
-      in:
-      year:
-      url:
+      authors: Roberto Bifulco, Anton Matsiuk
+      in: ACM SIGCOMM CCR 45,4
+      year: 2015
+      url: https://dl.acm.org/doi/10.1145/2829988.2790008
       relevance:
       desc:
                 
     - title: 'Hermes: Providing Tight Control over High-Performance SDN Switches'
-      authors:
-      in:
-      year:
-      url:
+      authors: Huan Chen, Theophilus Benson
+      in: ACM CoNEXT '17
+      year: 2017
+      url: https://dl.acm.org/doi/10.1145/3143361.3143391
       relevance:
       desc:
                 
     - title: Fast String Searching on PISA
-      authors:
-      in:
-      year:
-      url:
+      authors: Theo Jepsen, Daniel Alvarez, Nate Foster, Changhoon Kim, Jeongkeun Lee, Masoud Moshref, and Robert Soulé
+      in: ACM SOSR '19
+      year: 2019
+      url: https://dl.acm.org/doi/10.1145/3314148.3314356
       relevance:
       desc:
                 
