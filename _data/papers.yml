@@ -1060,70 +1060,70 @@ misc:
       papers:
 
         - title: 'Smart packets: Applying active networks to network management'
-          authors:
-          in:
-          year:
-          url:
+          authors: Beverly Schwartz, Alden W. Jackson, W. Timothy Strayer, Wenyi Zhou, R. Dennis Rockwell, Craig Partridge
+          in: ACM Trans. Comp. Sys. 18,1
+          year: 2000
+          url: https://dl.acm.org/doi/10.1145/332799.332893
           relevance:
           desc:
 
-        - title: The Road to SDN
-          authors:
-          in:
-          year:
-          url:
+        - title: 'The road to SDN: an intellectual history of programmable networks'
+          authors: Nick Feamster, Jennifer Rexford, Ellen Zegura
+          in: ACM SIGCOMM CCR 44,2
+          year: 2014
+          url: https://dl.acm.org/doi/10.1145/2602204.2602219
           relevance:
           desc:
 
         - title: Reconfigurable Network Systems and Software-Defined Networking
-          authors:
-          in:
-          year:
-          url:
+          authors: Noa Zilberman, Philip M. Watts, Charalampos Rotsos, Andrew W. Moore 
+          in: Proc. IEEE 103,7
+          year: 2015
+          url: https://ieeexplore.ieee.org/document/7122247
           relevance:
           desc:
 
         - title: Programmable Forwarding Planes are Here to Stay
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Nick McKeown
+          in: ACM SIGCOMM NetPL Keynote
+          year: 2017
+          url: https://conferences.sigcomm.org/sigcomm/2017/files/program-netpl/01-mckeown.pptx
+          relevance: mustread
+          desc: A keynote from Nick McKeown at NetPL'17 on the many great research ideas and new languages that have emerged for programmable forwarding. The talk considers how we got here, why programmable forwarding planes are inevitable, why now is the right time, why they are a final frontier for SDN, and why they are here to stay. 
                               
     - name: Deployments
       preamble: A very relevant question, which is also a research challenge, regards the deployment of SDN and programmable data planes.
       papers:
 
         - title: 'Ethane: Taking Control of the Enterprise'
-          authors:
-          in:
-          year:
-          url:
+          authors: Martin Casado, Michael J. Freedman, Justin Pettit, Jianying Luo, Nick McKeown, Scott Shenker
+          in: ACM SIGCOMM '07 
+          year: 2007
+          url: https://dl.acm.org/doi/10.1145/1282380.1282382
           relevance:
           desc:
         
         - title: 'Softcell: Scalable and flexible cellular core network architecture'
-          authors:
-          in:
-          year:
-          url:
+          authors: Xin Jin, Li Erran Li, Laurent Vanbever, Jennifer Rexford
+          in: ACM CoNEXT '13
+          year: 2013
+          url: https://dl.acm.org/doi/abs/10.1145/2535372.2535377
           relevance:
           desc:
         
         - title: 'B4: Experience with a Globally-deployed Software Defined Wan'
-          authors:
-          in:
-          year:
-          url:
+          authors: Sushant Jain, Alok Kumar, Subhasree Mandal, Joon Ong, Leon Poutievski, Arjun Singh, Subbaiah Venkata, Jim Wanderer, Junlan Zhou, Min Zhu, Jon Zolla, Urs Hölzle, Stephen Stuart, Amin Vahdat
+          in: ACM SIGCOMM '13
+          year: 2013
+          url: https://dl.acm.org/doi/10.1145/2534169.2486019
           relevance:
           desc:
         
         - title: A High Performance Packet Core for Next Generation Cellular Networks
-          authors:
-          in:
-          year:
-          url:
+          authors: Zafar Ayyub Qazi, Melvin Walls, Aurojit Panda, Vyas Sekar, Sylvia Ratnasamy, and Scott Shenker
+          in: ACM SIGCOMM '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3098822.3098848
           relevance:
           desc:
         
@@ -1131,10 +1131,10 @@ misc:
       papers:
 
         - title: 'NS4: Enabling Programmable Data Plane Simulation'
-          authors:
-          in:
-          year:
-          url:
+          authors: Jiasong Bai, Jun Bi, Peng Kuang, Chengze Fan, Yu Zhou, Cheng Zhang
+          in: ACM SOSR '18
+          year: 2018
+          url: https://dl.acm.org/doi/10.1145/3185467.3185470
           relevance:
           desc:
                 
