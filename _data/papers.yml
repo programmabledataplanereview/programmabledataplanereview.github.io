@@ -791,34 +791,34 @@ applications:
       papers:
 
         - title: 'Hedera: Dynamic Flow Scheduling for Data Center Networks'
-          authors:
-          in:
-          year:
-          url:
+          authors: Mohammad Al-Fares, Sivasankar Radhakrishnan, Barath Raghavan, Nelson Huang, Amin Vahdat
+          in: USENIX NSDI '10
+          year: 2010
+          url: https://dl.acm.org/doi/10.5555/1855711.1855730
           relevance:
           desc:
           
         - title: Ensuring Connectivity via Data Plane Mechanisms
-          authors:
-          in:
-          year:
-          url:
+          authors: Junda Liu, Aurojit Panda, Ankit Singla, Brighten Godfrey, Michael Schapira, Scott Shenker
+          in: USENIX NSDI '13
+          year: 2013
+          url: https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/liu_junda
           relevance:
           desc:
  
         - title: 'The show must go on: Fundamental data plane connectivity services for dependable SDNs'
-          authors:
-          in:
-          year:
-          url:
+          authors: Michael Borokhovich, Clement Rault, Liron Schiff, Stefan Schmid
+          in: Elsevier Computer Communications 116
+          year: 2018
+          url: https://www.sciencedirect.com/journal/computer-communications/vol/116/suppl/C
           relevance:
           desc:
  
         - title: 'Blink: Fast Connectivity Recovery Entirely in the Data Plane'
-          authors:
-          in:
-          year:
-          url:
+          authors: Thomas Holterbach, Edgar Costa Molero, Maria Apostolaki, Alberto Dainotti, Stefano Vissicchio, Laurent Vanbever
+          in: USENIX NSDI '19
+          year: 2019
+          url: https://www.usenix.org/conference/nsdi19/presentation/holterbach
           relevance:
           desc:
  
@@ -827,66 +827,66 @@ applications:
       papers:
 
         - title: 'Camdoop: Exploiting In-network Aggregation for Big Data Applications'
-          authors:
-          in:
-          year:
-          url:
+          authors: Paolo Costa, Austin Donnelly, Antony Rowstron, Greg O'Shea
+          in: USENIX NSDI '12
+          year: 2012
+          url: https://www.usenix.org/conference/nsdi12/technical-sessions/presentation/costa
           relevance:
           desc:
  
         - title: 'Netagg: Using middleboxes for application-specific on-path aggregation in data centres'
-          authors:
-          in:
-          year:
-          url:
+          authors: Luo Mai, Lukas Rupprecht, Abdul Alim, Paolo Costa, Matteo Migliavacca, Peter Pietzuch, Alexander L. Wolf
+          in: ACM CoNEXT '14
+          year: 2014
+          url: https://dl.acm.org/doi/abs/10.1145/2674005.2674996
           relevance:
           desc:
  
         - title: 'Scalable hierarchical aggregation protocol (SHArP): a hardware architecture for efficient data reduction'
-          authors:
-          in:
-          year:
-          url:
+          authors: Richard L. Graham, Devendar Bureddy, Pak Lui, Hal Rosenstock, Gilad Shainer, Gil Bloch, Dror Goldenerg, Mike Dubman, Sasha Kotchubievsky, Vladimir Koushnir, Lion Levi, Alex Margolin, Tamir Ronen, Alexander Shpiner, Oded Wertheim, Eitan Zahavi
+          in: IEEE COMHPC '16
+          year: 2016
+          url: https://ieeexplore.ieee.org/document/7830486
           relevance:
           desc:
  
         - title: In-Network Computation is a Dumb Idea Whose Time Has Come
-          authors:
-          in:
-          year:
-          url:
+          authors: Amedeo Sapio, Ibrahim Abdelaziz, Abdulla Aldilaijan, Marco Canini, Panos Kalnis
+          in: ACM HotNets '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3152434.3152461
           relevance:
           desc:
  
         - title: 'IncBricks: Toward In-Network Computation with an In-Network Cache'
-          authors:
-          in:
-          year:
-          url:
+          authors: Ming Liu, Liang Luo, Jacob Nelson, Luis Ceze, Arvind Krishnamurthy, Kishore Atreya
+          in: ASPLOS '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3037697.3037731
           relevance:
           desc:
  
         - title: 'Evaluating the Power of Flexible Packet Processing for Network Resource Allocation'
-          authors:
-          in:
-          year:
-          url:
+          authors: Naveen Kr. Sharma, Antoine Kaufmann, Thomas Anderson, Changhoon Kim, Arvind Krishnamurthy, Jacob Nelson, Simon Peter
+          in: NSDI '17
+          year: 2017
+          url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/sharma
           relevance:
           desc:
  
-        - title: 'Can the Network Be the AI Accelerator'
-          authors:
-          in:
-          year:
-          url:
+        - title: Can the Network Be the AI Accelerator?
+          authors: Davide Sanvito, Giuseppe Siracusano, Roberto Bifulco
+          in: ACM NetCompute '18
+          year: 2018
+          url: https://dl.acm.org/doi/10.1145/3229591.3229594
           relevance:
           desc:
           
         - title: In-network Neural Networks
-          authors:
-          in:
-          year:
-          url:
+          authors: Giuseppe Siracusano, Roberto Bifulco
+          in: unpublished manuscript
+          year: 2018
+          url: https://arxiv.org/abs/1801.05731
           relevance:
           desc:
         
@@ -896,58 +896,58 @@ applications:
       papers:
 
         - title: 'NetPaxos: Consensus at Network Speed'
-          authors:
-          in:
-          year:
-          url:
+          authors: Huynh Tu Dang, Daniele Sciascia, Marco Canini, Fernando Pedone, Robert Soulé
+          in: ACM SOSR '15
+          year: 2015
+          url: https://dl.acm.org/doi/10.1145/2774993.2774999
           relevance:
           desc:
  
         - title: Paxos Made Switch-y
-          authors:
-          in:
-          year:
-          url:
+          authors: Huynh Tu Dang, Marco Canini, Fernando Pedone, and Robert Soulé
+          in: ACM SIGCOMM CCR 46,2
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2935634.2935638
           relevance:
           desc:
  
         - title: Be Fast, Cheap and in Control with SwitchKV
-          authors:
-          in:
-          year:
-          url:
+          authors: Xiaozhou Li, Raghav Sethi, Michael Kaminsky, David G. Andersen, Michael J. Freedman
+          in: USENIX NSDI '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.5555/2930611.2930614
           relevance:
           desc:
  
         - title: In-band synchronization for distributed SDN control planes
-          authors:
-          in:
-          year:
-          url:
+          authors: Liron Schiff, Stefan Schmid, Petr Kuznetsov
+          in: ACM SIGCOMM CCR 46,1
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2875951.2875957
           relevance:
           desc:
  
         - title: 'NetCache: Balancing Key-Value Stores with Fast In-Network Caching'
-          authors:
-          in:
-          year:
-          url:
+          authors: Xin Jin, Xiaozhou Li, Haoyu Zhang, Robert Soulé, Jeongkeun Lee, Nate Foster, Changhoon Kim, Ion Stoica
+          in: ACM SOSP '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3132747.3132764
           relevance:
           desc:
  
         - title: 'KV-Direct: High-Performance In-Memory Key-Value Store with Programmable NIC'
-          authors:
-          in:
-          year:
-          url:
+          authors: Bojie Li, Zhenyuan Ruan, Wencong Xiao, Yuanwei Lu, Yongqiang Xiong, Andrew Putnam, Enhong Chen, Lintao Zhang
+          in: ACM SOSP '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3132747.3132756
           relevance:
           desc:
  
         - title: 'NetChain: Scale-Free Sub-RTT Coordination'
-          authors:
-          in:
-          year:
-          url:
+          authors: Xin Jin, Xiaozhou Li, Haoyu Zhang, Nate Foster, Jeongkeun Lee, Robert Soulé, Changhoon Kim, Ion Stoica
+          in: USENIX NSDI '18
+          year: 2018
+          url: https://www.usenix.org/conference/nsdi18/presentation/jin
           relevance:
           desc:
  
@@ -956,58 +956,50 @@ applications:
       papers:
 
         - title: 'Millions of little minions: Using packets for low latency network programming and visibility'
-          authors:
-          in:
-          year:
-          url:
+          authors: Vimalkumar Jeyakumar, Mohammad Alizadeh, Yilong Geng, Changhoon Kim, David Mazières
+          in: ACM SIGCOMM '14
+          year: 2014
+          url: https://dl.acm.org/doi/10.1145/2619239.2626292
           relevance:
           desc:
  
         - title: In-band Network Telemetry via Programmable Dataplanes
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Changhoon Kim, Anirudh Sivaraman, Naga Katta, Antonin Bas, Advait Dixit, Lawrence J Wobker
+          in: ACM SOSR '15 Demos
+          year: 2015
+          url: https://nkatta.github.io/papers/int-demo.pdf
+          relevance: important
+          desc: In-band Network Telemetry (INT) is a powerful new network-diagnostics and debug mechanism, which allows, e.g., to diagnose performance problems related to latency spikes. The INT abstraction allows data packets to query switch-internal state (e.g., queue size, link utilization, and queuing latency). The paper reports on a prototype implemented in the P4 language, hence supporting various different programmable network devices.
  
         - title: Towards Accurate Online Traffic Matrix Estimation in Software-defined Networks
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
- 
-        - title: In-band Network Telemetry (INT)
-          authors:
-          in:
-          year:
-          url:
+          authors: Yanlei Gong, Xiong Wang, Mehdi Malboubi, Sheng Wang, Shizhong Xu, Chen-Nee Chuah
+          in: ACM SOSR '15
+          year: 2015
+          url: https://dl.acm.org/doi/10.1145/2774993.2775068
           relevance:
           desc:
  
         - title: Heavy-Hitter Detection Entirely in the Data Plane
-          authors:
-          in:
-          year:
-          url:
+          authors: Vibhaalakshmi Sivaraman, Srinivas Narayana, Ori Rottenstreich, S. Muthukrishnan, Jennifer Rexford
+          in: ACM SOSR '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3050220.3063772
           relevance:
           desc:
  
         - title: 'Dapper: Data plane performance diagnosis of TCP'
-          authors:
-          in:
-          year:
-          url:
+          authors: Mojgan Ghasemi, Theophilus Benson, Jennifer Rexford
+          in: ACM SOSR '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3050220.3050228
           relevance:
           desc:
  
         - title: 'SketchVisor: Robust Network Measurement for Software Packet Processing'
-          authors:
-          in:
-          year:
-          url:
+          authors: Qun Huang, Xin Jin, Patrick P. C. Lee, Runhui Li, Lu Tang, Yi-Chao Chen, Gong Zhang
+          in: ACM SIGCOMM '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3098822.3098831
           relevance:
           desc:
  
@@ -1016,26 +1008,26 @@ applications:
       papers:
 
         - title: 'Hula: Scalable load balancing using programmable data planes'
-          authors:
-          in:
-          year:
-          url:
+          authors: Naga Katta, Mukesh Hira, Changhoon Kim, Anirudh Sivaraman,  Jennifer Rexford
+          in: ACM SOSR '16
+          year: 2016
+          url: https://dl.acm.org/doi/10.1145/2890955.2890968
           relevance:
           desc:
  
         - title: 'SilkRoad: Making Stateful Layer-4 Load Balancing Fast and Cheap Using Switching ASICs'
-          authors:
-          in:
-          year:
-          url:
+          authors: Rui Miao, Hongyi Zeng, Changhoon Kim, Jeongkeun Lee, Minlan Yu
+          in: ACM SIGCOMM '17
+          year: 2017
+          url: https://dl.acm.org/doi/10.1145/3098822.3098824
           relevance:
           desc:
  
         - title: 'Load Balancing Memcached Traffic Using Software Defined Networking'
-          authors:
-          in:
-          year:
-          url:
+          authors: Anat Bremler-Barr, David Hay, Idan Moyal, Liron Schiff 
+          in: IFIP Networking '17
+          year: 2017
+          url: https://ieeexplore.ieee.org/document/8264855
           relevance:
           desc:
  
@@ -1043,18 +1035,18 @@ applications:
       papers:
 
         - title: Hardware-Accelerated Network Control Planes
-          authors:
-          in:
-          year:
-          url:
+          authors: Edgar Costa Molero, Stefano Vissicchio, Laurent Vanbever
+          in: ACM HotNets '18
+          year: 2018
+          url: https://dl.acm.org/doi/abs/10.1145/3286062.3286080
           relevance:
           desc:
  
         - title: Precise Time-synchronization in the Data-Plane Using Programmable Switching ASICs
-          authors:
-          in:
-          year:
-          url:
+          authors: Pravein Govindan, Kannan Raj, Joshi Mun, Choon Chan 
+          in: ACM SOSR '19
+          year: 2019
+          url: https://dl.acm.org/doi/10.1145/3314148.3314353
           relevance:
           desc:
  
