@@ -4,7 +4,8 @@ architectures:
   preamble: We divide the discussion of switch architectures into software and hardware switch architectures.
   categories:
     - name: Software Switch Architectures
-      preamble: We first discuss the viability of software switching and then review dataflow graph abstractions, also discussing, e.g., Click, ClickOS, and software NICs. We proceed by revisiting literature on match-action abstractions, discussing OVS and PISCES. We conclude with a review on packet I/O libraries. 
+      preamble: |
+        We first discuss the viability of software switching and then review dataflow graph abstractions, also discussing, e.g., Click, ClickOS, and software NICs. We proceed by revisiting literature on match-action abstractions, discussing OVS and PISCES. We conclude with a review on packet I/O libraries. 
 
       sections:
         - name: Viability of Software Switching
@@ -16,7 +17,8 @@ architectures:
               year: 2018
               url: http://doi.acm.org/10.1145/1544012.1544032
               relevance: interesting
-              desc: The paper is the first to study the performance limitations when building both software routers and software virtual routers on commodity CPU platforms. The authors observe that the fundamental performance bottleneck is the memory system, and that through careful mapping of tasks to CPU cores one can achieve very high forwarding rates. The authors also identify principles for the construction of high-performance software router systems on commodity hardware.
+              desc: |
+                The paper is the first to study the performance limitations when building both software routers and software virtual routers on commodity CPU platforms. The authors observe that the fundamental performance bottleneck is the memory system, and that through careful mapping of tasks to CPU cores one can achieve very high forwarding rates. The authors also identify principles for the construction of high-performance software router systems on commodity hardware.
             
             - authors: Adam Greenhalgh, Felipe Huici, Mickael Hoerdt, Panagiotis Papadimitriou, Mark Handley, and Laurent Mathy
               title: Flow processing and the rise of commodity network hardware
@@ -24,7 +26,8 @@ architectures:
               year: 2009
               url: https://dl.acm.org/doi/10.1145/1517480.1517484
               relevance: mustread
-              desc: The paper introduces the FlowStream switch architecture, which enables flow processing and forwarding at unprecedented flexibility and low cost by consolidating middlebox functionality, such as load balancing, packet inspection and intrusion detection, and commodity switch technologies, offering the possibility to control the switching of flows in a fine-grained manner, into a single integrated package deployed on commodity hardware.
+              desc: |
+                The paper introduces the FlowStream switch architecture, which enables flow processing and forwarding at unprecedented flexibility and low cost by consolidating middlebox functionality, such as load balancing, packet inspection and intrusion detection, and commodity switch technologies, offering the possibility to control the switching of flows in a fine-grained manner, into a single integrated package deployed on commodity hardware.
 
             - authors: Mihai Dobrescu, Norbert Egi, Katerina Argyraki, Byung-Gon Chun, Kevin Fall, Gianluca Iannaccone, Allan Knies, Maziar Manesh, Sylvia Ratnasamy
               title: 'RouteBricks: Exploiting Parallelism to Scale Software Routers'
@@ -32,7 +35,8 @@ architectures:
               year: 2009
               url: https://dl.acm.org/doi/10.1145/1629575.1629578
               relevance: interesting
-              desc: RouteBricks is concerned with enabling high-speed parallel processing in software routers, using a software router architecture that parallelizes router functionality both across multiple servers and across multiple cores within a single server. RouteBricks adopts a fully programmable Click/Linux environment and is built entirely from off-the-shelf, general-purpose server hardware.
+              desc: |
+                RouteBricks is concerned with enabling high-speed parallel processing in software routers, using a software router architecture that parallelizes router functionality both across multiple servers and across multiple cores within a single server. RouteBricks adopts a fully programmable Click/Linux environment and is built entirely from off-the-shelf, general-purpose server hardware.
 
         - name: The Dataflow Graph Abstraction
           papers:
@@ -43,7 +47,8 @@ architectures:
               year: 2000
               url: https://dl.acm.org/doi/10.1145/354871.354874
               relevance: mustread
-              desc: Introduces Click, a software architecture for building flexible and configurable routers from packet processing modules implementing simple router functions like packet classification, queuing, scheduling, organized into a directed graph with packet processing modules at the vertices; packets flow along the edges of the graph.
+              desc: |
+                Introduces Click, a software architecture for building flexible and configurable routers from packet processing modules implementing simple router functions like packet classification, queuing, scheduling, organized into a directed graph with packet processing modules at the vertices; packets flow along the edges of the graph.
             
             - authors: Weibin Sun, Robert Ricci
               title: 'Fast and Flexible: Parallel Packet Processing with GPUs and Click'
@@ -51,7 +56,8 @@ architectures:
               year: 2013
               url: https://dl.acm.org/doi/10.5555/2537857.2537861
               relevance: important
-              desc: The paper introduces Snap, a framework for packet processing that exploits the parallelism available on modern GPUs, while remaining flexible, with packet processing tasks implemented as simple modular elements that are composed to build fully functional routers and switches. Snap is based on the Click modular router, which it extends by adding new architectural features that support batched packet processing, memory structures optimized for offloading to coprocessors, and asynchronous scheduling with in-order completion.
+              desc: |
+                The paper introduces Snap, a framework for packet processing that exploits the parallelism available on modern GPUs, while remaining flexible, with packet processing tasks implemented as simple modular elements that are composed to build fully functional routers and switches. Snap is based on the Click modular router, which it extends by adding new architectural features that support batched packet processing, memory structures optimized for offloading to coprocessors, and asynchronous scheduling with in-order completion.
 
             - authors: Joao Martins, Mohamed Ahmed, Costin Raiciu, Vladimir Olteanu, Michio Honda, Roberto Bifulco, Felipe Huici
               title: ClickOS and the Art of Network Function Virtualization
@@ -59,7 +65,8 @@ architectures:
               year: 2014
               url: https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/martins
               relevance: mustread
-              desc: The paper introduces ClickOS, a high-performance, virtualized software middlebox platform. ClickOS virtual machines are small (5MB), boot quickly (about 30 milliseconds), add little delay (45 microseconds), and over one hundred of them can be concurrently run while saturating a 10Gb pipe on a commodity server. A wide range of middleboxes is implemented, including a firewall, a carrier-grade NAT and a load balancer, and the evaluations suggest that ClickOS can handle packets in the millions per second.
+              desc: |
+                The paper introduces ClickOS, a high-performance, virtualized software middlebox platform. ClickOS virtual machines are small (5MB), boot quickly (about 30 milliseconds), add little delay (45 microseconds), and over one hundred of them can be concurrently run while saturating a 10Gb pipe on a commodity server. A wide range of middleboxes is implemented, including a firewall, a carrier-grade NAT and a load balancer, and the evaluations suggest that ClickOS can handle packets in the millions per second.
 
             - authors: Sangjin Han, Keon Jang, Aurojit Panda, Shoumik Palkar, Dongsu Han, Sylvia Ratnasamy
               title: Berkeley Extensible Software Switch
@@ -67,23 +74,26 @@ architectures:
               in: project website
               year: 2015
               relevance: important
-              desc: BESS is the Berkeley Extensible Software Switch developed at the University of California, Berkeley and at Nefeli Networks. BESS is heavily inspired by the Click modular router, representing a packet processing pipeline as a dataflow (multi)graph that consists of modules, each of which implements a NIC feature, and ports that act as sources and sinks for this pipeline. Packets received at a port flow through the pipeline to another port, and each module in the pipeline performs module-specific operations on packets.
+              desc: |
+                BESS is the Berkeley Extensible Software Switch developed at the University of California, Berkeley and at Nefeli Networks. BESS is heavily inspired by the Click modular router, representing a packet processing pipeline as a dataflow (multi)graph that consists of modules, each of which implements a NIC feature, and ports that act as sources and sinks for this pipeline. Packets received at a port flow through the pipeline to another port, and each module in the pipeline performs module-specific operations on packets.
 
             - title: 'mSwitch: A Highly-scalable, Modular Software Switch'
               authors: Michio Honda, Felipe Huici, Giuseppe Lettieri, Luigi Rizzo
               in: ACM SOSR '15
               year: 2015
               url: https://dl.acm.org/doi/10.1145/2774993.2775065
-              relevance:
-              desc:              
+              relevance: interesting
+              desc: |
+                The authors make the observation that it is difficult to simultaneously provide high packet rates, high throughput, low CPU usage, high port density and a flexible data plane in a same architecture. A new architecture called mSwitch is proposed and four distinct modules are implemented on top: a learning bridge, an accelerated Open vSwitch module, a protocol demultiplexer for userspace protocol stacks, and a filtering module that can direct packets to virtualized middleboxes.       
 
             - title: 'NetBricks: Taking the V out of NFV'
               authors: Aurojit Panda, Sangjin Han, Keon Jang, Melvin Walls, Sylvia Ratnasamy, Scott Shenker
               in: USENIX OSDI
               year: 2016
               url: https://www.usenix.org/conference/osdi16/technical-sessions/presentation/panda
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                NetBricks is an NFV framework adopting the "graph-based" pipeline abstraction and embracing type checking and safe runtimes to provide isolation efficiently in software, providing the same memory isolation as containers and VMs without incurring the same performance penalties. The new isolation technique is called zero-copy software isolation.
 
         - name: The Match-action Abstraction
           papers:
@@ -93,48 +103,55 @@ architectures:
               in: USENIX NSDI '15
               year: 2015
               url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/pfaff
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                The paper describes the design and implementation of Open vSwitch, a multi-layer, open source virtual switch. The design document details the advanced flow classification and caching techniques that Open vSwitch uses to optimize its operations and conserve hypervisor resources.
 
             - title: 'PISCES: A Programmable, Protocol-Independent Software Switch'
               authors: Muhammad Shahbaz, Sean Choi, Ben Pfaff, Changhoon Kim, Nick Feamster, Nick McKeown, Jennifer Rexford
               in: ACM SIGCOMM '16
               year: 2016
               url: https://dl.acm.org/doi/10.1145/2934872.2934886
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                PISCES is a software switch derived from Open vSwitch (OVS), a hypervisor switch whose behavior is customized using P4. PISCES is not hard-wired to specific protocols; this independence makes it easy to add new features. The paper also shows how the compiler can analyze the high-level P4 specification to optimize forwarding performance; the evaluations show that PISCES performs comparably to OVS but PISCES programs are about 40 times shorter than equivalent OVS source code. 
 
             - title: 'SoftFlow: A Middlebox Architecture for Open vSwitch'
               authors: Ethan J. Jackson, Melvin Walls, Aurojit Panda, Justin Pettit, Ben Pfaff, Jarno Rajahalme, Teemu Koponen, Scott Shenker
               in: USENIX ATC '16
               year: 2016
               url: https://www.usenix.org/conference/atc16/technical-sessions/presentation/jackson
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                The paper presents SoftFlow, an extension to Open vSwitch that seamlessly integrates middlebox functionality while maintaining the familiar OpenFlow forwarding model and performing significantly better than alternative techniques for middlebox integration. 
 
             - title: 'Dataplane Specialization for High-performance OpenFlow Software Switching'
               authors: László Molnár, Gergely Pongrácz, Gábor Enyedi, Zoltán Lajos Kis, Levente Csikor, Ferenc Juhász, Attila Kőrösi, and Gábor Rétvári
               in: ACM SIGCOMM '16
               year: 2016
               url: https://dl.acm.org/doi/10.1145/2934872.2934887
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                The authors argue that, instead of enforcing the same universal fast-path semantics to all OpenFlow applications and optimizing for the common case, as it is done in Open vSwitch, a programmable software switch should rather automatically specialize its dataplane piecemeal with respect to the configured workload. They introduce ESwitch, a switch architecture that uses on-the-fly template-based code generation to compile any OpenFlow pipeline into efficient machine code, which can then be readily used as the switch fast-path, delivering superior packet processing speed, improved latency and CPU scalability, and predictable performance. 
 
             - title: 'Dynamic Compilation and Optimization of Packet Processing Programs'
-              authors:
-              in:
-              year:
-              url:
-              relevance:
-              desc:
+              authors: Gábor Rétvári, László Molnár, Gábor Enyedi, Gergely Pongrácz
+              in: ACM SIGCOMM NetPL '17
+              year: 2017
+              url: https://conferences.sigcomm.org/sigcomm/2017/files/program-netpl/sigcomm17netpl-paper4.pdf
+              relevance: interesting
+              desc: |
+                 The paper makes the observation that data-plane compilation is fundamentally static, i.e., the input of the compiler is a fixed description of the forwarding plane semantics and the output is code that can accommodate any packet processing behavior set by the controller at runtime. The authors advocate a dynamic approach to data plane compilation instead, where not just the semantics but the intended behavior is also input to the compiler, opening the door to a handful of runtime optimization opportunities that can be leveraged to improve the performance of custom-compiled datapaths beyond what is possible in a static setting.
+
 
             - title: 'Andromeda: Performance, Isolation, and Velocity at Scale in Cloud Network Virtualization'
               authors: Michael Dalton, David Schultz, Jacob Adriaens, Ahsan Arefin, Anshuman Gupta, Brian Fahs, Dima Rubinstein, Enrique Cauich Zermeno, Erik Rubow, James Alexander Docauer, Jesse Alpert, Jing Ai, Jon Olson, Kevin DeCabooter, Marc de Kruijf, Nan Hua, Nathan Lewis, Nikhil Kasinadhuni, Riccardo Crepaldi, Srinivas Krishnan, Subbaiah Venkata, Yossi Richter, Uday Naik,  Amin Vahdat
               in: USENIX NSDI '18
               year: 2018
               url: https://www.usenix.org/conference/nsdi18/presentation/dalton
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                This paper presents the design and experience with Andromeda, the network virtualization stack underlying the Google Cloud Platform. Andromeda is designed around the Hoverboard programming model, which uses gateways for the long tail of low bandwidth flows enabling the control plane to program network connectivity for tens of thousands of VMs in seconds, and applies per-flow processing to elephant flows only. The paper cites statistics indicating that above 80% of VM pairs never talk to each other in a deployment and only 1–2% generate sufficient traffic to warrant per-flow processing. The architecture also uses a high-performance OS bypass software packet processing path for CPU-intensive per packet operations, implemented on coprocessor threads.
 
         - name: Packet I/O libraries
           papers:
@@ -144,26 +161,31 @@ architectures:
               in: USENIX ATC '12
               year: 2012
               url: https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                Netmap is a framework that enables commodity operating systems to handle the millions of packets per seconds, without requiring custom hardware or changes to applications. The idea is to eliminate inefficiencies in OSes' standard packet processing datapaths: per-packet dynamic memory allocations are removed by preallocating resources, system call overheads are amortized over large I/O batches, and memory copies are eliminated by sharing buffers and metadata between kernel and userspace, while still protecting access to device registers and other kernel memory areas. 
 
             - title: 'Intel DPDK: Data Plane Development Kit'
-              authors:
-              in:
-              year:
-              url:
-              relevance:
-              desc:
+              authors: Intel
+              in: project website
+              year: 2016
+              url: http://dpdk.org/
+              relevance: important
+              desc: |
+                DPDK is a set of libraries and drivers for fast packet processing, including a multicore framework, huge page memory, ring buffers, poll-mode drivers for networking I/O, crypto and eventdev, etc. DPDK can be used to receive and send packets within the minimum number of CPU cycles (usually less than 80 cycles), develop fast packet capture algorithms (like tcpdump), and run third-party fast path stacks.
 
             - title: The Fast Data Project
-              authors:
-              in:
-              year:
-              url:
-              relevance:
-              desc:
+              authors: fd.io
+              in: project website
+              year: 2016
+              url: https://fd.io/
+              relevance: interesting
+              desc: |
+                FD.io (Fast data – Input/Output) is a collection of several projects and libraries to support flexible, programmable and composable services on a generic hardware platform, using a high-throughput, low-latency and resource-efficient IO services suitable to many architectures (x86, ARM, and PowerPC) and deployment environments (bare metal, VM, container).
 
     - name: Hardware Switch Architectures
+      preamble: |
+        We start off by discussing a first incarnation of a programmable switch, PLUG, then discuss the SwitchBlade platform and the seminal paper on RMT (Reconfigurable Match Tables). We then review existing performance evaluation studies and literature dealing with performance monitoring and the issue of potential inconsistencies in reconfigurable networks. We conclude with a paper on Azure SmartNICs based on FPGAs.
       papers:
 
         - title: 'PLUG: Flexible Lookup Modules for Rapid Deployment of New Protocols in High-speed Routers'
@@ -171,123 +193,140 @@ architectures:
           in: ACM SIGCOMM '09
           year: 2009
           url: https://dl.acm.org/doi/10.1145/1594977.1592593
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            The first incarnation of the "programmable switch". PLUG (Pipelined Lookup Grid) is a flexible lookup module that can achieve generality without loosing efficiency, because various custom lookup modules have the same fundamental features that PLUG retains: area dominated by memories, simple processing, and strict access patterns defined by the data structure. The authors IPv4, Ethernet, Ethane, and SEATTLE in a dataflow-based programming model for the PLUG and mapped them to the PLUG hardware, showing that throughput, area, power, and latency of PLUGs are close to those of specialized lookup modules.
 
         - title: 'SwitchBlade: A Platform for Rapid Deployment of Network Protocols on Programmable Hardware'
           authors: Muhammad Bilal Anwer, Murtaza Motiwala, Mukarram bin Tariq,  Nick Feamster
           in: ACM SIGCOMM '10
           year: 2010
           url: https://dl.acm.org/doi/10.1145/1851182.1851206
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            SwitchBlade is a platform for rapidly deploying custom protocols on programmable hardware. SwitchBlade uses a pipeline-based design that allows individual hardware modules to be enabled or disabled on the fly, integrates common packet-processing functions as hardware modules enabling different protocols to use these functions without having to resynthesize hardware, and uses a customizable forwarding engine that supports both longest-prefix matching in the packet header and exact matching on a hash value. SwitchBlade also allows multiple custom data planes to operate in parallel on the same physical hardware, while providing complete isolation for protocols running in parallel.
 
         - title: 'Forwarding Metamorphosis: Fast Programmable Match-action Processing in Hardware for SDN'
           authors: Pat Bosshart, Glen Gibb, Hun-Seok Kim, George Varghese, Nick McKeown, Martin Izzard, Fernando Mujica, Mark Horowitz
           in: ACM SIGCOMM '13
           year: 2013
           url: https://dl.acm.org/doi/10.1145/2486001.2486011
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            This seminal paper presents RMT to overcome two limitations in current switching chips and OpenFlow: (1) conventional hardware switches are rigid, allowing "Match-Action" processing on only a fixed set of fields, and (2) the OpenFlow specification only defines a limited repertoire of packet processing actions. The RMT (Reconfigurable Match Tables) model is a RISC-inspired pipelined architecture for switching chips, including an essential minimal set of action primitives to specify how headers are processed in hardware. RMT allows the forwarding plane to be changed in the field without modifying hardware.
 
         - title: 'High-Speed Packet Processing using Reconfigurable Computing'
           authors: Gordon Brebner, Weirong Jiang 
           in: IEEE Micro 34,1
           year: 2014
           url: https://ieeexplore.ieee.org/document/6774354
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper presents a tool chain that maps a domain-specific declarative packet-processing language with object-oriented semantics, called PX, to high-performance reconfigurable-computing architectures based on field-programmable gate array (FPGA) technology, including components for packet parsing, editing, and table lookups.
 
         - title: What You Need to Know About SDN Control and Data Planes
-          authors:
-          in:
-          year:
-          url:
-          relevance:
-          desc:
+          authors: Maciej Kuźniar, Peter Perešíni, Dejan Kostić
+          in: EPFL Technical Report 199497
+          year: 2014
+          url: https://infoscience.epfl.ch/record/199497/files/switches-tr-oct14_1.pdf
+          relevance: mustread
+          desc: |
+            The definite source on OpenFlow switches and the differences between them. The authors measure, report, and explain the performance characteristics of the control- and data-planes in three hardware OpenFlow switches. The results highlight differences between the OpenFlow specification and its implementations that, if ignored, pose a serious threat to network security and correctness.
 
         - title: 'BlueSwitch: Enabling Provably Consistent Configuration of Network Switches'
           authors:  Jong Hun Han, Prashanth Mundkur, Charalampos Rotsos, Gianni Antichi, Nirav Dave, Andrew W. Moore, Peter G. Neumann
           in: ACM/IEEE ANCS '15
           year: 2015
           url: https://ieeexplore.ieee.org/document/7110117
-          relevance: 
-          desc: 
+          relevance: important
+          desc: |
+            The paper is motivated by the challenges involved in consistent updates of distributed network configurations, given the complexity of modern switch datapaths and the exposed opaque configuration mechanisms. The authors demonstrate that even simple rule updates result in inconsistent packet switching in multi-table datapaths. The main contribution of the paper is a hardware design that supports a transactional configuration mechanism, providing strong switch-level atomicity: all packets traversing the datapath will encounter either the old configuration or the new one, and never an inconsistent mix of the two. The approach is prototyped using the NetFPGA hardware platform.
 
         - title: 'ClickNP: Highly Flexible and High Performance Network Processing with Reconfigurable Hardware'
           authors: Bojie Li, Kun Tan, Layong (Larry) Luo, Yanqing Peng, Renqian Luo, Ningyi Xu, Yongqiang Xiong, Peng Cheng, Enhong Chen
           in: ACM SIGCOMM '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2934872.2934897
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            This paper focuses on accelerating NFs with FPGAs. However, FPGA is predominately programmed using low-level hardware description languages (HDLs), which are hard to code and difficult to debug. More importantly, HDLs are almost inaccessible for most software programmers. This paper presents ClickNP, a FPGA-accelerated platform, which is highly flexible as it is completely programmable using high-level C-like languages and exposes a modular programming abstraction that resembles Click Modular Router, and also high performance.
+
 
         - title: 'dRMT: Disaggregated Programmable Switching'
           authors: Sharad Chole, Andy Fingerhut, Sha Ma, Anirudh Sivaraman, Shay Vargaftik, Alon Berger, Gal Mendelson, Mohammad Alizadeh, Shang-Tse Chuang, Isaac Keslassy, Ariel Orda, Tom Edsall
           in: ACM SIGCOMM '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3098822.3098823
-          relevance: 
-          desc: 
+          relevance: important
+          desc: |
+            A follow-up to the RMT paper. dRMT (disaggregated Reconfigurable Match-Action Table) is a new architecture for programmable switches, which overcomes two important restrictions of RMT: (1) table memory is local to an RMT pipeline stage, implying that memory not used by one stage cannot be reclaimed by another, and (2) RMT is hardwired to always sequentially execute matches followed by actions as packets traverse pipeline stages. dRMT resolves both issues by disaggregating the memory and compute resources of a programmable switch, moving table memories out of pipeline stages and into a centralized pool that is accessible through a crossbar. In addition, dRMT replaces RMT's pipeline stages with a cluster of processors that can execute match and action operations in any order.
 
         - title: Language-Directed Hardware Design for Network Performance Monitoring
           authors: Srinivas Narayana, Anirudh Sivaraman, Vikram Nathan, Prateesh Goyal, Venkat Arun, Mohammad Alizadeh, Vimalkumar Jeyakumar, Changhoon Kim
           in: ACM SIGCOMM '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3098822.3098829
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            The authors ask what switch hardware primitives are required to support an expressive language of network performance questions. They present a performance query language, Marple, modeled on familiar functional constructs, backed by a new programmable key-value store primitive on switch hardware that performs flexible aggregations at line rate and scales to millions of keys. Marple can express switch queries that could previously run only on end hosts, while Marple queries only occupy a modest fraction of a switch's hardware resources.
 
         - title: 'Azure Accelerated Networking: SmartNICs in the Public Cloud'
           authors: Daniel Firestone, Andrew Putnam, Sambhrama Mundkur, Derek Chiou, Alireza Dabagh, Mike Andrewartha, Hari Angepat, Vivek Bhanu, Adrian Caulfield, Eric Chung, Harish Kumar Chandrappa, Somesh Chaturmohta, Matt Humphrey, Jack Lavier, Norman Lam, Fengfen Liu, Kalin Ovtcharov, Jitu Padhye, Gautham Popuri, Shachar Raindel, Tejas Sapre, Mark Shaw, Gabriel Silva, Madhan Sivakumar, Nisheeth Srivastava, Anshuman Verma, Qasim Zuhair, Deepak Bansal, Doug Burger, Kushagra Vaid, David A. Maltz, Albert Greenberg
           in: USENIX NSDI '18
           year: 2018
           url: https://www.usenix.org/conference/nsdi18/presentation/firestone
-          relevance: 
-          desc: 
+          relevance: mustread
+          desc: |
+            Modern public cloud architectures rely on complex networking policies and running the necessary network stacks on CPU cores takes away processing power from VMs, increasing the cost of running cloud services, and adding latency and variability to network performance. The paper presents the design of AccelNet, the Azure Accelerated Networking scheme for offloading host networking to hardware, using custom Azure SmartNICs based on FPGAs, including the hardware/software co-design model, performance results on key workloads, and experiences and lessons learned from developing and deploying AccelNet.
 
     - name: Hybrid Hardware/Software Architectures
+      preamble: |
+        It is often believed that the performance of programmable network processors is lower than hard‐coded chips. There exists interesting literature questioning this assumption and exploring these overheads empirically. We also discuss opportunities coming from Graphics Processing Units (GPUs) acceleration, e.g., for packet processing, as well as from hybrid hardware/software architectures in general.
       papers:
-
         - title: 'PacketShader: A GPU-accelerated Software Router'
           authors: Sangjin Han, Keon Jang, KyoungSoo Park, Sue Moon
           in: ACM SIGCOMM '10
           year: 2010
           url: https://dl.acm.org/doi/10.1145/1851275.1851207
-          relevance: 
-          desc: 
+          relevance: important
+          desc: |
+            PacketShader is a high-performance software router framework for general packet processing with Graphics Processing Unit (GPU) acceleration, exploiting the massively-parallel processing power of GPU to address the CPU bottleneck in software routers, combined with a high-performance packet I/O engine. The paper presents implementations for IPv4 and IPv6 forwarding, OpenFlow switching, and IPsec tunneling to demonstrate the flexibility and performance advantage of PacketShader.
 
         - title: 'Cheap Silicon: A Myth or Reality Picking the Right Data Plane Hardware for Software Defined Networking'
           authors: Gergely Pongrácz, László Molnár, Zoltán Lajos Kis, Zoltán Turányi
           in: ACM HotSDN '13
           year: 2013
           url: https://dl.acm.org/doi/10.1145/2491185.2491204
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            Industry insight holds that programmable network processors are of lower performance than their hard-coded counterparts, such as Ethernet chips. The paper argues that, contrast to the common view, the overhead of programmability is relatively low, and that the apparent difference between programmable and hard-coded chips is not primarily due to programmability itself, but because the internal balance of programmable network processors is tuned to more complex use cases.
 
         - title: 'Raising the Bar for Using GPUs in Software Packet Processing'
           authors: Anuj Kalia, Dong Zhou, Michael Kaminsky, David G. Andersen
           in: USENIX NSDI '15
           year: 2015
           url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/kalia
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            The paper opens the debate as to whether Graphics Processing Units (GPUs) are useful for accelerating software-based routing and packet handling applications. The authors argue that for many such applications the benefits arise less from the GPU hardware itself than from the expression of the problem in a language such as CUDA or OpenCL that facilitates memory latency hiding and vectorization through massive concurrency. They then demonstrate that applying a similar style of optimization to algorithm implementations, a CPU-only implementation is more resource efficient than the version running on the GPU.
 
         - title: 'CacheFlow: Dependency-Aware Rule-Caching for Software-Defined Networks'
           authors: Naga Katta, Omid Alipourfard, Jennifer Rexford, David Walker
           in: ACM SOSR '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2890955.2890969
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            The paper presents an architecture to allow high-speed forwarding even with large rule tables and fast updates, by combining the best of hardware and software processing. The CacheFlow system caches the most popular rules in the small TCAM and relies on software to handle the small amount of cache-miss traffic. The authors observe that one cannot blindly apply existing cache-replacement algorithms, because of dependencies between rules with overlapping patterns. Rather long dependency chains must be broken to cache smaller groups of rules while preserving the semantics of the policy.
 
         - title: 'APUNet: Revitalizing GPU as Packet Processing Accelerator'
           authors: Younghwan Go, Muhammad Asim Jamshed, YoungGyoun Moon, Changho Hwang, KyoungSoo Park
           in: USENIX NSDI '17
           year: 2017
           url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/go
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            This is the answer to the question raised by the "Raising the Bar for Using GPUs" paper. Kalia et al. argue that the key enabler for high packet-processing performance is the inherent feature of GPU that automatically hides memory access latency rather than its parallel computation power and claim that CPU can outperform or achieve a similar performance as GPU if its code is re-arranged to run concurrently with memory access. This paper revists these claims and find, with eight popular algorithms widely used in network applications, that (a) there are many compute-bound algorithms that do benefit from the parallel computation capacity of GPU while CPU-based optimizations fail to help, and (b) the relative performance advantage of CPU over GPU in most applications is due to data transfer bottleneck in PCIe communication of discrete GPU rather than lack of capacity of GPU itself.
 
     - name: Programmable NICs
       papers: 
@@ -297,60 +336,68 @@ architectures:
           in: USENIX HotOS '13
           year: 2013
           url: https://www.usenix.org/conference/hotos13/session/shinde
-          relevance: 
-          desc: 
+          relevance: mustread
+          desc: |
+            The paper's aim is to reinvigorate the discussion on the design of network interface cards (NICs) in the network and OS community. The authors argue that currently operating systems fail to efficiently exploit and manage the considerable hardware resources provided by modern network interface controllers. They then describe Dragonet, a network stack that represents both the physical capabilities of the network hardware and the current protocol state of the machine as dataﬂow graphs.
 
         - title: 'NetFPGA SUME: Toward 100 Gbps as Research Commodity'
-          authors:
-          in:
-          year:
-          url:
-          relevance: 
-          desc: 
+          authors:  Noa Zilberman, Yury Audzevich, G. Adam Covington, Andrew W. Moore 
+          in: IEEE Micro 34,5
+          year: 2014
+          url: https://ieeexplore.ieee.org/document/6866035
+          relevance: mustread
+          desc: |
+            The paper presents a reference design and implementation for a programmable NIC that is in wide-scale use today as an accessible development environment that both reuses existing codebases and enables new designs. NetFPGA SUME is an FPGA-based PCI Express board with I/O capabilities for 100 Gbps operation as a network interface card, multiport switch, firewall, or test and measurement environment. 
 
         - title: 'SoftNIC: A Software NIC to Augment Hardware'
-          authors:
-          in:
-          year:
-          url:
-          relevance: 
-          desc: 
+          authors: Sangjin Han, Keon Jang, Aurojit Panda, Shoumik Palkar, Dongsu Han, Sylvia Ratnasamy
+          in: UC Berkeley Tech. Report
+          year: 2015
+          url: https://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-155.pdf
+          relevance: interesting
+          desc: |
+            SoftNIC is a hybrid software-hardware architecture to bridge the gap between limited hardware capabilities and ever changing user demands. SoftNIC provides a programmable platform that allows applications to leverage NIC features implemented in software and hardware, without sacrificing performance. This paper serves the foundation for the BESS software switch.
 
         - title: High Performance Packet Processing with FlexNIC
           authors: Antoine Kaufmann, SImon Peter, Naveen Kr. Sharma, Thomas Anderson, Arvind Krishnamurthy
           in: ACM ASPLOS '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2872362.2872367
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            The authors argue that the primary reason for high memory and processing overheads inherent to packet processing applications is the inefficient use of the memory and I/O resources by commodity NICs. They propose FlexNIC, a flexible network DMA interface that can be used to reduce packet processing overheads; FlexNIC allows services to install packet processing rules into the NIC, which then executes simple operations on packets while exchanging them with host memory. This moves some of the packet processing traditionally done in software to the NIC, where it can be done flexibly and at high speed.
 
         - title: 'Floem: A Programming System for NIC-Accelerated Network Applications'
           authors: Phitchaya Mangpo Phothilimthana, Ming Liu, Antoine Kaufmann, Simon Peter, Rastislav Bodik, Thomas Anderson
           in: USENIX OSDI '18
           year: 2018
           url: https://www.usenix.org/conference/osdi18/presentation/phothilimthana
-          relevance: 
-          desc: 
+          relevance: interesting
+          desc: |
+            The paper presents Floem, a set of programming abstractions for NIC-accelerated applications to ease developing server applications that offload computation and data to a NIC accelerator. Floem simplifies typical offloading issues, like data placement and caching, partitioning of code and its parallelism, and communication strategies between program components across devices, by providing language-level abstractions for logical and physical queues, global per-packet state, remote caching; and interfacing with external application code. The paper also presents evaluations to demonstrate how these abstractions help explore a space of NIC-offloading designs for real-world applications, including a key-value store and a distributed real-time data analytics system.
 
         - title: 'Offloading Distributed Applications Onto SmartNICs Using iPipe'
           authors: Ming Liu, Tianyi Cui, Henry Schuh, Arvind Krishnamurthy, Simon Peter, Karan Gupta
           in: ACM SIGCOMM '19
           year: 2019
           url: https://dl.acm.org/doi/10.1145/3341302.3342079
-          relevance: 
-          desc: 
+          relevance: important
+          desc: |
+            The paper presents iPipe, a generic actor-based offloading framework to run distributed applications on commodity SmartNICs. The paper details the iPipe design, built around a hybrid scheduler that combines first-come-first-served with deficit round-robin policies to schedule offloading tasks at microsecond-scale precision on SmartNICs, and presents 3 custom-built use cases, a real-time data analytics engine, a distributed transaction system, and a replicated key-value store, to show that SmartNIC offloading brings about significant performance benefits in terms of traffic control, computing capability, onboard memory, and host communication.
 
         - title: 'PicNIC: Predictable Virtualized NIC'
           authors: Praveen Kumar, Nandita Dukkipati, Nathan Lewis, Yi Cui, Yaogong Wang, Chonggang Li, Valas Valancius, Jake Adriaens, Steve Gribble, Nate Foster, Amin Vahdat
           in: ACM SIGCOMM '19
           year: 2019
           url: https://dl.acm.org/doi/10.1145/3341302.3342093
-          relevance: 
-          desc: 
+          relevance: important
+          desc: |
+            The paper addresses the noisy neighbor problem in the context of NICs. Using data from a major public cloud provider, the paper systematically characterizes how performance isolation can break in virtualization stacks and finds a fundamental tradeoff between isolation and efficiency. The paper then proposes PicNIC, the Predictable Virtualized NIC, a new NIC design that shares resources efficiently in the common case while rapidly reacting to ensure isolation in order to provide predictable performance for isolated workloads. PicNIC builds on three constructs to quickly detect isolation breakdown and to enforce it when necessary: CPU-fair weighted fair queues at receivers, receiver-driven congestion control for backpressure, and sender-side admission control with shaping. Evaluations show that this combination ensures isolation for VMs at sub-millisecond timescales with negligible overhead.
 
 abstractions:
   name: Abstractions
-  preamble: At the heart of programmable data planes lies the question of which abstractions and programming interfaces to provide. We first review literature on low-level APIs, including OpenFlow and P4, and then discuss more high-level languages and compilers, including DevoFlow and the Frenetic framework. Particular focus is put on stateful abstractions. We then extend our review to literature on parser design as well as scheduling, and in particular, the question whether there exist universal packet scheduling algorithms.
+  preamble: |
+    At the heart of programmable data planes lies the question of which abstractions and programming interfaces to provide. We first review literature on low-level APIs, including OpenFlow and P4, and then discuss more high-level languages and compilers, including DevoFlow and the Frenetic framework. Particular focus is put on stateful abstractions. We then extend our review to literature on parser design as well as scheduling, and in particular, the question whether there exist universal packet scheduling algorithms.
 
   categories:
 
@@ -370,64 +417,72 @@ abstractions:
               in: ACM SIGCOMM CCR 28,2
               year: 2008
               url: https://dl.acm.org/doi/10.1145/1355734.1355746
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                The OpenFlow whitepaper. The original idea in OpenFlow was to provide a way for researchers to run experimental protocols in the networks they use every day. OpenFlow is based on an Ethernet switch, with an internal flow-table, and a standardized interface to add and remove flow entries. This allowed, in addition to allowing researchers to evaluate their ideas in real-world traffic settings, for OpenFlow to serve as a useful campus component in large-scale testbeds.
 
             - title: 'packetC: Language for High Performance Packet Processing'
               authors: Ralph Duncan, Peder Jungck
               in: IEEE HPCC '09
               year: 2009
               url: https://ieeexplore.ieee.org/document/5167027/authors#authors
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                This paper describes a model which combines a parallel model and heterogeneous multiprocessor implementations. The parallel packet processing model uses coarse-grained SPMD parallelism to free users from thread management and it requires the host system to locate protocol headers in the packet before a parallel copy of the program executes. The packetC language abstracts and encapsulates familiar packet processing data sets and operations into new aggregate data types and operators, e.g., for packets, databases and searchsets.
                   
             - title: 'Protocol-oblivious Forwarding: Unleash the Power of SDN Through a Future-proof Forwarding Plane'
               authors: Haoyu Song
               in: ACM HotSDN '13 
               year: 2013
               url: https://dl.acm.org/doi/10.1145/2491185.2491190
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                As an alternative to P4, Protocol-Oblivious Forwarding (POF) is presented as a key enabler for highly flexible and programmable SDN. The goal is to remove any dependency on protocol-specific configurations on the forwarding elements and, in addition to P4's stateless design, enhance the data-path with new stateful instructions to support genuine software defined networking behavior. A generic flow instruction set (FIS) is defined to fulfill this purpose and both hardware-based and open source software-based prototypes are shown to demonstrate the feasibility and advantages of POF.
                   
             - title: 'P4: Programming protocol-independent packet processors'
               authors: Pat Bosshart, Dan Daly, Glen Gibb, Martin Izzard, Nick McKeown, Jennifer Rexford, Cole Schlesinger, Dan Talayco, Amin Vahdat, George Varghese, David Walker
               in: ACM SIGCOMM CCR 44,3
               year: 2014
               url: https://dl.acm.org/doi/10.1145/2656877.2656890
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                This seminal paper introduces P4, a high-level language for programming protocol-independent packet processors. P4 has three goals: (1) reconfigurability, in that programmers can change the way switches process packets once they are deployed, (2) protocol independence, in that switches are not tied to any specific network protocols, and (3) target independence, in that programmers can describe packet-processing functionality independently of the specifics of the underlying hardware. The paper demonstrates P4 by showing configure a switch to add a new hierarchical label.
                   
             - title: 'DC.P4: Programming the Forwarding Plane of a Data-center Switch'
               authors: Anirudh Sivaraman, Changhoon Kim, Ramkumar Krishnamoorthy, Advait Dixit, Mihai Budiu
               in: ACM SOSR '15
               year: 2015
               url: https://dl.acm.org/doi/10.1145/2774993.2775007
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                The paper presents a case study that uses P4 to express the forwarding behavior of a datacenter switch's data plane. In the process, it identifies issues and strengths of P4. Some of the lessons learned had, and are having, an impact on the language evolution. For instance, and most notably, the language-architecture separation that has been implemented in newer versions of P4.
                   
             - title: The Case for an Intermediate Representation for Programmable Data Planes
               authors: Muhammad Shahbaz, Nick Feamster
               in: ACM SOSR '15
               year: 2015
               url: https://dl.acm.org/doi/10.1145/2774993.2775000
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                The paper introduces NetASM, an intermediate representation for programmable data planes. NetASM is a device-independent language that is expressive enough to act as the target language for compilers for high-level languages, yet low-level enough to be efficiently assembled on various device architectures. It enables conventional compiler optimization techniques to significantly improve the performance and resource utilization of custom packet-processing pipelines on a variety of targets.
                   
             - title: Improving SDN with InSPired Switches
               authors: Roberto Bifulco, Julien Boite, Mathieu Bouet, Fabian Schneider
               in: ACM SOSR '16
               year: 2016
               url: https://dl.acm.org/doi/10.1145/2890955.2890962
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                The paper proposes an API for programming the generation of packets in programmable switches, instead of forging network packets on the controller side. The InSP API allows a programmer to define in-switch packet generation operations, which include the specification of triggering conditions, packet's content and forwarding actions.
                   
             - title: 'PVPP: A Programmable Vector Packet Processor'
               authors: Sean Choi, Xiang Long, Muhammad Shahbaz, Skip Booth, Andy Keep, John Marshall, Changhoon Kim
               in: ACM SOSR '17
               year: 2017
               url: https://dl.acm.org/doi/10.1145/3050220.3060609
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                PVPP is a data-plane program compiler from P4, a data plane DSL based on match-action tables, to the fd.io Vector Packet Processor (VPP) software switch, based on the packet processing node graph model. PVPP compiles a data plane program written in P4 to VPP's internal graph representation.
                   
         - name: High-level Languages and Compilers
           papers:
@@ -437,96 +492,108 @@ abstractions:
               in: ACM SIGCOMM '11
               year: 2011
               url: https://dl.acm.org/doi/10.1145/2018436.2018466
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                This paper is motivated by the observation that OpenFlow, in its original design, imposes great overheads, involving the switch’s control-plane too often. In order to meet the needs of high-performance networks, the authors propose and evaluate DevoFlow, which provides less fine-grained visibility, at significantly lower costs. In a case study, the authors show that DevoFlow can load-balance data center traffic as well as fine-grained solutions, but with much fewer flow table entries and using much fewer control messages.
                   
             - title: 'Composing Software Defined Networks'
               authors: Christopher Monsanto, Joshua Reich, Nate Foster, Jennifer Rexford, David Walker
               in: USENIX NSDI '13
               year: 2013
               url: https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/monsanto
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                The paper introduces Pyretic, a novel programming language for writing composable SDN applications using a set of high level topology and packet-processing abstractions. Pyretic improves on Frenetic (an earlier incarnation of a similar language) by adding support for sequential composition, the use of topology abstractions to define what each module can see and do with the network, and an abstract packet model that introduces virtual fields into packets. Modular applications are written using the static policy language NetCore, which provides primitive actions, matching predicates, query policies, and policies.
                   
             - title: 'Maple: simplifying SDN programming using algorithmic policies'
               authors: Andreas Voellmy, Junchang Wang, Y Richard Yang, Bryan Ford, Paul Hudak
               in: ACM SIGCOMM '13
               year: 2013
               url: https://dl.acm.org/doi/10.1145/2534169.2486030
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                The paper presents Maple, a system that simplifies SDN programming by (1) allowing a programmer to use a standard programming language to design an arbitrary, centralized algorithm, to decide the behavior of an entire network, and (2) providing an abstraction that the programmer-defined, centralized policy runs on every packet entering a network, and hence is oblivious to the challenge of translating a high-level policy into sets of rules on distributed individual switches. To implement algorithmic policies efficiently, Maple includes not only a highly-efficient multicore scheduler, but more importantly a novel tracing runtime optimizer that can automatically record reusable policy decisions, offload work to switches when possible, and keep switch flow tables up-to-date by dynamically tracing the dependency of policy decisions on packet contents as well as the environment.
                   
             - title: Languages for software-defined networks
               authors:  Nate Foster, Arjun Guha, Mark Reitblatt, Alec Story, Michael J. Freedman, Naga Praveen Katta, Christopher Monsanto, Joshua Reich, Jennifer Rexford, Cole Schlesinger, David Walker, Robert Harrison
               in: IEEE Communications 51,2
               year: 2013
               url: https://ieeexplore.ieee.org/document/6461197
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                An easily approachable survey on higher-level abstractions for creating and composing packet processing applications using the Frenetic framework.
                   
             - title: 'NetKAT: Semantic Foundations for Networks'
               authors: Carolyn Jane Anderson, Nate Foster, Arjun Guha, Jean-Baptiste Jeannin, Dexter Kozen, Cole Schlesinger, David Walker
               in: ACM POPL '14
               year: 2014
               url: https://dl.acm.org/doi/10.1145/2578855.2535862
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                The paper contributes just what is stated in the title, a new network programming language called NetKAT that is based on a solid mathematical foundation. Formerly, the design of network dataplane programming languages was largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. NetKAT solves this problem by (1) proposing primitives for filtering, modifying, and transmitting packets, operators for combining programs in parallel and in sequence, and a Kleene star operator for iteration, and (2) presenting a series of proofs that the language is sound and complete.
                   
             - title: A Purely Functional Approach to Packet Processing
               authors: Nicola Bonelli, Stefano Giordano, Gregorio Procissi, Luca Abeni
               in: ACM/IEEE ANCS '14
               year: 2014
               url: https://dl.acm.org/doi/10.1145/2658260.2658269
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                The paper introduces PFQ-Lang, an extensible functional language to process, analyze and forward packets, which allows easy development by leveraging functional composition and allows to exploit multi-queue NICs and multi-core architectures.
                   
             - title: 'Reclaiming the Brain: Useful OpenFlow Functions in the Data Plane'
               authors: Liron Schiff, Michael Borokhovich, Stefan Schmid
               in: ACM HotNets '14
               year: 2014
               url: https://dl.acm.org/doi/10.1145/2670518.2673874
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                Schiff et al. show that standard OpenFlow can be exploited to implement powerful functionality in the data plane, e.g., to reduce the number of interactions with the control plane or to render the network more robust. Example applications of such a SmartSouth include topology snapshot, anycast, blackhole detection and critical node detection.
                   
             - title: Compiling Packet Programs to Reconfigurable Switches
               authors: Lavanya Jose, Lisa Yan, George Varghese, Nick McKeown
               in: USENIX NSDI '15
               year: 2015
               url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/jose
-              relevance:
-              desc:
+              relevance: mustread
+              desc: |
+                Seminal paper exploring the design of a compiler for programmable switching chips, in particular how to map logical lookup tables to physical tables while meeting data and control dependencies in the program. A Integer Linear Programming (ILP) and greedy approach is presented to generate solutions optimized for latency, pipeline occupancy, or power consumption. The authors show benchmarks from real production networks to two different programmable switch architectures: RMT and Intel’s FlexPipe.
                   
             - title: 'VFP: A Virtual Switch Platform for Host SDN in the Public Cloud'
               authors: Daniel Firestone
               in: USENIX NSDI '17
               year: 2017
               url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/firestone
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                The paper presents the Virtual Filtering Platform (VFP), a programmable virtual switch that powers Microsoft Azure, a large public cloud. VFP includes support for multiple independent network controllers, policy based on connections rather than only on packets, efficient caching and classification algorithms for performance, and efficient offload of flow policy to programmable NICs. The paper presents the design of VFP and its API, its flow language and compiler used for flow processing, performance results, and experiences deploying and using VFP in Azure over several years.
                   
             - title: 'P4FPGA: A Rapid Prototyping Framework for P4'
               authors: Han Wang, Robert Soulé, Huynh Tu Dang, Ki Suh Lee, Vishal Shrivastav, Nate Foster, Hakim Weatherspoon
               in: ACM SOSR '17
               year: 2017
               url: https://dl.acm.org/doi/10.1145/3050220.3050234
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                P4FPGA is a tool for developing and evaluating data plane applications. It is both an open-source compiler and runtime; the compiler in turn extends the P4.org reference compiler with a custom backend that generates FPGA code. By combining high-level programming abstractions offered by P4 with a flexible and powerful hardware target, P4FPGA may allow developers to rapidly prototype and deploy new data plane applications.
                   
             - title: 'HARMLESS: Cost-Effective Transitioning to SDN for Small Enterprises'
               authors: Levente Csikor, László Toka, Márk Szalay, Gergely Pongrácz, Dimitrios P. Pezaros, Gábor Rétvári 
               in: IFIP Networking '18
               year: 2018
               url: https://ieeexplore.ieee.org/document/8696504
-              relevance:
-              desc:
+              relevance: interesting
+              desc: |
+                The paper proposes HARMLESS, a new SDN switch design that seamlessly adds SDN capability to legacy network gear, by emulating the OpenFlow switch OS in a separate software switch component. This way, HARMLESS enables a quick and easy leap into SDN, combining the rapid innovation and upgrade cycles of software switches with the port density and cost-efficiency of hardware-based appliances into a fully dataplane-transparent and vendor-neutral solution. HARMLESS incurs an order of magnitude smaller initial expenditure for an SDN deployment than existing turnkey vendor SDN solutions while it yields matching, or even better data plane performance for smaller enterprises.          
                   
             - title: Dataplane equivalence and its applications
               authors: Dragos Dumitrescu, Radu Stoenescu, Matei Popovici, Lorina Negreanu, Costin Raiciu
               in: USENIX NSDI '19
               year: 2019
               url: https://www.usenix.org/conference/nsdi19/presentation/dumitrescu
-              relevance:
-              desc:
+              relevance: important
+              desc: |
+                The paper presents netdiff, an algorithm to check the equivalence of two network dataplanes. Such an algorithm can be useful to verify and compare the output of different dataplane compilers, to find new bugs existing network dataplanes, or to check the equivalence of FIB updates in a production network. The evaluation shows that equivalence is an easy way to find bugs, scales well to relatively large programs and uncovers subtle issues otherwise difficult to find.
                   
     - name: Abstractions for Embedded State
       preamble: While OpenFlow match/action table abstractions are stateless, there are many efforts toward devising a stateful data plane programming abstraction, e.g., based on finite state machines, for supporting more dynamic applications. We discuss such approaches as well as first workload characterizations of stateful networking applications. We also review literature on the challenge of consistent state migration and elastic scaling, and discuss security implications.
@@ -537,156 +604,175 @@ abstractions:
           in: IEEE ISHPC '08
           year: 2008
           url: https://link.springer.com/chapter/10.1007/978-3-540-77704-5_11
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            This paper presents the first workload characterization of stateful networking applications. The analysis emphasizes the study of data cache behavior, but discusses branch prediction, instruction distribution, etc. Another important contribution is the study of the state categories of different networking applications.
                   
         - title: 'OpenState: Programming Platform-independent Stateful Openflow Applications Inside the Switch'
           authors: Giuseppe Bianchi, Marco Bonola, Antonio Capone, Carmelo Cascone
           in: ACM SIGCOMM CCR 44,2
           year: 2014
           url: https://dl.acm.org/doi/10.1145/2602204.2602211
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            The paper tackles the challenge to devise a stateful data plane programming abstraction (versus the stateless OpenFlow match/action table abstraction) which still entails high performance and remains consistent with vendors' preference for closed platforms. The authors posit that a promising answer revolves around the usage of extended finite state machines, as an extension (super-set) of the OpenFlow match/action abstraction, turn the proposed abstraction into an actual table-based API, and show how it can be supported by (mostly) reusing core primitives already implemented in OpenFlow devices.
                   
         - title: 'Flow-level State Transition As a New Switch Primitive for SDN'
           authors: Masoud Moshref, Apoorv Bhargava, Adhip Gupta, Minlan Yu, Ramesh Govindan
           in: ACM HotSDN '14
           year: 2014
           url: https://dl.acm.org/doi/10.1145/2620728.2620729
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper proposes FAST (Flow-level State Transitions) as a new switch primitive for software-defined networks. With FAST, the controller simply preinstalls a state machine and switches can automatically record flow state transitions by matching incoming packets to installed filters. FAST can support a variety of dynamic applications, and can be readily implemented with commodity switch components and software switches.
                   
         - title: 'SNAP: Stateful Network-Wide Abstractions for Packet Processing'
           authors: Mina Tahmasbi Arashloo, Yaron Koral, Michael Greenberg, Jennifer Rexford, David Walker
           in: ACM SIGCOMM '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2934872.2934892
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            SNAP offers a simpler "centralized" stateful programming model on top of the simple match-action paradigm offered by OpenFlow. SNAP programs are developed on a one-big-switch abstraction and may contain reads and writes to global, persistent arrays, allowing programmers to implement a broad range of stateful applications. The SNAP compiler then distributes, places, and optimizes access to these stateful arrays, discovering read/write dependencies and translating one-big-switch programs into an efficient internal representation based on a novel variant of binary decision diagrams.
                   
         - title: 'Kinetic: Verifiable Dynamic Network Control'
           authors: Hyojoon Kim, Joshua Reich, Arpit Gupta, Muhammad Shahbaz,  Nick Feamster, Russ Clark
           in: USENIX NSDI '15
           year: 2015
           url: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/kim
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            Kinetic provides a formal way to program the network control plane using finite state machines. The use of a formal language allows the system to verify the correctness of the control program according to user-specified temporal properties. The paper also reports about a user survey among students of the Coursera's SDN course, which find the Finite State Machine abstraction of Kinetic to be intuitive and easier to verify compared to other high-level languages, such as Pyretic.
                   
         - title: 'Packet Transactions: High-Level Programming for Line-Rate Switches'
           authors: Anirudh Sivaraman, Alvin Cheung, Mihai Budiu, Changhoon Kim, Mohammad Alizadeh, Hari Balakrishnan, George Varghese, Nick McKeown,  Steve Licking
           in: ACM SIGCOMM '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2934872.2934900
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            This paper shows how to program data-plane algorithms in a high-level language and compile those programs into low-level microcode that can run on programmable line-rate switching chips. The key challenge is that many data-plane algorithms create and modify algorithmic state. To achieve line-rate programmability for stateful algorithms, the paper introduces the notion of a packet transaction: a sequential packet-processing code block that is atomic and isolated from other such code blocks. The idea is developed in Domino, a C-like imperative language to express data-plane algorithms, and many examples are shown that can be run at line rate with modest estimated chip-area overhead.
                   
         - title: 'Open Packet Processor: a programmable architecture for wire speed platform-independent stateful in-network processing'
           authors: Giuseppe Bianchi, Marco Bonola, Salvatore Pontarelli, Davide Sanvito, Antonio Capone, Carmelo Cascone
           in: unpublished manuscript
           year: 2016
           url: https://arxiv.org/abs/1605.01977
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            This paper aims at contributing to the debate on how to bring programmability of stateful packet processing tasks inside the network switches, while retaining platform independence. The proposed approach, named "Open Packet Processor" (OPP), shows the viability of eXtended Finite State Machines (XFSM) as low-level data plane programming abstraction. Platform independence is accomplished by decoupling the implementation of hardware primitives from their usage by an application formally described via an abstract XFSM.
                   
         - title: 'Paving the Way for NFV: Simplifying Middlebox Modifications Using StateAlyzr'
           authors: Junaid Khalid, Aaron Gember-Jacobson, Roney Michael, Anubhavnidhi Abhashkumar,Aditya Akella
           in: USENIX NSDI '16
           year: 2016
           url: https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/khalid
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            Migrating/cloning internal state in elastically scalable Network Functions Virtualization (NFV) require modifications to middlebox code to identify needed state. The paper presents a framework-independent system, StateAlyzr, that embodies novel algorithms adapted from program analysis to provably and automatically identify all state that must be migrated/cloned to ensure consistent middlebox output in the face of redistribution. StateAlyzr reduces man-hours required for code modification by nearly 20x.
                   
         - title: 'Swing State: Consistent Updates for Stateful and Programmable Data Planes'
           authors: Shouxi Luo, Hongfang Yu, Laurent Vanbever
           in: ACM SOSR '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3050220.3050233
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper presents Swing State, a general state-management framework and runtime system supporting consistent state migration in stateful data planes. The key insight is to perform state migration entirely within the data plane by piggybacking state updates on live traffic. To minimize the overhead, Swing State only migrates the states that cannot be safely reconstructed at the destination switch. A prototype of Swing State for P4 is also described.
                   
         - title: 'A Survey on the Security of Stateful SDN Data Planes'
           authors:  Tooska Dargahi, Alberto Caponi, Moreno Ambrosin, Giuseppe Bianchi, Mauro Conti 
           in: IEEE Comm. Surveys & Tutorials 19,3
           year: 2017
           url: https://ieeexplore.ieee.org/document/7890396
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The paper provides the reader with a background on stateful SDN data plane proposals, focusing on the security implications that data plane programmability brings about, identifies potential attack scenarios, and highlights possible vulnerabilities specific to stateful in-switch processing, including denial of service and saturation attacks.
                   
         - title: 'Stateless Network Functions: Breaking the Tight Coupling of State and Processing'
           authors: Murad Kablan, Azzam Alsudais, Eric Keller, Franck Le
           in: USENIX NSDI '17
           year: 2017
           url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/kablan
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            The paper presents Stateless Network Functions, a new architecture for network functions virtualization, where the existing design of network functions is decomposed into a stateless processing component along with a data-store layer. The StatelessNF processing instances are architected around efficient pipelines utilizing DPDK for high performance network I/O, packaged as Docker containers for easy deployment, and a data store interface optimized based on the expected request patterns to efficiently access a RAMCloud-based data store. A network-wide orchestrator monitors the instances for load and failure, manages instances to scale and provide resilience, and leverages an OpenFlow-based network to direct traffic to instances.
                   
         - title: 'Elastic Scaling of Stateful Network Functions'
           authors: Shinae Woo, Justine Sherry, Sangjin Han, Sue Moon, Sylvia Ratnasamy, Scott Shenker
           in: USENIX NSDI '18
           year: 2018
           url: https://www.usenix.org/conference/nsdi18/presentation/woo
-          relevance:
-          desc:
+          relevance: msutread
+          desc: |
+            Elastic scaling is a central promise of NFV but has been hard to realize in practice, because most Network Functions (NFs) are stateful and this state need to be shared across NF instances. The paper presents S6, building on the insight that a distributed shared state abstraction is well-suited to the NFV context. State is organized as a distributed shared object (DSO) space, extended with techniques designed to meet the need for elasticity and high-performance in NFV workloads.
                   
         - title: 'FlowBlaze: Stateful Packet Processing in Hardware'
           authors: Salvatore Pontarelli, Roberto Bifulco, Marco Bonola, Carmelo Cascone, Marco Spaziani, Valerio Bruschi, Davide Sanvito, Giuseppe Siracusano, Antonio Capone, Michio Honda, Felipe Huici, Giuseppe Bianchi
           in: USENIX NSDI '19
           year: 2019
           url: https://www.usenix.org/conference/nsdi19/presentation/pontarelli
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            FlowBlaze is an open abstraction for building stateful packet processing functions in hardware. The abstraction is based on Extended Finite State Machines and introduces the explicit definition of flow state, allowing FlowBlaze to leverage flow-level parallelism. The paper presents an implementation of FlowBlaze on a NetFPGA SmartNIC that achieves latency on the order of a few microseconds, consumes relatively little power, can hold per-flow state for hundreds of thousands of flows, and yields speeds of 40 Gbps.
                   
     - name: Programmable Parsing and Scheduling
-      desc: We start by reviewing design principles for packet parsers. We then revisit the concept of a universal scheduler that would handle all queuing strategies that may arise in a programmable switch, and ask whether such a scheduling algorithm can really exist. We conclude with a review of fair queuing on reconfigurable switches.
+      desc: |
+        We start by reviewing design principles for packet parsers. We then revisit the concept of a universal scheduler that would handle all queuing strategies that may arise in a programmable switch, and ask whether such a scheduling algorithm can really exist. We conclude with a review of fair queuing on reconfigurable switches.
       papers:
-
         - title: Design principles for packet parsers
           authors: Glen Gibb, George Varghese, Mark Horowitz, Nick McKeown
           in: ACM/IEEE ANCS '13
           year: 2013
           url: https://dl.acm.org/doi/10.5555/2537857.2537860
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The paper presents an interesting view on parser design and the trade-offs between different designs, asking whether it is better to design one fast parser or several slow parsers, what are the costs of making the parser reconfigurable in the field, and what design decisions most impact power and area. The paper describes trade-offs in parser design, identifies design principles for switch and router architects, and describes a parser generator that outputs synthesizable Verilog that is available for download.
                   
         - title: 'No Silver Bullet: Extending SDN to the Data Plane'
           authors: Anirudh Sivaraman, Keith Winstein, Suvinay Subramanian, Hari Balakrishnan
           in: ACM HotNets '13
           year: 2013
           url: https://dl.acm.org/doi/10.1145/2535771.2535796 
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The authors argue that, instead of going with a universal scheduler that would handle all queuing strategies that may arise in a programmable switch, Software-Defined Networking must be extended to control the fast-path scheduling and queuing behavior of a switch. To this end, they propose adding a small FPGA to switches, and synthesize, place, and route hardware implementations for CoDel and RED.
                   
         - title: 'Universal Packet Scheduling'
           authors: Radhika Mittal, Rachit Agarwal, Sylvia Ratnasamy, Scott Shenker
           in: USENIX NSDI '16
           year: 2016
           url: https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/mittal
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The addresses a seemingly simple question: Is there a universal packet scheduling algorithm? It turns out that in general the answer is "no"; however, the authors manage to show that the classical Least Slack Time First (LSTF) scheduling algorithm comes closest to being universal and it can closely replay a wide range of scheduling algorithms. LSTF is evaluated as to whether in practice it can meet various network-wide objectives; the authors find that LSTF performs comparable to the state-of-the-art for each of performance metric.
                   
         - title: 'Programmable Packet Scheduling at Line Rate'
           authors: Anirudh Sivaraman, Suvinay Subramanian, Mohammad Alizadeh, Sharad Chole, Shang-Tse Chuang, Anurag Agrawal, Hari Balakrishnan, Tom Edsall, Sachin Katti, Nick McKeown
           in: ACM SIGCOMM '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2934872.2934899
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            Similarly to the "Universal Packet Scheduling" paper, this paper presents another design for a programmable packet scheduler, which allows scheduling algorithms, potentially algorithms that are unknown today, to be programmed into a switch without requiring hardware redesign. The design uses the property that scheduling algorithms make two decisions, in what order to schedule packets and when to schedule them, and exploits that in many scheduling algorithms definitive decisions on these two questions can be made when packets are enqueued. The resultant design uses a single abstraction: the push-in first-out queue (PIFO), a priority queue that maintains the scheduling order or time.
 
         - title: Approximating Fair Queueing on Reconfigurable Switches
           authors: Naveen Kr. Sharma, Ming Liu, Kishore Atreya, Arvind Krishnamurthy
           in: USENIX NSDI '18
           year: 2018
           url: https://www.usenix.org/conference/nsdi18/presentation/sharma
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper discusses how to leverage configurable per-packet processing and the ability to maintain mutable state inside switches to achieve fair bandwidth allocation across all traversing flows. The problem is that implementing fair queuing mechanisms in high-speed switches is expensive, since they require complex flow classification, buffer allocation, and scheduling on a per-packet basis. The proposed dequeuing scheduler, called Rotating Strict Priority scheduler, simulates an ideal round-robin scheme where each active flow transmits a single bit of data in every round, which allows to transmit packets from multiple queues in approximately sorted order.
 
         - title: Fast, Scalable, and Programmable Packet Scheduler in Hardware
           authors: Vishal Shrivastav
           in: ACM SIGCOMM '19
           year: 2019
           url: https://dl.acm.org/doi/10.1145/3341302.3342090
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            The trend toward increasing link speeds and slowdown in the scaling of CPU speeds, leads to a situation where packet scheduling in software results in lower precision and higher CPU utilization. While by offloading packet scheduling to the hardware (e.g., the NIC), this drawback can be overcome, one still would like to retain the flexibility benefits of software packet schedulers: packet scheduling in hardware should hence be programmable. Shrivastav proposes a generalization of the Push-In-First-Out (PIFO) primitive used by state-of-the-art hardware packet schedulers: Push-In-Extract-Out (PIEO) maintains an ordered list of elements, but allows dequeue from arbitrary positions in the list by supporting a programmable predicate-based filtering at dequeue. PIEO supports most scheduling (work-conserving and non-work conserving) algorithms and can be implemented scalably in hardware.
   
 algorithms:
   name: Algorithms & HW Realizations
@@ -698,80 +784,90 @@ algorithms:
       in: ACM SIGCOMM '99
       year: 1999
       url: https://dl.acm.org/doi/10.1145/316188.316216
-      relevance:
-      desc:
+      relevance: mustread
+      desc: |
+        This paper presents the packet classifier algorithm that underlies the Open vSwitch fast-path. Packet classification requires matching each packet against a database of flow rules and forwarding the packet according to the highest priority rule. The paper introduces a generic packet classification algorithm, called Tuple Space Search (TSS), based on the observation that real databases typically use only a small number of distinct field lengths. Thus, by mapping rules to tuples even a simple linear search of the tuple space can provide significant speedup over naive linear search over the filters. Each tuple is maintained as a hash table that can be searched in one memory access.
 
     - title: 'Content-addressable memory (CAM) circuits and architectures: A tutorial and survey'
       authors: Kostas Pagiamtzis, Ali Sheikholeslami
       in: IEEE Journal of Solid-State Circuits 41,3
       year: 2006
       url: https://ieeexplore.ieee.org/document/1599540
-      relevance:
-      desc:
+      relevance: important
+      desc: |
+        Content-addressable memory (CAM) and Ternary CAM (TCAM) chips are the most important component in programmable switch ASICs, performing packet classification according to configurable header fields, matching rules, and priority, in a single clock cycle using dedicated comparison circuitry. The paper surveys recent developments in the design of large-capacity CAMs. The main CAM-design challenge is to reduce power consumption associated with the large amount of parallel active circuitry, without sacrificing speed or memory density. The paper reviews CAM-design techniques at the circuit level and at the architectural level.
 
     - title: Efficient IP-address Lookup with a Shared Forwarding Table for Multiple Virtual Routers
       authors: Jing Fu, Jennifer Rexford
       in: ACM CoNEXT '08
       year: 2008
       url: https://dl.acm.org/doi/10.1145/1544012.1544033
-      relevance:
-      desc:
+      relevance: mustread
+      desc: |
+        Programmable routers often need to support a separate forwarding information base (FIB) for each virtual router provisioned by the controller, which leads to memory scaling challenges. In this paper, a small, shared FIB data structure is presented and a fast lookup algorithm that capitalize on the commonality of IP prefixes between each FIB. Experiments with real packet traces and routing tables show that the approach achieves much lower memory requirements and considerably faster lookup times.
                 
     - title: A Smart Pre-classifier to Reduce Power Consumption of TCAMs for Multi-dimensional Packet Classification
       authors: Yadi Ma, Suman Banerjee
       in: ACM SIGCOMM CCR 42,4
       year: 2012
       url: https://dl.acm.org/doi/10.1145/2377677.2377749
-      relevance:
-      desc:
+      relevance: interesting
+      desc: |
+        Ternary Content-Addressable Memories (TCAMs) have become the industrial standard for high-throughput packet classification, and as such, for programmable switch ASICs. However, one major drawback of TCAMs is their high power consumption. In this paper, a practical and efficient solution is proposed which introduces a smart pre-classifier to reduce power consumption of TCAMs for multi-dimensional packet classification. The classifier dimension is reduced by pre-classifying a packet on two header fields, source and destination IP addresses. Then, the high dimensional problem can use only a small portion of a TCAM for a given packet. The pre-classifier is built such that a given packet matches at most one entry in the pre-classifier, and each rule is stored only once in one of the TCAM blocks, which avoids rule replication. The presented solution uses commodity TCAMs.
                 
     - title: Scalable, High Performance Ethernet Forwarding with CuckooSwitch
       authors: Dong Zhou, Bin Fan, Hyeontaek Lim, Michael Kaminsky, David G. Andersen
       in: ACM CoNEXT '13
       year: 2013
       url: https://dl.acm.org/doi/10.1145/2535372.2535379
-      relevance:
-      desc:
+      relevance: important
+      desc: |
+        Programmable switches usually need to implement some or more match-action tables in the fast-path. This paper presents CuckooSwitch, a software-based switch design built around a memory-efficient, high-performance, and highly-concurrent hash table for compact and fast FIB lookup. The authors show that CuckooSwitch can process the maximum packets per second rate achievable across the underlying hardware's PCI buses while maintaining a forwarding table of one billion forwarding entries.
                 
     - title: 'Compressing IP Forwarding Tables: Towards Entropy Bounds and Beyond'
       authors: Gábor Rétvári, János Tapolcai, Attila Kőrösi, András Majdán,  Zalán Heszberger
       in: IEEE/ACM Trans. Networking 24,1
       year: 2016
       url: https://ieeexplore.ieee.org/document/6910329
-      relevance:
-      desc:
+      relevance: mustread
+      desc: |
+        The main goal of this paper is to demonstrate how data compression can benefit the networking community, by showing how to squeeze the longest-prefix-matching lookup table, consulted by switches for IP lookup, into information-theoretical entropy bounds with essentially zero cost on lookup performance and FIB update. The state-of-the-art in compressed data structures yields a static entropy-compressed FIB representation with asymptotically optimal lookup. Since this data structure results too slow for practical uses, the authors redesign the venerable prefix tree to also admit entropy bounds and support lookup in optimal time and update in nearly optimal time.
                 
     - title: SAX-PAC (Scalable And eXpressive PAcket Classification)
       authors: Kirill Kogan, Sergey Nikolenko, Ori Rottenstreich, William Culhane, Patrick Eugster
       in: ACM SIGCOMM '14
       year: 2014
       url: https://dl.acm.org/doi/10.1145/2740070.2626294
-      relevance:
-      desc:
+      relevance: important
+      desc: |
+        Efficient packet classification is a core concern for programmable network devices, but it is also very difficult to implement efficiently. Traditional multi-field classification approaches, in both software and ternary content-addressable memory (TCAMs), entail trade-offs between (memory) space and (lookup) time. In this work, a novel approach is presented, which identifies properties of many classifiers that can be implemented in linear space and with worst-case guaranteed logarithmic time and allows the addition of more fields including range constraints without impacting space and time complexities.
                 
     - title: 'Towards Scalable SDN Switches: Enabling Faster Flow Table Entries Installation'
       authors: Roberto Bifulco, Anton Matsiuk
       in: ACM SIGCOMM CCR 45,4
       year: 2015
       url: https://dl.acm.org/doi/10.1145/2829988.2790008
-      relevance:
-      desc:
+      relevance: important
+      desc: |
+        The authors argue that a hybrid software-hardware switch may help in lowering the flow-table entries installation time, and present ShadowSwitch (sSw), an OpenFlow switch prototype that implements such a design. sSw builds on two key observations. First, software tables are very fast to be updated, hence, forwarding tables updates always happen in software first and, eventually, entries are moved to the TCAM to achieve higher overall throughput and offload the software forwarder. Lookup in software is performed only in case there are no entries matching a packet in hardware. Second, since deleting entries from TCAM is much faster than adding them, ShadowSwitch may translate an entry installation in a mix of installation in software tables and deletion from hardware tables.
                 
     - title: 'Hermes: Providing Tight Control over High-Performance SDN Switches'
       authors: Huan Chen, Theophilus Benson
       in: ACM CoNEXT '17
       year: 2017
       url: https://dl.acm.org/doi/10.1145/3143361.3143391
-      relevance:
-      desc:
+      relevance: interesting
+      desc: |
+        The paper presents the design and evaluation of Hermes, a practical and immediately deployable framework that offers a novel method for partitioning and optimizing switch TCAM to enable performance guarantees for control plane actions, in particular, inserting, modifying, or deleting rules. Hermes provides these guarantees by trading-off a nominal amount of TCAM space for assured performance.
                 
     - title: Fast String Searching on PISA
       authors: Theo Jepsen, Daniel Alvarez, Nate Foster, Changhoon Kim, Jeongkeun Lee, Masoud Moshref, and Robert Soulé
       in: ACM SOSR '19
       year: 2019
       url: https://dl.acm.org/doi/10.1145/3314148.3314356
-      relevance:
-      desc:
+      relevance: interesting
+      desc: |
+        The paper presents PPS, an algorithm for locating occurrences of string keywords in the payload of packets using programmable network ASICs. PPS converts the string search problem into a Deterministic Finite Automata (DFA) representation and then maps the DFA into a sequence of forwarding tables implemented in the switch pipeline. The evaluations show that PPS demonstrates significantly higher throughput and lower latency than CPUs, GPUs, or FPGAs.
                 
 applications:
   name: Applications
@@ -795,32 +891,36 @@ applications:
           in: USENIX NSDI '10
           year: 2010
           url: https://dl.acm.org/doi/10.5555/1855711.1855730
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            This paper is motivated by the limitations of existing IP multipath protocols relying on per-flow static hashing, which can result in suboptimal throughput and bandwidth losses due to long-term collisions. Hedera is a dynamic flow scheduling system for multi-stage switch topologies as they often appear in data centers. Hedera uses flow information from constituent switches and reroutes traffic to non-conflicting routes accordingly. The authors show that the more global view of routing and traffic demands allows Hedera to see bottlenecks that switch-local schedulers cannot, and to adaptively schedule the switching fabric in a way which significantly improves aggregate network utilization with minimal overheads.
           
         - title: Ensuring Connectivity via Data Plane Mechanisms
           authors: Junda Liu, Aurojit Panda, Ankit Singla, Brighten Godfrey, Michael Schapira, Scott Shenker
           in: USENIX NSDI '13
           year: 2013
           url: https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/liu_junda
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The authors propose to move the responsibility for maintaining basic network connectivity (as opposed to the computation of optimal paths which require global control plane knowledge) to the data plane, which operates orders of magnitude faster than the control plane. Their Data-Driven Connectivity (DDC) approach, which can handle arbitrary delays and losses, relies on simple state changes which can done at packet rates. In particular, DCC relies on link reversal routing, adapted to suit the data plane, e.g., to handle message loss.
  
         - title: 'The show must go on: Fundamental data plane connectivity services for dependable SDNs'
           authors: Michael Borokhovich, Clement Rault, Liron Schiff, Stefan Schmid
           in: Elsevier Computer Communications 116
           year: 2018
           url: https://www.sciencedirect.com/journal/computer-communications/vol/116/suppl/C
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper argues that in order to provide a high availability, connectivity, and robustness, dependable SDNs must implement functionality for inband network traversals, e.g., to find failover paths in the presence link failures. Three fundamentally different mechanisms are described: simple stateless mechanisms, efficient mechanisms based on packet tagging, and mechanisms based on dynamic state at the switches.
  
         - title: 'Blink: Fast Connectivity Recovery Entirely in the Data Plane'
           authors: Thomas Holterbach, Edgar Costa Molero, Maria Apostolaki, Alberto Dainotti, Stefano Vissicchio, Laurent Vanbever
           in: USENIX NSDI '19
           year: 2019
           url: https://www.usenix.org/conference/nsdi19/presentation/holterbach
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The paper explores new possibilities, created by programmable switches, for fast dataplane-driven rerouting upon signals triggered by traffic disruptions. The proposed method, Blink, uses exploits TCP-induced signals to detect failures; when compounded over multiple flows, TCP behavior creates a strong and characteristic failure signal. Blink analyzes TCP flows, at line rate, to reliably and quickly detect major traffic disruptions and recover data-plane connectivity. Evaluation results on a P4 implementation of Blink running on real Tofino switch indicate that it can achieve sub-second rerouting for realistic Internet traffic and scales to protect large fractions of realistic traffic.
  
     - name: In-network Computation
       preamble: Offloading computation, on‐path aggregation functionalities, caching, or even AI, to the network, has the potential to significantly improve the efficiency of distributed applications. Accordingly, the study of such mechanisms have recently received much attention. 
@@ -831,64 +931,72 @@ applications:
           in: USENIX NSDI '12
           year: 2012
           url: https://www.usenix.org/conference/nsdi12/technical-sessions/presentation/costa
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            This paper makes the case that many massive-scale information processing and real-time applications may benefit from pushing data-aggregation load from the network edge into the network. This is because in many of these applications data is aggregated during the computation process and the output size is a fraction of the input size. The authors explore a different point in the design space, whereby instead of increasing the network bandwidth they rather implement a MapReduce-like system on a cluster design that uses a direct-connect network topology, with servers directly linked to other servers, and letting servers to perform in-network aggregation of data during the shuffle phase. Camdoop was shown to significantly reduce network traffic and provide high performance increase.
  
         - title: 'Netagg: Using middleboxes for application-specific on-path aggregation in data centres'
           authors: Luo Mai, Lukas Rupprecht, Abdul Alim, Paolo Costa, Matteo Migliavacca, Peter Pietzuch, Alexander L. Wolf
           in: ACM CoNEXT '14
           year: 2014
           url: https://dl.acm.org/doi/abs/10.1145/2674005.2674996
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            This paper is motivated by the performance challenges faced by data-center applications, such as Hadoop batch processing, during the data aggregation phase: if the network struggles to support many-to-few, high-bandwidth communication between servers then it can become a bottleneck. Mai et al. propose to depart from performing data aggregation at edge servers, but rather, do it more efficiently along network paths. The presented software platform, NETAGG, supports on-path aggregation for network-bound partition/aggregation applications. It is based on a middlebox-like design, in which dedicated servers that can execute aggregation functions provided by applications. The authors demonstrate that NETAGG can improve throughput substantially.
  
         - title: 'Scalable hierarchical aggregation protocol (SHArP): a hardware architecture for efficient data reduction'
           authors: Richard L. Graham, Devendar Bureddy, Pak Lui, Hal Rosenstock, Gilad Shainer, Gil Bloch, Dror Goldenerg, Mike Dubman, Sasha Kotchubievsky, Vladimir Koushnir, Lion Levi, Alex Margolin, Tamir Ronen, Alexander Shpiner, Oded Wertheim, Eitan Zahavi
           in: IEEE COMHPC '16
           year: 2016
           url: https://ieeexplore.ieee.org/document/7830486
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            SHArP is designed to offload computational load to the network, by relying on intelligent network devices manipulating data traversing the datacenter. SHArP is implemented in Mellanox’s SwitchIB-2 ASIC, using in-network trees to reduce data from a group of sources, and to distribute the result. Multiple parallel jobs with several partially overlapping groups are supported, and pipelining is used for improving latency further.
  
         - title: In-Network Computation is a Dumb Idea Whose Time Has Come
           authors: Amedeo Sapio, Ibrahim Abdelaziz, Abdulla Aldilaijan, Marco Canini, Panos Kalnis
           in: ACM HotNets '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3152434.3152461
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The authors ask the question, given that programmable data plane hardware creates new opportunities for infusing intelligence into the network, what kinds of computation should be delegated to the data plane? The paper discusses the opportunities and challenges for co-designing data center distributed systems with their network layer, under the constraints imposed by the limitations of the network machine architecture of programmable devices. They find that, in particular, aggregation functions raise opportunities to exploit the limited computation power of networking hardware to lessen network congestion and improve the overall application performance.
  
         - title: 'IncBricks: Toward In-Network Computation with an In-Network Cache'
           authors: Ming Liu, Liang Luo, Jacob Nelson, Luis Ceze, Arvind Krishnamurthy, Kishore Atreya
           in: ASPLOS '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3037697.3037731
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            This paper presents IncBricks, an in-network caching fabric with basic computing primitives. IncBricks is a hardware-software co-designed system that supports caching in the network using a programmable network middlebox. As a key-value store accelerator, our prototype lowers request latency by over 30% and doubles throughput for 1024 byte values in a common cluster configuration. The results demonstrate the effectiveness of in-network computing and that efficient datacenter network request processing is possible if we carefully split the computation across programmable switches, network accelerators, and end hosts.
  
         - title: 'Evaluating the Power of Flexible Packet Processing for Network Resource Allocation'
           authors: Naveen Kr. Sharma, Antoine Kaufmann, Thomas Anderson, Changhoon Kim, Arvind Krishnamurthy, Jacob Nelson, Simon Peter
           in: NSDI '17
           year: 2017
           url: https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/sharma
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The main contribution of this work is providing a set of general building blocks that mask the limitations of programmable switches (limited state, support limited types of operations, limited per-packet computation) using approximation techniques and thereby enabling the implementation of realistic network protocols. These building blocks are then used to tackle the network resource allocation problem within datacenters and realize approximate variants of congestion control and load balancing protocols, such as XCP, RCP, and CONGA, that require explicit support from the network. The evaluations show that the proposed approximations are accurate and that they do not exceed the hardware resource limits associated with flexible switches.
  
         - title: Can the Network Be the AI Accelerator?
           authors: Davide Sanvito, Giuseppe Siracusano, Roberto Bifulco
           in: ACM NetCompute '18
           year: 2018
           url: https://dl.acm.org/doi/10.1145/3229591.3229594
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            This paper analyzes the feasibility and opportunities from using programmable network devices (e.g., network cards and switches), as accelerators for Artificial Neural Networks (NNs). In particular, the authors investigate the properties of NN processing on CPUs, and find that programmable network devices may indeed be a suitable engine, for implementing a CPU’s NN co-processor.
           
         - title: In-network Neural Networks
           authors: Giuseppe Siracusano, Roberto Bifulco
           in: unpublished manuscript
           year: 2018
           url: https://arxiv.org/abs/1801.05731
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The paper presents N2Net, a system that implements binary neural networks using commodity switching chips deployed in network switches and routers. N2Net shows that these devices can run simple neural network models, whose input is encoded in the network packets' header, at packet processing speeds (billions of packets per second). Furthermore, the authors' experience highlights that switching chips could support even more complex models, provided that some minor and cheap modifications to the chip's design are applied.
         
     - name: Distributed Consensus
       preamble: |
@@ -900,68 +1008,76 @@ applications:
           in: ACM SOSR '15
           year: 2015
           url: https://dl.acm.org/doi/10.1145/2774993.2774999
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            This paper explores the possibility of implementing the widely deployed Paxos consensus protocol in network devices. Two different approaches are presented: (1) a detailed design description for implementing the full Paxos logic in SDN switches, which identifies a sufficient set of required OpenFlow extensions, and (2) an alternative, optimistic protocol which can be implemented without changes to the OpenFlow API, but relies on assumptions about how the network orders messages. Although neither of these protocols can be fully implemented without changes to the underlying switch firmware, the authors argue that such changes are feasible in existing hardware.
  
         - title: Paxos Made Switch-y
           authors: Huynh Tu Dang, Marco Canini, Fernando Pedone, and Robert Soulé
           in: ACM SIGCOMM CCR 46,2
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2935634.2935638
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            This paper posits that there are significant performance benefits to be gained by implementing the Paxos protocol, the foundation for building many fault-tolerant distributed systems and services, in network devices. The paper describes an implementation of Paxos in P4.
  
         - title: Be Fast, Cheap and in Control with SwitchKV
           authors: Xiaozhou Li, Raghav Sethi, Michael Kaminsky, David G. Andersen, Michael J. Freedman
           in: USENIX NSDI '16
           year: 2016
           url: https://dl.acm.org/doi/10.5555/2930611.2930614
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            SwitchKV implements a key-value store system leveraging SDN network switches to balance the cache servers workload routing the traffic based on the content of the network packets. To identify the content of a packet, the key of a key-value entry is encoded in the packet header. A hybrid cache strategy keeps the cache and switch forwarding rules updated, finally achieving significant improvements in both system's throughput and latency.
  
         - title: In-band synchronization for distributed SDN control planes
           authors: Liron Schiff, Stefan Schmid, Petr Kuznetsov
           in: ACM SIGCOMM CCR 46,1
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2875951.2875957
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The paper considers the design of consistent distributed control planes in which the actions performed on the data plane by different controllers need to be synchronized. The authors propose a synchronization framework for based on atomic transactions implemented in the data plane switches and show that their approach allows to realize fundamental consensus primitives in the presence of controller failures. They also discuss applications for consistent policy composition. With a proof-of-concept implementation, it is demonstrated that the framework can be implemented using the standard OpenFlow protocol.
  
         - title: 'NetCache: Balancing Key-Value Stores with Fast In-Network Caching'
           authors: Xin Jin, Xiaozhou Li, Haoyu Zhang, Robert Soulé, Jeongkeun Lee, Nate Foster, Changhoon Kim, Ion Stoica
           in: ACM SOSP '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3132747.3132764
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            NetCache implements a small cache in for key-velue stores in a programmable hardware switch data plane. The switch works as a cache at the datacenter's rack level, handling requests directed to the rack's server. The implementation deals with consistency problems and shows how to overcome the constraints of hardware to provide throughput and latency improvements.
  
         - title: 'KV-Direct: High-Performance In-Memory Key-Value Store with Programmable NIC'
           authors: Bojie Li, Zhenyuan Ruan, Wencong Xiao, Yuanwei Lu, Yongqiang Xiong, Andrew Putnam, Enhong Chen, Lintao Zhang
           in: ACM SOSP '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3132747.3132756
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper presents an interesting alternative of NetCache: instead of using in-network programmable switches to cache key-value pairs it leverages programmable NIC to accelerate key-value stores in an "end-to-end" fashion. In particular, KV-Direct extends RDMA using programmable NICs to enable remote direct key-value access to the main host memory, yielding more than 1.2 billion operations per second using 10 parallel NICs.
  
         - title: 'NetChain: Scale-Free Sub-RTT Coordination'
           authors: Xin Jin, Xiaozhou Li, Haoyu Zhang, Nate Foster, Jeongkeun Lee, Robert Soulé, Changhoon Kim, Ion Stoica
           in: USENIX NSDI '18
           year: 2018
           url: https://www.usenix.org/conference/nsdi18/presentation/jin
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            This paper presents NetChain, a new approach that provides scale-free sub-RTT coordination in data centers. NetChain exploits programmable switches to store data and process queries entirely in the network data plane. This eliminates the query processing at coordination servers and cuts the end-to-end latency to as little as half of an RTT. New protocols and algorithms are designed for NetChain guarantees strong consistency and handles switch failures efficiently.
  
     - name: Monitoring, Telemetry, and Measurement
-      preamble: Perhaps the most interesting applications are related to network measurement, monitoring and diagnosis. Indeed, programmable data planes can be a game changer, providing deep insights into the network, even to end-hosts, as we discuss in the following. 
+      preamble: |
+        Perhaps the most interesting applications are related to network measurement, monitoring and diagnosis. Indeed, programmable data planes can be a game changer, providing deep insights into the network, even to end-hosts, as we discuss in the following. 
       papers:
-
         - title: 'Millions of little minions: Using packets for low latency network programming and visibility'
           authors: Vimalkumar Jeyakumar, Mohammad Alizadeh, Yilong Geng, Changhoon Kim, David Mazières
           in: ACM SIGCOMM '14
           year: 2014
           url: https://dl.acm.org/doi/10.1145/2619239.2626292
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            Jeyakumar et al. present an approach to give end-hosts visibility into network behavior and to quickly introduce new data plane functionality, via a new Tiny Packet Program (TTP) interface. TTPs are embedded into packets by endhosts and can actively query and manipulate internal network state. The idea is motivated by a clear work division: switches forward and execute TTPs in-band at line rate, and endhosts perform arbitrary (and easily updated) computation on network state. The paper presents a number of use case descriptions motivating In‐band Network Telemetry (INT).
  
         - title: In-band Network Telemetry via Programmable Dataplanes
           authors: Changhoon Kim, Anirudh Sivaraman, Naga Katta, Antonin Bas, Advait Dixit, Lawrence J Wobker
@@ -969,42 +1085,48 @@ applications:
           year: 2015
           url: https://nkatta.github.io/papers/int-demo.pdf
           relevance: important
-          desc: In-band Network Telemetry (INT) is a powerful new network-diagnostics and debug mechanism, which allows, e.g., to diagnose performance problems related to latency spikes. The INT abstraction allows data packets to query switch-internal state (e.g., queue size, link utilization, and queuing latency). The paper reports on a prototype implemented in the P4 language, hence supporting various different programmable network devices.
+          desc: |
+            In-band Network Telemetry (INT) is a powerful new network-diagnostics and debug mechanism, which allows, e.g., to diagnose performance problems related to latency spikes. The INT abstraction allows data packets to query switch-internal state (e.g., queue size, link utilization, and queuing latency). The paper reports on a prototype implemented in the P4 language, hence supporting various different programmable network devices.
  
         - title: Towards Accurate Online Traffic Matrix Estimation in Software-defined Networks
           authors: Yanlei Gong, Xiong Wang, Mehdi Malboubi, Sheng Wang, Shizhong Xu, Chen-Nee Chuah
           in: ACM SOSR '15
           year: 2015
           url: https://dl.acm.org/doi/10.1145/2774993.2775068
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper seeks for accurate, feasible and scalable traffic matrix estimation approaches, by designing feasible traffic measurement rules that can be installed in TCAM entries of SDN switches. The statistics of the measurement rules are collected by the controller to estimate fine-grained traffic matrix. Two strategies are proposes, called Maximum Load Rule First (MLRF) and Large Flow First (LFF), both of which LFF satisfy the flow aggregation constraints (determined by associated routing policies) and have low-complexity.
  
         - title: Heavy-Hitter Detection Entirely in the Data Plane
           authors: Vibhaalakshmi Sivaraman, Srinivas Narayana, Ori Rottenstreich, S. Muthukrishnan, Jennifer Rexford
           in: ACM SOSR '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3050220.3063772
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper describes HashPipe, a heavy hitter detection algorithm using programmable data planes. HashPipe implements a pipeline of hash tables which retain counters for heavy flows while evicting lighter flows over time. HashPipe is prototyped in P4 and evaluated with packet traces from an ISP backbone link and a data center.
  
         - title: 'Dapper: Data plane performance diagnosis of TCP'
           authors: Mojgan Ghasemi, Theophilus Benson, Jennifer Rexford
           in: ACM SOSR '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3050220.3050228
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            Dapper is a system which leverages emerging edge devices offering flexible and high-speed packet processing on commodity hardware, to diagnose cloud performance problems in a timely manner. In particular, Dapper analyzes TCP performance in real time near the end-hosts, i.e., at the hypervisor, NIC, or top-of-rack switch, by determining whether a connection is limited by the sender, the network, or the receiver. Dapper was prototyped in P4.
  
         - title: 'SketchVisor: Robust Network Measurement for Software Packet Processing'
           authors: Qun Huang, Xin Jin, Patrick P. C. Lee, Runhui Li, Lu Tang, Yi-Chao Chen, Gong Zhang
           in: ACM SIGCOMM '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3098822.3098831
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper presents SketchVisor, a robust network measurement framework, which augments sketch-based measurement in the data plane with a fast path that is activated under high traffic load to provide high-performance local measurement with slight accuracy degradation. It further recovers accurate network-wide measurement results via compressive sensing. A SketchVisor prototype is build on top of Open vSwitch; testbed experiments show that SketchVisor achieves high throughput and high accuracy for a wide range of network measurement tasks.
  
     - name: Load balancing
-      preamble: Last but not least, and similarly to the above discussion on resilient routing, programmable data planes provide unprecedented flexibilities (and performance) in how traffic can be dynamically load-balanced. 
+      preamble: |
+        Last but not least, and similarly to the above discussion on resilient routing, programmable data planes provide unprecedented flexibilities (and performance) in how traffic can be dynamically load-balanced. 
       papers:
 
         - title: 'Hula: Scalable load balancing using programmable data planes'
@@ -1012,24 +1134,27 @@ applications:
           in: ACM SOSR '16
           year: 2016
           url: https://dl.acm.org/doi/10.1145/2890955.2890968
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            HULA is motivated by the shortcomings of ECMP as well as of existing congestion-aware load-balancing techniques such as CONGA, which, due to limited switch memory, can only maintain a limited amount of congestion-tracking state at the edge switches, and hence do not scale. HULA is a more flexible and scalable data-plane load-balancing algorithm in which each switch tracks congestion only for the best path to a destination through a neighboring switch. HULA is designed for programmable switches and is programmed in P4.
  
         - title: 'SilkRoad: Making Stateful Layer-4 Load Balancing Fast and Cheap Using Switching ASICs'
           authors: Rui Miao, Hongyi Zeng, Changhoon Kim, Jeongkeun Lee, Minlan Yu
           in: ACM SIGCOMM '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3098822.3098824
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper explores how to use programmable switching ASICs to build much faster load balancers than have been built before. The proposed system, called SilkRoad, is defined in a 400 lines of P4 and, when compiled to a state-of-the-art switching ASIC, it can load-balance ten million connections simultaneously at line rate.
  
         - title: 'Load Balancing Memcached Traffic Using Software Defined Networking'
           authors: Anat Bremler-Barr, David Hay, Idan Moyal, Liron Schiff 
           in: IFIP Networking '17
           year: 2017
           url: https://ieeexplore.ieee.org/document/8264855
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            Memcached is an in-memory key-value distributed caching solution, commonly used by web servers for fast content delivery. In order to deal with skewed distributions of key popularity in key-value stores, the authors propose and implement MBalancer, a switch-based L7 load balancing scheme, which offloads requests from bottleneck Memcached servers. MBalancer runs as an SDN application, identifies the (typically small number of) hot keys, duplicates these hot keys to many (or all) Memcached servers, and adjusts the switches' forwarding tables accordingly. Experiences with an implementation of MBalancer on a hardware-based OpenFlow switch indicate significant throughput boost and latency reduction.
  
     - name: Control plane acceleration
       papers:
@@ -1039,24 +1164,28 @@ applications:
           in: ACM HotNets '18
           year: 2018
           url: https://dl.acm.org/doi/abs/10.1145/3286062.3286080
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            This seminal paper challenges a fundamental design principle of modern network architecture that the control plane software-based. With the advent of programmable switch ASICs, which can run complex logic at line rate, the paper revisits this principle, by accelerating the control plane offloading some of its tasks directly to the network hardware. Some simple control plane functionality can already be successfully offloaded to P4 hardware, including failure detection and notification, connectivity retrieval, and even policy-based routing protocols, but complex cases involve several tradeoffs and limitations; the paper outlines these and sketches interesting future research directions towards hardware-software co-design of network control planes.
  
         - title: Precise Time-synchronization in the Data-Plane Using Programmable Switching ASICs
           authors: Pravein Govindan, Kannan Raj, Joshi Mun, Choon Chan 
           in: ACM SOSR '19
           year: 2019
           url: https://dl.acm.org/doi/10.1145/3314148.3314353
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            Current implementations of time synchronization protocols, like PTP, handle the protocol stack in the control-plane. The paper explores the possibility of using programmable switching ASICs to design and implement a time synchronization protocol, DPTP, with the core logic running in the data-plane. Comprehensive measurement studies running a a dataplane-accelerated DPTP implemented in P4 running on a Barefoot Tofino switch shows that DPTP can achieve median and 99th percentile synchronization error of 19 ns and 47 ns, even under heavy network load.
  
 misc:
   name: Miscellaneous Topics
-  preamble: There exists highly recommendable literature on the history of SDN and programmable data planes. We also report on two other important topics, deployment and algorithms of programmable data planes. 
+  preamble: |
+    There exists highly recommendable literature on the history of SDN and programmable data planes. We also report on two other important topics, deployment and algorithms of programmable data planes. 
   categories:
 
     - name: History
-      preamble: There are several interesting papers putting the technological trends around programmable networks into a historic perspective.
+      preamble: |
+        There are several interesting papers putting the technological trends around programmable networks into a historic perspective.
       papers:
 
         - title: 'Smart packets: Applying active networks to network management'
@@ -1064,24 +1193,27 @@ misc:
           in: ACM Trans. Comp. Sys. 18,1
           year: 2000
           url: https://dl.acm.org/doi/10.1145/332799.332893
-          relevance:
-          desc:
+          relevance:  interesting
+          desc: |
+            One intellectual precursor to programmable networks is the Active Networks concept. This paper surveys the application of active networks technology to network management and monitoring. The main idea of Smart Packets, which contain programs written in a safe language, is to move management decision points closer to the nodes being managed, as well as to target specific aspects of the node for information.
 
         - title: 'The road to SDN: an intellectual history of programmable networks'
           authors: Nick Feamster, Jennifer Rexford, Ellen Zegura
           in: ACM SIGCOMM CCR 44,2
           year: 2014
           url: https://dl.acm.org/doi/10.1145/2602204.2602219
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            An intellectual history of programmable networks. A mustread. 
 
         - title: Reconfigurable Network Systems and Software-Defined Networking
           authors: Noa Zilberman, Philip M. Watts, Charalampos Rotsos, Andrew W. Moore 
           in: Proc. IEEE 103,7
           year: 2015
           url: https://ieeexplore.ieee.org/document/7122247
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper reviews the state of the art in reconfigurable network systems, covering hardware reconfiguration, SDN, and the interplay between them. It starts with a tutorial on software-defined networks, then continues to discuss programming languages as the linking element between different levels of software and hardware in the network, reviews electronic switching systems, highlighting programmability and reconfiguration aspects, and describes the trends in reconfigurable network elements. 
 
         - title: Programmable Forwarding Planes are Here to Stay
           authors: Nick McKeown
@@ -1089,7 +1221,8 @@ misc:
           year: 2017
           url: https://conferences.sigcomm.org/sigcomm/2017/files/program-netpl/01-mckeown.pptx
           relevance: mustread
-          desc: A keynote from Nick McKeown at NetPL'17 on the many great research ideas and new languages that have emerged for programmable forwarding. The talk considers how we got here, why programmable forwarding planes are inevitable, why now is the right time, why they are a final frontier for SDN, and why they are here to stay. 
+          desc: |
+            A keynote from Nick McKeown at NetPL'17 on the many great research ideas and new languages that have emerged for programmable forwarding. The talk considers how we got here, why programmable forwarding planes are inevitable, why now is the right time, why they are a final frontier for SDN, and why they are here to stay. 
                               
     - name: Deployments
       preamble: A very relevant question, which is also a research challenge, regards the deployment of SDN and programmable data planes.
@@ -1100,32 +1233,37 @@ misc:
           in: ACM SIGCOMM '07 
           year: 2007
           url: https://dl.acm.org/doi/10.1145/1282380.1282382
-          relevance:
-          desc:
+          relevance: mustread
+          desc: |
+            A seminal paper for deploying SDN in enterprise networks, this paper presents Ethane, a network architecture allowing managers to define a single network-wide fine-grain policy and then enforcing it directly. Ethane couples extremely simple flow-based Ethernet switches with a centralized controller that manages the admittance and routing of flows. While radical, this design is backwards-compatible with existing hosts and switches. Ethane was implemented in both hardware and software, supporting both wired and wireless hosts.
         
         - title: 'Softcell: Scalable and flexible cellular core network architecture'
           authors: Xin Jin, Li Erran Li, Laurent Vanbever, Jennifer Rexford
           in: ACM CoNEXT '13
           year: 2013
           url: https://dl.acm.org/doi/abs/10.1145/2535372.2535377
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            SoftCell aims to overcome today's expensive, inflexible and complex cellular core networks by supporting fine-grained policies for mobile devices, using commodity switches and servers. In particular, SoftCell allows to flexibly route traffic through sequences of middleboxes based on subscriber attributes and applications. Scalability is achieved by minimizing the size of the forwarding tables, using aggregation, and by performing packet classification at the access switches, next to the base stations.
+
         
         - title: 'B4: Experience with a Globally-deployed Software Defined Wan'
           authors: Sushant Jain, Alok Kumar, Subhasree Mandal, Joon Ong, Leon Poutievski, Arjun Singh, Subbaiah Venkata, Jim Wanderer, Junlan Zhou, Min Zhu, Jon Zolla, Urs Hölzle, Stephen Stuart, Amin Vahdat
           in: ACM SIGCOMM '13
           year: 2013
           url: https://dl.acm.org/doi/10.1145/2534169.2486019
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            The paper presents the design, implementation, and evaluation of B4, a private WAN connecting Google's data centers across the planet. B4 has a number of unique characteristics: (1) massive bandwidth requirements deployed to a modest number of sites, (2) elastic traffic demand that seeks to maximize average bandwidth, and (3) full control over the edge servers and network, which enables rate limiting and demand measurement at the edge. These characteristics led to a Software Defined Networking architecture using OpenFlow to control relatively simple switches built from merchant silicon.
         
         - title: A High Performance Packet Core for Next Generation Cellular Networks
           authors: Zafar Ayyub Qazi, Melvin Walls, Aurojit Panda, Vyas Sekar, Sylvia Ratnasamy, and Scott Shenker
           in: ACM SIGCOMM '17
           year: 2017
           url: https://dl.acm.org/doi/10.1145/3098822.3098848
-          relevance:
-          desc:
+          relevance: important
+          desc: |
+            To support deploying SDNs into the Evolved Packet Core (EPC), the paper presents the design and evaluation of a system architecture for a software EPC that achieves high and scalable performance. The authors postulate that the poor scaling of existing EPC systems stems from the manner in which the system is decomposed, which leads to device state being duplicated across multiple components, which in turn results in frequent interactions between the different components. An alternate approach is proposed in which state for a single device is consolidated in one location and EPC functions are reorganized for efficient access to this consolidated state. A prototype for PEPC is also presented, as a software EPC that implements the key components of the design.
         
     - name: Simulators and evaluation platforms
       papers:
@@ -1135,6 +1273,7 @@ misc:
           in: ACM SOSR '18
           year: 2018
           url: https://dl.acm.org/doi/10.1145/3185467.3185470
-          relevance:
-          desc:
+          relevance: interesting
+          desc: |
+            The paper presents a new simulator platform on top of ns-3 specifically tailored to programmable dataplanes and P4 in particular. Evaluations show tht NS4 can effectively simulate representative P4 programs and scales to large-scale P4-enabled networks at a low cost.
                 
