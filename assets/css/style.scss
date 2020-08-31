@@ -7,10 +7,12 @@ $link-color: #1d3557; // prussian blue
 $link-color-hover: #1d3557; // celadon blue
 $lighter-gray: #666666;
 $darker-gray: #333333;
+$background-gray: #fdfdfd;
 
 body {
 
     color: $darker-gray;
+    background: $background-gray;
 
     nav {
         margin-bottom: 10px;
@@ -56,11 +58,23 @@ body {
             font-weight: 400;
             color: $link-color;
         }
+
+        // &.active {
+        // }
     }
 
     header nav {
         a {
             display: block;
+        
+            &.sub {
+                font-size: 12px;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 

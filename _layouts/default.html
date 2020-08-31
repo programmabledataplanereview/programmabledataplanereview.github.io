@@ -18,13 +18,7 @@
         
         {% include authors.html %}
         
-        <nav>
-            {% assign url = page.url|remove:'index.html' %}
-            {% for item in site.nav %}
-                <a class="{% if url == item.url %}active{% endif %}" href="{{ item.url }}">{{ item.text }}</a>
-            {% endfor %}
-        </nav>
-
+        {% include nav.html %}
       </header>
       <section>
 

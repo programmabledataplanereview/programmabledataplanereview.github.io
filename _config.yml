@@ -5,14 +5,19 @@ title: The Programmable Data Plane Reading List
 
 nav:
   - text: Architectures
+    key: architectures
     url: /architectures/
   - text: Abstractions
+    key: abstractions
     url: /abstractions/
   - text: Algorithms & HW Realizations
+    key: algorithms
     url: /algorithms/
   - text: Applications
+    key: applications
     url: /applications/
   - text: Miscellaneous Topics
+    key: misc
     url: /misc/
 
 baseurl: ''

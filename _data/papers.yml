@@ -4,6 +4,7 @@ architectures:
   preamble: We divide the discussion of switch architectures into software and hardware switch architectures.
   categories:
     - name: Software Switch Architectures
+      anchor: sw-switch
       preamble: |
         We first discuss the viability of software switching and then review dataflow graph abstractions, also discussing, e.g., Click, ClickOS, and software NICs. We proceed by revisiting literature on match-action abstractions, discussing OVS and PISCES. We conclude with a review on packet I/O libraries. 
 
@@ -184,6 +185,7 @@ architectures:
                 FD.io (Fast data – Input/Output) is a collection of several projects and libraries to support flexible, programmable and composable services on a generic hardware platform, using a high-throughput, low-latency and resource-efficient IO services suitable to many architectures (x86, ARM, and PowerPC) and deployment environments (bare metal, VM, container).
 
     - name: Hardware Switch Architectures
+      anchor: hw-switch
       preamble: |
         We start off by discussing a first incarnation of a programmable switch, PLUG, then discuss the SwitchBlade platform and the seminal paper on RMT (Reconfigurable Match Tables). We then review existing performance evaluation studies and literature dealing with performance monitoring and the issue of potential inconsistencies in reconfigurable networks. We conclude with a paper on Azure SmartNICs based on FPGAs.
       papers:
@@ -280,6 +282,7 @@ architectures:
             Modern public cloud architectures rely on complex networking policies and running the necessary network stacks on CPU cores takes away processing power from VMs, increasing the cost of running cloud services, and adding latency and variability to network performance. The paper presents the design of AccelNet, the Azure Accelerated Networking scheme for offloading host networking to hardware, using custom Azure SmartNICs based on FPGAs, including the hardware/software co-design model, performance results on key workloads, and experiences and lessons learned from developing and deploying AccelNet.
 
     - name: Hybrid Hardware/Software Architectures
+      anchor: hybrid-switch
       preamble: |
         It is often believed that the performance of programmable network processors is lower than hard‐coded chips. There exists interesting literature questioning this assumption and exploring these overheads empirically. We also discuss opportunities coming from Graphics Processing Units (GPUs) acceleration, e.g., for packet processing, as well as from hybrid hardware/software architectures in general.
       papers:
@@ -329,6 +332,7 @@ architectures:
             This is the answer to the question raised by the "Raising the Bar for Using GPUs" paper. Kalia et al. argue that the key enabler for high packet-processing performance is the inherent feature of GPU that automatically hides memory access latency rather than its parallel computation power and claim that CPU can outperform or achieve a similar performance as GPU if its code is re-arranged to run concurrently with memory access. This paper revists these claims and find, with eight popular algorithms widely used in network applications, that (a) there are many compute-bound algorithms that do benefit from the parallel computation capacity of GPU while CPU-based optimizations fail to help, and (b) the relative performance advantage of CPU over GPU in most applications is due to data transfer bottleneck in PCIe communication of discrete GPU rather than lack of capacity of GPU itself.
 
     - name: Programmable NICs
+      anchor: smart-nic
       papers: 
 
         - title: 'We Need to Talk About NICs'
@@ -402,6 +406,7 @@ abstractions:
   categories:
 
     - name: Languages and Compilers
+      anchor: languages
       preamble: |
         We start our survey with the seminal paper on OpenFlow, introducing a standardized interface to manage flow table entries in data plane devices via a standard control-plane–data-plane API. We then proceed by discussing P4 and its alternatives and use cases. We also review, among other, high-performance packet processing languages and make the case for intermediate representations for programmable data planes.
 
@@ -596,6 +601,7 @@ abstractions:
                 The paper presents netdiff, an algorithm to check the equivalence of two network dataplanes. Such an algorithm can be useful to verify and compare the output of different dataplane compilers, to find new bugs existing network dataplanes, or to check the equivalence of FIB updates in a production network. The evaluation shows that equivalence is an easy way to find bugs, scales well to relatively large programs and uncovers subtle issues otherwise difficult to find.
                   
     - name: Abstractions for Embedded State
+      anchor: embedded-state
       preamble: While OpenFlow match/action table abstractions are stateless, there are many efforts toward devising a stateful data plane programming abstraction, e.g., based on finite state machines, for supporting more dynamic applications. We discuss such approaches as well as first workload characterizations of stateful networking applications. We also review literature on the challenge of consistent state migration and elastic scaling, and discuss security implications.
       papers:
 
@@ -717,6 +723,7 @@ abstractions:
             FlowBlaze is an open abstraction for building stateful packet processing functions in hardware. The abstraction is based on Extended Finite State Machines and introduces the explicit definition of flow state, allowing FlowBlaze to leverage flow-level parallelism. The paper presents an implementation of FlowBlaze on a NetFPGA SmartNIC that achieves latency on the order of a few microseconds, consumes relatively little power, can hold per-flow state for hundreds of thousands of flows, and yields speeds of 40 Gbps.
                   
     - name: Programmable Parsing and Scheduling
+      anchor: prog-parsing
       desc: |
         We start by reviewing design principles for packet parsers. We then revisit the concept of a universal scheduler that would handle all queuing strategies that may arise in a programmable switch, and ask whether such a scheduling algorithm can really exist. We conclude with a review of fair queuing on reconfigurable switches.
       papers:
@@ -883,6 +890,7 @@ applications:
   categories:
 
     - name: Resilient, Robust, and Efficient Forwarding
+      anchor: resilient-fwd
       preamble: Data planes often operate much faster than the control plane, which motivates to move functionality for maintaining connectivity and efficient routing under failures to the switches. At the same time, implementing such functionality is non-trivial, as discussed in the following research papers. 
       papers:
 
@@ -923,6 +931,7 @@ applications:
             The paper explores new possibilities, created by programmable switches, for fast dataplane-driven rerouting upon signals triggered by traffic disruptions. The proposed method, Blink, uses exploits TCP-induced signals to detect failures; when compounded over multiple flows, TCP behavior creates a strong and characteristic failure signal. Blink analyzes TCP flows, at line rate, to reliably and quickly detect major traffic disruptions and recover data-plane connectivity. Evaluation results on a P4 implementation of Blink running on real Tofino switch indicate that it can achieve sub-second rerouting for realistic Internet traffic and scales to protect large fractions of realistic traffic.
  
     - name: In-network Computation
+      anchor: in-net-compute
       preamble: Offloading computation, on‐path aggregation functionalities, caching, or even AI, to the network, has the potential to significantly improve the efficiency of distributed applications. Accordingly, the study of such mechanisms have recently received much attention. 
       papers:
 
@@ -999,6 +1008,7 @@ applications:
             The paper presents N2Net, a system that implements binary neural networks using commodity switching chips deployed in network switches and routers. N2Net shows that these devices can run simple neural network models, whose input is encoded in the network packets' header, at packet processing speeds (billions of packets per second). Furthermore, the authors' experience highlights that switching chips could support even more complex models, provided that some minor and cheap modifications to the chip's design are applied.
         
     - name: Distributed Consensus
+      anchor: dist-consensus
       preamble: |
         Another interesting application for programmable data planes is related to consensus algorithms: the coordination among controllers or switches may be performed most efficiently directly on the network devices. Over the last years, several interesting first approaches have been reported in the literature, not only to compute consensus but also to provide different notions of consistency more generally. 
       papers:
@@ -1067,6 +1077,7 @@ applications:
             This paper presents NetChain, a new approach that provides scale-free sub-RTT coordination in data centers. NetChain exploits programmable switches to store data and process queries entirely in the network data plane. This eliminates the query processing at coordination servers and cuts the end-to-end latency to as little as half of an RTT. New protocols and algorithms are designed for NetChain guarantees strong consistency and handles switch failures efficiently.
  
     - name: Monitoring, Telemetry, and Measurement
+      anchor: monitoring
       preamble: |
         Perhaps the most interesting applications are related to network measurement, monitoring and diagnosis. Indeed, programmable data planes can be a game changer, providing deep insights into the network, even to end-hosts, as we discuss in the following. 
       papers:
@@ -1125,6 +1136,7 @@ applications:
             The paper presents SketchVisor, a robust network measurement framework, which augments sketch-based measurement in the data plane with a fast path that is activated under high traffic load to provide high-performance local measurement with slight accuracy degradation. It further recovers accurate network-wide measurement results via compressive sensing. A SketchVisor prototype is build on top of Open vSwitch; testbed experiments show that SketchVisor achieves high throughput and high accuracy for a wide range of network measurement tasks.
  
     - name: Load balancing
+      anchor: load-balancing
       preamble: |
         Last but not least, and similarly to the above discussion on resilient routing, programmable data planes provide unprecedented flexibilities (and performance) in how traffic can be dynamically load-balanced. 
       papers:
@@ -1157,6 +1169,7 @@ applications:
             Memcached is an in-memory key-value distributed caching solution, commonly used by web servers for fast content delivery. In order to deal with skewed distributions of key popularity in key-value stores, the authors propose and implement MBalancer, a switch-based L7 load balancing scheme, which offloads requests from bottleneck Memcached servers. MBalancer runs as an SDN application, identifies the (typically small number of) hot keys, duplicates these hot keys to many (or all) Memcached servers, and adjusts the switches' forwarding tables accordingly. Experiences with an implementation of MBalancer on a hardware-based OpenFlow switch indicate significant throughput boost and latency reduction.
  
     - name: Control plane acceleration
+      anchor: control-accel
       papers:
 
         - title: Hardware-Accelerated Network Control Planes
@@ -1184,6 +1197,7 @@ misc:
   categories:
 
     - name: History
+      anchor: history
       preamble: |
         There are several interesting papers putting the technological trends around programmable networks into a historic perspective.
       papers:
@@ -1225,6 +1239,7 @@ misc:
             A keynote from Nick McKeown at NetPL'17 on the many great research ideas and new languages that have emerged for programmable forwarding. The talk considers how we got here, why programmable forwarding planes are inevitable, why now is the right time, why they are a final frontier for SDN, and why they are here to stay. 
                               
     - name: Deployments
+      anchor: deployments
       preamble: A very relevant question, which is also a research challenge, regards the deployment of SDN and programmable data planes.
       papers:
 
@@ -1266,6 +1281,7 @@ misc:
             To support deploying SDNs into the Evolved Packet Core (EPC), the paper presents the design and evaluation of a system architecture for a software EPC that achieves high and scalable performance. The authors postulate that the poor scaling of existing EPC systems stems from the manner in which the system is decomposed, which leads to device state being duplicated across multiple components, which in turn results in frequent interactions between the different components. An alternate approach is proposed in which state for a single device is consolidated in one location and EPC functions are reorganized for efficient access to this consolidated state. A prototype for PEPC is also presented, as a software EPC that implements the key components of the design.
         
     - name: Simulators and evaluation platforms
+      anchor: sim-eval
       papers:
 
         - title: 'NS4: Enabling Programmable Data Plane Simulation'
