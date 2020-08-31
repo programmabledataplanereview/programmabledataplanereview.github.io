@@ -1,6 +1,6 @@
 <h2>{{list.name}}</h2>
 
-{{list.preamble}}
+<p>{{list.preamble}}</p>
 
 {% for paper in list.papers %}
     {% include paper.html paper=paper %}
@@ -9,7 +9,7 @@
 {% for category in list.categories %}
 
     <h3>{{category.name}}</h3>
-    {{category.preamble}}
+    <p>{{category.preamble}}</p>
 
     {% for paper in category.papers %}
         {% include paper.html paper=paper %}
@@ -17,7 +17,7 @@
 
     {% for section in category.sections %}
         <h4>{{section.name}}</h4>
-        {{section.preamble}}
+        <p>{{section.preamble}}</p>
         {% for paper in section.papers %}
             {% include paper.html paper=paper %}
         {% endfor %}

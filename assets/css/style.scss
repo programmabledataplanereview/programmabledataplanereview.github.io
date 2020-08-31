@@ -39,6 +39,10 @@ body {
         // font-weight: 500;
     }
 
+    p {
+        text-align: justify;
+    }
+
 
     a {
         color: #1d3557;
@@ -62,7 +66,7 @@ body {
 
     .paper {
         
-        margin-bottom: 10px;
+        margin-bottom: 1.5em;
 
         .title a {
             font-weight: 700;
@@ -75,14 +79,19 @@ body {
         }
         
         .desc {
-            margin-top: 5px;
-            font-size: 14px;
+            text-align: justify;
+            margin-top: 0.2em;
+            font-size: 13px;
             display: block;
         }
 
     }
 
     .authors {
+
+        margin-bottom: 1em;
+
+
         a {
             color: $darker-gray;
 
