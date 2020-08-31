@@ -1134,7 +1134,16 @@ applications:
           relevance: interesting
           desc: |
             The paper presents SketchVisor, a robust network measurement framework, which augments sketch-based measurement in the data plane with a fast path that is activated under high traffic load to provide high-performance local measurement with slight accuracy degradation. It further recovers accurate network-wide measurement results via compressive sensing. A SketchVisor prototype is build on top of Open vSwitch; testbed experiments show that SketchVisor achieves high throughput and high accuracy for a wide range of network measurement tasks.
- 
+
+        - title: Scaling Hardware Accelerated Network Monitoring to Concurrent and Dynamic Queries With *Flow
+          authors: John Sonchack, Oliver Michel, Adam J. Aviv, Eric Keller, Jonathan M. Smith
+          in: USENIX ATC '18
+          year: 2018
+          url: https://www.usenix.org/conference/atc18/presentation/sonchack
+          relevance: important
+          desc: |
+            *Flow is a hardware-accelerated network telemetry system that can export flexible packet-level records that analytics applications can use to calculate a wide range of metrics. Contrary to previous approaches, *Flow partitions hardware and software components such that applications can operate concurrently and dynamically on telemetry streams without impacting each other enabling parallel and runtime-configurable measurement analytics applications. The system is implemented in P4 and runs on commodity line rate switching hardware.
+            
     - name: Load balancing
       anchor: load-balancing
       preamble: |
