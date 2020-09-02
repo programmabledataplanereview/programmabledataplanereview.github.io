@@ -2,6 +2,7 @@
 theme: jekyll-theme-minimal
 
 title: The Programmable Data Plane Reading List
+description: This is a reading list for students, practitioners, and researchers interested in the general area of programmable data planes.
 
 nav:
   - text: Architectures
