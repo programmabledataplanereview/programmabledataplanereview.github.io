@@ -1302,3 +1302,28 @@ misc:
           desc: |
             The paper presents a new simulator platform on top of ns-3 specifically tailored to programmable dataplanes and P4 in particular. Evaluations show tht NS4 can effectively simulate representative P4 programs and scales to large-scale P4-enabled networks at a low cost.
                 
+    - name: Performance
+      anchor: perf
+      papers:
+
+        - title: 'P8: P4 with Predictable Packet Processing Performance'
+          authors: Hasanin Harkous, Michael Jarschel, Mu He, Rastin Priest, Wolfgang Kellerer
+          in: IEEE Transactions on Network and Service Management (TNSM)
+          year: 2020
+          url: https://ieeexplore.ieee.org/document/9220822
+          relevance: interesting
+          desc: |
+            The authors leverage the characteristics of the P4 programming language to provide a method for estimating the packet forwarding latency as a function of the data path program. They analyze the impact of different P4 constructs on packet processing latency for three state-of-the-art P4 devices: a Netronome SmartNIC, the NetFPGA-SUME, and the T4P4S DPDK-based software switch. Besides comparing the performance of these three targets, derived results are used to propose a method for estimating the average packet latency, at compilation time, of arbitrary P4-based network functions implemented using the surveyed P4 constructs. The proposed method is finally validated using a set of realistic network functions, which shows that the method estimates the average packet latency with sub-microsecond precision.
+
+    - name: Security
+      anchor: security
+      papers:
+
+        - title: 'P4Fuzz: Compiler Fuzzer for Dependable Programmable Dataplanes'
+          authors: Andrei-Alexandru Agape, Madalin Claudiu Danceanu, Rene Rydhof Hansen, Stefan Schmid
+          in: ICDCN '21
+          year: 2021
+          url: https://www.univie.ac.at/ct/stefan/icdcn21p4.pdf
+          relevance: interesting
+          desc: |
+            Extending programmability into the data plane introduces new threat models, in particular related to compilers used to map data plane languages, such as P4 to software or hardware targets. P4Fuzz aims at uncovering vulnerabilities in such compilers through automated compiler fuzzing. The author's compiler found several bugs in production compilers that since have been acknowledged and fixed by the community.
