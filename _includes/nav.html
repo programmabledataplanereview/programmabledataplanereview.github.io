@@ -1,4 +1,4 @@
-<nav>
+<nav class="categories">
     {% assign url = page.url|remove:'index.html' %}
     {% for item in site.nav %}
         <a class="{% if url == item.url %}active{% endif %}" href="{{ item.url }}">{{ item.text }}</a>
@@ -8,4 +8,8 @@
             {% endfor %}
         {% endif %}
     {% endfor %}
+</nav>
+
+<nav class="etc">
+    <a href="https://github.com/programmabledataplanereview/programmabledataplanereview.github.io">Github Repository</a>
 </nav>

@@ -14,10 +14,6 @@ body {
     color: $darker-gray;
     background: $background-gray;
 
-    nav {
-        margin-bottom: 10px;
-    }
-
     h1 {
         font-size: 22px;
 
@@ -58,12 +54,12 @@ body {
             font-weight: 400;
             color: $link-color;
         }
-
-        // &.active {
-        // }
     }
 
     header nav {
+
+        margin-bottom: 10px;
+
         a {
             display: block;
         
@@ -72,8 +68,20 @@ body {
                 margin-left: 10px;
             }
 
-            &:hover {
-                cursor: pointer;
+            &:hover { 
+                cursor: pointer; // fix otherwise missing pointer in sub category links
+            }
+        }
+
+        &.etc {
+            font-size: 13px;
+
+            a {
+                color: $darker-gray;
+
+                &:hover {
+                    color: $lighter-gray;
+                }
             }
         }
     }
