@@ -1327,3 +1327,33 @@ misc:
           relevance: interesting
           desc: |
             Extending programmability into the data plane introduces new threat models, in particular related to compilers used to map data plane languages, such as P4 to software or hardware targets. P4Fuzz aims at uncovering vulnerabilities in such compilers through automated compiler fuzzing. The author's compiler found several bugs in production compilers that since have been acknowledged and fixed by the community.
+
+    - name: Verification
+      anchor: verification
+      papers:
+        - title: 'Fix with P6: Verifying Programmable Switches at Runtime'
+          authors: Apoorv Shukla, Kevin Nico Hudemann, Zsolt Vagi, Lily Huegerich, Georgios Smaragdakis, Artur Hecker, Stefan Schmid, Anja Feldmann
+          in: IEEE INFOCOM' 21
+          year: 2021
+          url: https://arxiv.org/abs/2004.10887
+          relevance:
+          desc: |
+            Is it possible to patch software bugs in P4 programs without human involvement? The paper shows that this is partially possible in many cases due to advances in software testing and the structure of P4 programs. The insight is that runtime verification can detect bugs, even those that are not detected at compile-time, with machine learning-guided fuzzing. This enables a more automated and real-time localization of bugs in P4 programs using software testing techniques like Tarantula. Once the bug in a P4 program is localized, the faulty code can be patched due to the programmable nature of P4. In addition, platform-dependent bugs can be detected. From P4_14 to P4_16 (latest version), the key observation is that as the programmable blocks increase, the patchability of P4 programs increases accordingly. To this end, the authors design, develop, and evaluate P6 that (a) detects, (b) localizes, and (c) patches bugs in P4 programs with minimal human interaction. P6 tests P4 switch non-intrusively, i.e., requires no modification to the P4 program for detecting and localizing bugs. The authors used a P6 prototype to detect and patch seven existing bugs in eight publicly available P4 application programs deployed on two different switch platforms: behavioral model (bmv2) and Tofino. The evaluation shows that P6 significantly outperforms bug detection baselines while generating fewer packets and patches bugs in P4 programs such as switch.p4 without triggering any regressions.
+        
+        - title: Runtime Verification of P4 Switches with Reinforcement Learning
+          authors: Apoorv Shukla, Kevin Nico Hudemann, Artur Hecker, Stefan Schmid
+          in: ACM SIGCOMM 2019 Workshop on Network Meets AI & ML (NetAI 2019)
+          year: 2019
+          url: https://dlnext.acm.org/doi/abs/10.1145/3341216.3342206
+          relevance:
+          desc: |
+            This paper presents the design and early implementation of p4rl, a system that uses reinforcement learning-guided fuzz testing to execute the verification of P4 switches automatically at runtime. p4rl system uses novel user-friendly query language, p4q to conveniently specify the intended properties in simple conditional statements (if-else) and check the actual runtime behavior of the P4 switch against such properties. In p4rl, user-specified p4q queries with the control plane configuration, Agent, and the Reward System guide the fuzzing process to trigger runtime bugs automatically during Agent training. To illustrate the strength of p4rl, an early prototype of p4rl system is developed and evaluated to execute runtime verification of a P4 network device, e.g., L3 (Layer-3) switch. Initial results are promising and show that p4rl automatically detects diverse bugs while outperforming the baseline approach.
+        - title: 'P4CONSIST: Towards Consistent P4 SDNs'
+          authors: Apoorv Shukla, Seifeddine Fathalli, Thomas Zinner, Artur Hecker, Stefan Schmid
+          in: IEEE Journal on Selected Areas in Communications (JSAC) – Special Issue on Network Softwarization & Enablers, 2020
+          year: 2020
+          url: https://ieeexplore.ieee.org/document/9109655
+          relevance:
+          desc: |
+            The prevailing wisdom is that a software-defined network (SDN) operates under the premise that the logically centralized control plane has an accurate representation of the actual data plane state. Unfortunately, bugs, misconfigurations, faults or attacks can introduce inconsistencies between the network control and the data plane that can undermine the correct operation at runtime. Through experiments, the authors realize that P4 SDNs are no exception, and are prone to similar problems. With the aim to verify the control-data plane inconsistency, the authors present the design and implementation of P4Consist, a system to detect the inconsistency between control and data plane in P4 SDNs. P4Consist generates active probe-based traffic continuously or periodically as an input to the P4 SDNs to check whether the actual behavior on the data plane corresponds to the expected control plane behavior. In P4Consist, the control plane and the data plane generate independent reports which are later, compared to verify the control-data plane consistency. The previous works in the field of monitoring and verification mostly aim to test the P4 programs through static analysis and thus, are insufficient to verify the network consistency at runtime. Experiments with the prototype implementation of P4Consist are promising and show that P4Consist can verify the control-data plane consistency in the complex datacenter 4-ary fat-tree (20 switches) and multipath grid (4, 9 and 16 switches) topologies with 60k rules per switch within a minimum time of 4 minutes. At the same time, P4Consist scales to multiple source-destination pairs to detect control-data plane inconsistency.
+
