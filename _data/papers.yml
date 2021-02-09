@@ -1328,6 +1328,15 @@ misc:
           desc: |
             Extending programmability into the data plane introduces new threat models, in particular related to compilers used to map data plane languages, such as P4 to software or hardware targets. P4Fuzz aims at uncovering vulnerabilities in such compilers through automated compiler fuzzing. The author's compiler found several bugs in production compilers that since have been acknowledged and fixed by the community.
 
+        - title: 'FlowLens: Enabling Efficient Flow Classification for ML-based Network Security Applications'
+          authors: Diogo Barradas, Nuno Santos, Luís Rodrigues, Salvatore Signorello, Fernando Ramos, André Madeira
+          in: NDSS '21
+          year: 2021
+          url: https://web.ist.utl.pt/diogo.barradas/papers/barradas_ndss21.pdf
+          relevance: important
+          desc: |
+            FlowLens is a system that leverages commodity programmable switches to efficiently support multi-purpose ML-based security applications. FlowLens collects features of packet distributions at line speed and classifies flows directly on the switches, enabling network operators to re-purpose this measurement primitive at run-time to serve a different flow classification task. To cope with the resource constraints of programmable switches, FlowLens computes for each flow a memory-efficient representation of relevant features, named "flow  marker". Despite its small size, a flow marker contains enough information to perform accurate flow classification. We evaluated our system in three usage scenarios: covert channel detection, website fingerprinting, and botnet chatter detection. 
+
     - name: Verification
       anchor: verification
       papers:
