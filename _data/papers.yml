@@ -780,7 +780,16 @@ abstractions:
           relevance: mustread
           desc: |
             The trend toward increasing link speeds and slowdown in the scaling of CPU speeds, leads to a situation where packet scheduling in software results in lower precision and higher CPU utilization. While by offloading packet scheduling to the hardware (e.g., the NIC), this drawback can be overcome, one still would like to retain the flexibility benefits of software packet schedulers: packet scheduling in hardware should hence be programmable. Shrivastav proposes a generalization of the Push-In-First-Out (PIFO) primitive used by state-of-the-art hardware packet schedulers: Push-In-Extract-Out (PIEO) maintains an ordered list of elements, but allows dequeue from arbitrary positions in the list by supporting a programmable predicate-based filtering at dequeue. PIEO supports most scheduling (work-conserving and non-work conserving) algorithms and can be implemented scalably in hardware.
-  
+
+        - title: 'SP-PIFO: Approximating Push-In First-Out Behaviors using Strict-Priority Queues'
+          authors: Albert Gran Alcoz, Alexander Dietmueller, Laurent Vanbever
+          in: USENIX NSDI '20
+          year: 2020
+          url: https://www.usenix.org/conference/nsdi20/presentation/alcoz
+          relevance: important
+          desc: |
+            Push-In First-Out (PIFO) queues are hardware primitives which enable programmable packet scheduling by allowing to perfectly reorder packets at line rate. While promising, implementing PIFO queues in hardware and at scale is not easy: only hardware designs (not implementations) exist and they can only support about 1000 flows. This paper introduces SP-PIFO, a programmable packet scheduler which closely approximates the behavior of PIFO queues using strict-priority queues-- at line rate, at scale, and on existing devices. 
+
 algorithms:
   name: Algorithms & HW Realizations
   preamble: Another very relevant research area regards the design of algorithms and data planes for this new technology. 
